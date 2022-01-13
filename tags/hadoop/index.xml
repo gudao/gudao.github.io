@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hadoop on Even - A super concise theme for Hugo</title>
+    <link>https://gudao.github.io/tags/hadoop/</link>
+    <description>Recent content in Hadoop on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Tue, 05 Jun 2012 01:37:56 +0800</lastBuildDate><atom:link href="https://gudao.github.io/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(转)Hadoop集群安装详细步骤|Hadoop安装配置</title>
+      <link>https://gudao.github.io/post/hadoop-install/</link>
+      <pubDate>Tue, 05 Jun 2012 01:37:56 +0800</pubDate>
+      
+      <guid>https://gudao.github.io/post/hadoop-install/</guid>
+      <description>#Hadoop集群安装详细步骤|Hadoop安装配置 Hadoop集群安装 首先我们统一一下定义，在这里所提到的Hadoop是指Hadoop Co</description>
+    </item>
+    
+  </channel>
+</rss>

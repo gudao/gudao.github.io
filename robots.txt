@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://gudao.github.io/sitemap.xml

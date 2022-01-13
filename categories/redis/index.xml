@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on Even - A super concise theme for Hugo</title>
+    <link>https://gudao.github.io/categories/redis/</link>
+    <description>Recent content in Redis on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Thu, 26 Dec 2013 01:37:56 +0800</lastBuildDate><atom:link href="https://gudao.github.io/categories/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis 集群教程(一)</title>
+      <link>https://gudao.github.io/post/redis-clustor/</link>
+      <pubDate>Thu, 26 Dec 2013 01:37:56 +0800</pubDate>
+      
+      <guid>https://gudao.github.io/post/redis-clustor/</guid>
+      <description>本文依据官方教程（http://redis.io/topics/cluster-tutorial）翻译并夹杂个人理解撰写而成，如有翻译或理解</description>
+    </item>
+    
+  </channel>
+</rss>
