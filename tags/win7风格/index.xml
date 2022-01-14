@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>win7风格 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/win7%E9%A3%8E%E6%A0%BC/</link>
+    <link>https://gudao.github.io/tags/win7%E9%A3%8E%E6%A0%BC/</link>
     <description>Recent content in win7风格 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Fri, 15 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/win7%E9%A3%8E%E6%A0%BC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/win7%E9%A3%8E%E6%A0%BC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>c# ListView 显示win7风格</title>
-      <link>http://localhost:8080/post/c#-listview-%E6%98%BE%E7%A4%BAwin7%E9%A3%8E%E6%A0%BC/</link>
+      <link>https://gudao.github.io/post/c#-listview-%E6%98%BE%E7%A4%BAwin7%E9%A3%8E%E6%A0%BC/</link>
       <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/c#-listview-%E6%98%BE%E7%A4%BAwin7%E9%A3%8E%E6%A0%BC/</guid>
+      <guid>https://gudao.github.io/post/c#-listview-%E6%98%BE%E7%A4%BAwin7%E9%A3%8E%E6%A0%BC/</guid>
       <description>如果你用winform 开发应用，而且没有使用第三方的美化控件还想让应用漂亮一点， 那就使用下面的方法吧 先声明一下这个： [DllImport(&amp;quot;uxtheme.dll&amp;quot;, CharSet = CharSet.Unicode, EntryPoint = &amp;quot;SetWindowTheme&amp;quot;)] private static extern Int32 SetWindowTheme(IntPtr</description>
     </item>
     

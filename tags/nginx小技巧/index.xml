@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nginx小技巧 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
+    <link>https://gudao.github.io/tags/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
     <description>Recent content in nginx小技巧 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Mon, 15 Oct 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Oct 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[nginx小技巧]413 Request Entity Too Large</title>
-      <link>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</link>
+      <link>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</link>
       <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</guid>
+      <guid>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</guid>
       <description>某些网站用了Ext.js，但是用Nginx代理后容易出现413错误（ Request Entity Too Large）。可能是因为上传或请求的内容太大解决方法： 修改 client_max_body_size 如： http</description>
     </item>
     
     <item>
       <title>[nginx小技巧]Request Header Or Cookie Too Large </title>
-      <link>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</link>
+      <link>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</guid>
+      <guid>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</guid>
       <description>方法： 在http中添加 client_header_buffer_size 32k; large_client_header_buffers 4 32k;</description>
     </item>
     
     <item>
       <title>[nginx小技巧]httpheader准确显示命中状态</title>
-      <link>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</link>
+      <link>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</link>
       <pubDate>Wed, 10 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</guid>
+      <guid>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</guid>
       <description>nginx缓没缓存请求是我们关心的问题，把缓存状态显示在header里是个不错的选择。 方法如下： 使用$upstream_cache_stat</description>
     </item>
     

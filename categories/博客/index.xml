@@ -2,189 +2,189 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>博客 on 古道的技术博客</title>
-    <link>http://localhost:8080/categories/%E5%8D%9A%E5%AE%A2/</link>
+    <link>https://gudao.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Fri, 02 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>又是一年，2015年来了</title>
-      <link>http://localhost:8080/post/%E5%8F%88%E6%98%AF%E4%B8%80%E5%B9%B42015%E5%B9%B4%E6%9D%A5%E4%BA%86/</link>
+      <link>https://gudao.github.io/post/%E5%8F%88%E6%98%AF%E4%B8%80%E5%B9%B42015%E5%B9%B4%E6%9D%A5%E4%BA%86/</link>
       <pubDate>Fri, 02 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E5%8F%88%E6%98%AF%E4%B8%80%E5%B9%B42015%E5%B9%B4%E6%9D%A5%E4%BA%86/</guid>
+      <guid>https://gudao.github.io/post/%E5%8F%88%E6%98%AF%E4%B8%80%E5%B9%B42015%E5%B9%B4%E6%9D%A5%E4%BA%86/</guid>
       <description>2014年转眼过去了，虽然不像上一年那么感觉没准备，但是依旧感觉一年有点短。 老规矩写总结做计划。 生活 可可马上就学会走路了，也会喊几个“爸爸”</description>
     </item>
     
     <item>
       <title>悟</title>
-      <link>http://localhost:8080/post/%E6%82%9F/</link>
+      <link>https://gudao.github.io/post/%E6%82%9F/</link>
       <pubDate>Fri, 22 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%82%9F/</guid>
+      <guid>https://gudao.github.io/post/%E6%82%9F/</guid>
       <description>最近一直在忙公司的新产品，好多事都被搁置了，包括写博客。 工作忙了，就没时间也没精力想其他事情了，但是自己的知识体系还是要思考的。 前几天看到一</description>
     </item>
     
     <item>
       <title>13年最后一天</title>
-      <link>http://localhost:8080/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</link>
+      <link>https://gudao.github.io/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</link>
       <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</guid>
+      <guid>https://gudao.github.io/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</guid>
       <description>回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，</description>
     </item>
     
     <item>
       <title>帮公司发布个招聘广告</title>
-      <link>http://localhost:8080/post/%E5%B8%AE%E5%85%AC%E5%8F%B8%E5%8F%91%E5%B8%83%E4%B8%AA%E6%8B%9B%E8%81%98%E5%B9%BF%E5%91%8A/</link>
+      <link>https://gudao.github.io/post/%E5%B8%AE%E5%85%AC%E5%8F%B8%E5%8F%91%E5%B8%83%E4%B8%AA%E6%8B%9B%E8%81%98%E5%B9%BF%E5%91%8A/</link>
       <pubDate>Thu, 05 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E5%B8%AE%E5%85%AC%E5%8F%B8%E5%8F%91%E5%B8%83%E4%B8%AA%E6%8B%9B%E8%81%98%E5%B9%BF%E5%91%8A/</guid>
+      <guid>https://gudao.github.io/post/%E5%B8%AE%E5%85%AC%E5%8F%B8%E5%8F%91%E5%B8%83%E4%B8%AA%E6%8B%9B%E8%81%98%E5%B9%BF%E5%91%8A/</guid>
       <description>最近公司的移动客户端项目急需人手，帮公司发个招聘广告。 岗位：高级iOS开发工程师和高级Android开发工程师各2人 工作内容：开发视频发布平</description>
     </item>
     
     <item>
       <title>不敲代码的日子</title>
-      <link>http://localhost:8080/post/%E4%B8%8D%E6%95%B2%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%A5%E5%AD%90/</link>
+      <link>https://gudao.github.io/post/%E4%B8%8D%E6%95%B2%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%A5%E5%AD%90/</link>
       <pubDate>Mon, 14 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E4%B8%8D%E6%95%B2%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%A5%E5%AD%90/</guid>
+      <guid>https://gudao.github.io/post/%E4%B8%8D%E6%95%B2%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%A5%E5%AD%90/</guid>
       <description>最近因为一直在跟进公司的移动客户端项目，大概连续有一个月没有敲代码。不写代码没有感觉到渴望，不像其他爱好不玩就手痒痒，反而有点厌倦的样子。其</description>
     </item>
     
     <item>
       <title>春后大雪</title>
-      <link>http://localhost:8080/post/%E6%98%A5%E5%90%8E%E5%A4%A7%E9%9B%AA/</link>
+      <link>https://gudao.github.io/post/%E6%98%A5%E5%90%8E%E5%A4%A7%E9%9B%AA/</link>
       <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%98%A5%E5%90%8E%E5%A4%A7%E9%9B%AA/</guid>
+      <guid>https://gudao.github.io/post/%E6%98%A5%E5%90%8E%E5%A4%A7%E9%9B%AA/</guid>
       <description>昨晚一场大雪，赶走了多天的雾霾，京都的空气稍显新鲜。来京4个年头，印象中每年的春节过后一个月内都要下场大雪，估计是预示着冬天的彻底离去。</description>
     </item>
     
     <item>
       <title>IOS学习中</title>
-      <link>http://localhost:8080/post/ios%E5%AD%A6%E4%B9%A0%E4%B8%AD/</link>
+      <link>https://gudao.github.io/post/ios%E5%AD%A6%E4%B9%A0%E4%B8%AD/</link>
       <pubDate>Sat, 16 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/ios%E5%AD%A6%E4%B9%A0%E4%B8%AD/</guid>
+      <guid>https://gudao.github.io/post/ios%E5%AD%A6%E4%B9%A0%E4%B8%AD/</guid>
       <description>大年初七就开始上班了，唉！今年的计划本来是想学Java做android开发的，无奈公司安排开发iphone客户端，那就学习ios吧，反正都是</description>
     </item>
     
     <item>
       <title>新年新计划</title>
-      <link>http://localhost:8080/post/%E6%96%B0%E5%B9%B4%E6%96%B0%E8%AE%A1%E5%88%92/</link>
+      <link>https://gudao.github.io/post/%E6%96%B0%E5%B9%B4%E6%96%B0%E8%AE%A1%E5%88%92/</link>
       <pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%96%B0%E5%B9%B4%E6%96%B0%E8%AE%A1%E5%88%92/</guid>
+      <guid>https://gudao.github.io/post/%E6%96%B0%E5%B9%B4%E6%96%B0%E8%AE%A1%E5%88%92/</guid>
       <description>整天在公司写工作的周总结、月总结、年总结的，这次也写下自己的总结和计划吧。 2012年最大的事是把婚结了，媳妇也很贤惠，家庭方面都还是很好的，</description>
     </item>
     
     <item>
       <title>你生你的气，我依然爱你</title>
-      <link>http://localhost:8080/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</link>
+      <link>https://gudao.github.io/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</link>
       <pubDate>Mon, 24 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</guid>
+      <guid>https://gudao.github.io/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</guid>
       <description>周末和媳妇吵架了，这算是有史以来最凶的一次。她没吃饭就回屋了，我在客厅直到困的不行，回屋没说话就睡了！晚上她咳嗽的厉害也没起来帮她倒水，因为</description>
     </item>
     
     <item>
       <title>测测你的心有多少平方米？</title>
-      <link>http://localhost:8080/post/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84%E5%BF%83%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B9%B3%E6%96%B9%E7%B1%B3/</link>
+      <link>https://gudao.github.io/post/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84%E5%BF%83%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B9%B3%E6%96%B9%E7%B1%B3/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84%E5%BF%83%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B9%B3%E6%96%B9%E7%B1%B3/</guid>
+      <guid>https://gudao.github.io/post/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84%E5%BF%83%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B9%B3%E6%96%B9%E7%B1%B3/</guid>
       <description>心有多大，舞台就有多大。一个心眼小的人，会处处谨慎，但显得别扭；而心眼大的人，潇洒豪放，但或许被野心所困。如果把我们的心比喻成一个居所,就像</description>
     </item>
     
     <item>
       <title>奥巴马连任了</title>
-      <link>http://localhost:8080/post/%E5%A5%A5%E5%B7%B4%E9%A9%AC%E8%BF%9E%E4%BB%BB%E4%BA%86/</link>
+      <link>https://gudao.github.io/post/%E5%A5%A5%E5%B7%B4%E9%A9%AC%E8%BF%9E%E4%BB%BB%E4%BA%86/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E5%A5%A5%E5%B7%B4%E9%A9%AC%E8%BF%9E%E4%BB%BB%E4%BA%86/</guid>
+      <guid>https://gudao.github.io/post/%E5%A5%A5%E5%B7%B4%E9%A9%AC%E8%BF%9E%E4%BB%BB%E4%BA%86/</guid>
       <description>奥黑和老罗的对决结束了，以奥黑的胜利而结束。本来就以为奥巴马会连任，但是由于前几轮的投票都搞的形势很紧迫，还真为奥黑捏了一把汗。 为什么奥巴马</description>
     </item>
     
     <item>
       <title>飓风桑迪导致美股休市</title>
-      <link>http://localhost:8080/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</link>
+      <link>https://gudao.github.io/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</link>
       <pubDate>Mon, 29 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</guid>
+      <guid>https://gudao.github.io/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</guid>
       <description>本来今天对于老美是个重要的日子，wp8和google的发布会都因飓风桑迪的即将出现都推迟了。我苦苦等到9:30结果上网发现美股休市。</description>
     </item>
     
     <item>
       <title>放假归来</title>
-      <link>http://localhost:8080/post/%E6%94%BE%E5%81%87%E5%BD%92%E6%9D%A5/</link>
+      <link>https://gudao.github.io/post/%E6%94%BE%E5%81%87%E5%BD%92%E6%9D%A5/</link>
       <pubDate>Sat, 06 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%94%BE%E5%81%87%E5%BD%92%E6%9D%A5/</guid>
+      <guid>https://gudao.github.io/post/%E6%94%BE%E5%81%87%E5%BD%92%E6%9D%A5/</guid>
       <description>看看别人的博客，好像多数是说在这八天里去了哪哪地方而且这些地方多数是光听名字就很牛的地方。而我只是回家，回我家，回媳妇家，既没有令人向往又不</description>
     </item>
     
     <item>
       <title>中秋国庆放假</title>
-      <link>http://localhost:8080/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</link>
+      <link>https://gudao.github.io/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</link>
       <pubDate>Sat, 29 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</guid>
+      <guid>https://gudao.github.io/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</guid>
       <description>刚收到行政通知，今天中午就可以提前放假了，小兴奋一下同时为公司的牛逼人性关怀表示一下赞同。 我靠，看看这个标题竟然不知道写些什么了。 好吧，还是</description>
     </item>
     
     <item>
       <title>软件更新杂谈</title>
-      <link>http://localhost:8080/post/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9D%82%E8%B0%88/</link>
+      <link>https://gudao.github.io/post/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9D%82%E8%B0%88/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9D%82%E8%B0%88/</guid>
+      <guid>https://gudao.github.io/post/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9D%82%E8%B0%88/</guid>
       <description>今天刚打开电脑发现公司的263通信更新了，由原来的淡蓝色改为了大红色，而且加了一个很流行的名字：“云通信”。软件业就是这样，如果你不断的更新</description>
     </item>
     
     <item>
       <title>放一些百度网盘邀请码</title>
-      <link>http://localhost:8080/post/%E6%94%BE%E4%B8%80%E4%BA%9B%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E9%82%80%E8%AF%B7%E7%A0%81/</link>
+      <link>https://gudao.github.io/post/%E6%94%BE%E4%B8%80%E4%BA%9B%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E9%82%80%E8%AF%B7%E7%A0%81/</link>
       <pubDate>Tue, 08 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%94%BE%E4%B8%80%E4%BA%9B%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E9%82%80%E8%AF%B7%E7%A0%81/</guid>
+      <guid>https://gudao.github.io/post/%E6%94%BE%E4%B8%80%E4%BA%9B%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E9%82%80%E8%AF%B7%E7%A0%81/</guid>
       <description>百度网盘（http://pan.baidu.com）上线啦，强大的国产网盘，同步速度秒杀 dropbox 啊！ 1） 15GB 初始空间，免费自动扩容2） 随时随地跨平台</description>
     </item>
     
     <item>
       <title>50个精心设计的公司与电子商务网站鉴赏</title>
-      <link>http://localhost:8080/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</link>
+      <link>https://gudao.github.io/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</link>
       <pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</guid>
+      <guid>https://gudao.github.io/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</guid>
       <description>这些商业网站不是由某个个人设计师来完成，做为庞大的商业机构，这样的合同只能与更大的更完善的设计公司来完成。每个项目都来自于专业的设计师，开发</description>
     </item>
     
     <item>
       <title>HTML &amp; CSS | 生动的网站设计图书</title>
-      <link>http://localhost:8080/post/html-css-%E7%94%9F%E5%8A%A8%E7%9A%84%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%9B%BE%E4%B9%A6/</link>
+      <link>https://gudao.github.io/post/html-css-%E7%94%9F%E5%8A%A8%E7%9A%84%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%9B%BE%E4%B9%A6/</link>
       <pubDate>Mon, 20 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/html-css-%E7%94%9F%E5%8A%A8%E7%9A%84%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%9B%BE%E4%B9%A6/</guid>
+      <guid>https://gudao.github.io/post/html-css-%E7%94%9F%E5%8A%A8%E7%9A%84%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%9B%BE%E4%B9%A6/</guid>
       <description>之前学习HTML和CSS语言的时候总是苦于理解和死记硬背那些生涩难懂的另类语言，期盼着能有一本专门针对我们这些非专业的建站爱好者或设计师的相</description>
     </item>
     
     <item>
       <title>今晚小米就要“放马”了</title>
-      <link>http://localhost:8080/post/%E4%BB%8A%E6%99%9A%E5%B0%8F%E7%B1%B3%E5%B0%B1%E8%A6%81%E6%94%BE%E9%A9%AC%E4%BA%86/</link>
+      <link>https://gudao.github.io/post/%E4%BB%8A%E6%99%9A%E5%B0%8F%E7%B1%B3%E5%B0%B1%E8%A6%81%E6%94%BE%E9%A9%AC%E4%BA%86/</link>
       <pubDate>Wed, 15 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E4%BB%8A%E6%99%9A%E5%B0%8F%E7%B1%B3%E5%B0%B1%E8%A6%81%E6%94%BE%E9%A9%AC%E4%BA%86/</guid>
+      <guid>https://gudao.github.io/post/%E4%BB%8A%E6%99%9A%E5%B0%8F%E7%B1%B3%E5%B0%B1%E8%A6%81%E6%94%BE%E9%A9%AC%E4%BA%86/</guid>
       <description>小米的电信版比普通版贵不了多少，更可恨的是还要摇出600个1699的，比我团购的1899还便宜200块，我决定今晚试试。估计小米公司的服务器</description>
     </item>
     
     <item>
       <title>新站欢迎贴</title>
-      <link>http://localhost:8080/post/%E6%96%B0%E7%AB%99%E6%AC%A2%E8%BF%8E%E8%B4%B4/</link>
+      <link>https://gudao.github.io/post/%E6%96%B0%E7%AB%99%E6%AC%A2%E8%BF%8E%E8%B4%B4/</link>
       <pubDate>Mon, 13 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%96%B0%E7%AB%99%E6%AC%A2%E8%BF%8E%E8%B4%B4/</guid>
+      <guid>https://gudao.github.io/post/%E6%96%B0%E7%AB%99%E6%AC%A2%E8%BF%8E%E8%B4%B4/</guid>
       <description>这个可是纯自己做的网站！争取不断完善，等到成型以后就开源给大家。 测试一下发代码的效果。 protected void Application_Start() { AreaRegistration.RegisterAllAreas(); RegisterGlobalFilters(GlobalFilters.Filters); RegisterRoutes(RouteTable.Routes); //log log4net.Config.XmlConfigurator.Configure(); }</description>
     </item>
     

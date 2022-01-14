@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>.net 解密 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/.net-%E8%A7%A3%E5%AF%86/</link>
+    <link>https://gudao.github.io/tags/.net-%E8%A7%A3%E5%AF%86/</link>
     <description>Recent content in .net 解密 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Fri, 09 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/.net-%E8%A7%A3%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/.net-%E8%A7%A3%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DES加密/解密类</title>
-      <link>http://localhost:8080/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/</link>
+      <link>https://gudao.github.io/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/</link>
       <pubDate>Fri, 09 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/</guid>
+      <guid>https://gudao.github.io/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/</guid>
       <description>/// &amp;lt;summary&amp;gt; /// 加密数据 /// &amp;lt;/summary&amp;gt; /// &amp;lt;param name=&amp;#34;Text&amp;#34;&amp;gt;&amp;lt;/param&amp;gt; /// &amp;lt;param name=&amp;#34;sKey&amp;#34;&amp;gt;&amp;lt;/param&amp;gt; /// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt; public static string Encrypt(string Text,string sKey) { DESCryptoServiceProvider des = new DESCryptoServiceProvider(); byte[] inputByteArray; inputByteArray=Encoding.Default.GetBytes(Text); des.Key = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, &amp;#34;md5&amp;#34;).Substring(0, 8)); des.IV = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, &amp;#34;md5&amp;#34;).Substring(0, 8)); System.IO.MemoryStream ms=new System.IO.MemoryStream(); CryptoStream cs=new CryptoStream(ms,des.CreateEncryptor(),CryptoStreamMode.Write); cs.Write(inputByteArray,0,inputByteArray.Length); cs.FlushFinalBlock(); StringBuilder ret=new StringBuilder(); foreach( byte b in ms.ToArray()) { ret.AppendFormat(&amp;#34;{0:X2}&amp;#34;,b); } return ret.ToString(); } /// &amp;lt;summary&amp;gt; /// 解密数</description>
     </item>
     

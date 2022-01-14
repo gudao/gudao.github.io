@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>设计 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E8%AE%BE%E8%AE%A1/</link>
+    <link>https://gudao.github.io/tags/%E8%AE%BE%E8%AE%A1/</link>
     <description>Recent content in 设计 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Wed, 07 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>50个精心设计的公司与电子商务网站鉴赏</title>
-      <link>http://localhost:8080/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</link>
+      <link>https://gudao.github.io/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</link>
       <pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</guid>
+      <guid>https://gudao.github.io/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/</guid>
       <description>这些商业网站不是由某个个人设计师来完成，做为庞大的商业机构，这样的合同只能与更大的更完善的设计公司来完成。每个项目都来自于专业的设计师，开发</description>
     </item>
     

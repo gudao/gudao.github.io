@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>google adsense on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/google-adsense/</link>
+    <link>https://gudao.github.io/tags/google-adsense/</link>
     <description>Recent content in google adsense on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Mon, 08 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/google-adsense/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/google-adsense/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>技术博客中广告有何出路</title>
-      <link>http://localhost:8080/post/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B9%BF%E5%91%8A%E6%9C%89%E4%BD%95%E5%87%BA%E8%B7%AF/</link>
+      <link>https://gudao.github.io/post/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B9%BF%E5%91%8A%E6%9C%89%E4%BD%95%E5%87%BA%E8%B7%AF/</link>
       <pubDate>Mon, 08 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B9%BF%E5%91%8A%E6%9C%89%E4%BD%95%E5%87%BA%E8%B7%AF/</guid>
+      <guid>https://gudao.github.io/post/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B9%BF%E5%91%8A%E6%9C%89%E4%BD%95%E5%87%BA%E8%B7%AF/</guid>
       <description>在谈正题前先简单做个小调查：当你在看一篇技术博客时，发现博文中包含广告，不知身为技术人员的你做何感想？是像厌倦QQ弹窗中的广告一样并暗骂作者</description>
     </item>
     

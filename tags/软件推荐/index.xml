@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>软件推荐 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
+    <link>https://gudao.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</link>
     <description>Recent content in 软件推荐 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Wed, 12 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>手机遥控器</title>
-      <link>http://localhost:8080/post/%E6%89%8B%E6%9C%BA%E9%81%A5%E6%8E%A7%E5%99%A8/</link>
+      <link>https://gudao.github.io/post/%E6%89%8B%E6%9C%BA%E9%81%A5%E6%8E%A7%E5%99%A8/</link>
       <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%89%8B%E6%9C%BA%E9%81%A5%E6%8E%A7%E5%99%A8/</guid>
+      <guid>https://gudao.github.io/post/%E6%89%8B%E6%9C%BA%E9%81%A5%E6%8E%A7%E5%99%A8/</guid>
       <description>晚上在家上网有没有想躺在床上的冲动，让这个神器来助你一臂之力，它可以类似远程控制似的操作，对于你看电影，看书等少动作的操作来说更不在话下，赶</description>
     </item>
     

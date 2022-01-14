@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>oracle on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/oracle/</link>
+    <link>https://gudao.github.io/tags/oracle/</link>
     <description>Recent content in oracle on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Thu, 20 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ORACLE 10g下载地址</title>
-      <link>http://localhost:8080/post/oracle-10g%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/</link>
+      <link>https://gudao.github.io/post/oracle-10g%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/</link>
       <pubDate>Thu, 20 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/oracle-10g%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/</guid>
+      <guid>https://gudao.github.io/post/oracle-10g%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/</guid>
       <description>ORACLE 10g下载地址 oracle 下载还需要用户名我自己注册了个方便大家使用下载 user:wangdetian168@gmail.com pass:qwe123QWE密码是这个 一般不会动了 大家也不用帮我找回密码了</description>
     </item>
     

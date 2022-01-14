@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on 古道的技术博客</title>
-    <link>http://localhost:8080/categories/go/</link>
+    <link>https://gudao.github.io/categories/go/</link>
     <description>Recent content in go on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用hugo搭建github博客</title>
-      <link>http://localhost:8080/post/hugo-blog/</link>
+      <link>https://gudao.github.io/post/hugo-blog/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/hugo-blog/</guid>
+      <guid>https://gudao.github.io/post/hugo-blog/</guid>
       <description>Hugo 初步认识 之前用wordpress 部署过自己的博客，需要PHP环境和数据库后来觉得麻烦关停了。认识hugo是开始使用 golang 后发现的，刚开始觉得麻</description>
     </item>
     

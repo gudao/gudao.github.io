@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css Sprite on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/css-sprite/</link>
+    <link>https://gudao.github.io/tags/css-sprite/</link>
     <description>Recent content in Css Sprite on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Wed, 14 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/css-sprite/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/css-sprite/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图片合并 CSS Sprites工具</title>
-      <link>http://localhost:8080/post/%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6-css-sprites%E5%B7%A5%E5%85%B7/</link>
+      <link>https://gudao.github.io/post/%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6-css-sprites%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Wed, 14 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6-css-sprites%E5%B7%A5%E5%85%B7/</guid>
+      <guid>https://gudao.github.io/post/%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6-css-sprites%E5%B7%A5%E5%85%B7/</guid>
       <description>你还在用PS一个个拼图吗？有没有为算背景的位置而懊恼？ 好这个工具可以为你解忧&amp;ndash;CssSpriteSetup.msi</description>
     </item>
     

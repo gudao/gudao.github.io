@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nginx on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/nginx/</link>
+    <link>https://gudao.github.io/tags/nginx/</link>
     <description>Recent content in nginx on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Sun, 05 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>简单几步让Nginx平滑升级（服务器运维必看）</title>
-      <link>http://localhost:8080/post/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E8%AE%A9nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E5%BF%85%E7%9C%8B/</link>
+      <link>https://gudao.github.io/post/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E8%AE%A9nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E5%BF%85%E7%9C%8B/</link>
       <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E8%AE%A9nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E5%BF%85%E7%9C%8B/</guid>
+      <guid>https://gudao.github.io/post/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E8%AE%A9nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E5%BF%85%E7%9C%8B/</guid>
       <description>前一篇文章中的Markdwon其实是轻量级博客系统Ghost的默认编辑器，而今天介绍的Nginx也是Ghost部署需要的。我当时为了简单，安</description>
     </item>
     
     <item>
       <title>nginx Too many open files错误解决办法</title>
-      <link>http://localhost:8080/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <link>https://gudao.github.io/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
       <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <guid>https://gudao.github.io/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
       <description>应用环境：centos 5.9、 nginx 1.4.1 测试应用并发时，nginx报Too many open files错误。 解决方法： 1、修改/etc/security/lim</description>
     </item>
     
     <item>
       <title>[nginx小技巧]413 Request Entity Too Large</title>
-      <link>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</link>
+      <link>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</link>
       <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</guid>
+      <guid>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</guid>
       <description>某些网站用了Ext.js，但是用Nginx代理后容易出现413错误（ Request Entity Too Large）。可能是因为上传或请求的内容太大解决方法： 修改 client_max_body_size 如： http</description>
     </item>
     
     <item>
       <title>[nginx小技巧]Request Header Or Cookie Too Large </title>
-      <link>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</link>
+      <link>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</link>
       <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</guid>
+      <guid>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/</guid>
       <description>方法： 在http中添加 client_header_buffer_size 32k; large_client_header_buffers 4 32k;</description>
     </item>
     
     <item>
       <title>[nginx小技巧]httpheader准确显示命中状态</title>
-      <link>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</link>
+      <link>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</link>
       <pubDate>Wed, 10 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</guid>
+      <guid>https://gudao.github.io/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/</guid>
       <description>nginx缓没缓存请求是我们关心的问题，把缓存状态显示在header里是个不错的选择。 方法如下： 使用$upstream_cache_stat</description>
     </item>
     
     <item>
       <title>windows下编译nginx</title>
-      <link>http://localhost:8080/post/windows%E4%B8%8B%E7%BC%96%E8%AF%91nginx/</link>
+      <link>https://gudao.github.io/post/windows%E4%B8%8B%E7%BC%96%E8%AF%91nginx/</link>
       <pubDate>Thu, 13 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/windows%E4%B8%8B%E7%BC%96%E8%AF%91nginx/</guid>
+      <guid>https://gudao.github.io/post/windows%E4%B8%8B%E7%BC%96%E8%AF%91nginx/</guid>
       <description>前面一篇文章说了怎么修改nginx的flv模块，但是没有说修改完怎么用。如果你是Linux用户自然重新编译nginx就OK了，但偏偏我又是一</description>
     </item>
     
     <item>
       <title>Nginx模块修改(ngx_http_flv_module)</title>
-      <link>http://localhost:8080/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</link>
+      <link>https://gudao.github.io/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</link>
       <pubDate>Fri, 31 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</guid>
+      <guid>https://gudao.github.io/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</guid>
       <description>本文实现内容：增加flv模块参数，跳过片头内容。flv模块默认只有start一个参数，添加一个配置参数iskip来指定是否跳过片头。 如果你对</description>
     </item>
     

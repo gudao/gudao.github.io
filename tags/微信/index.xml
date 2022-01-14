@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>微信 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E5%BE%AE%E4%BF%A1/</link>
+    <link>https://gudao.github.io/tags/%E5%BE%AE%E4%BF%A1/</link>
     <description>Recent content in 微信 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Sat, 18 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E5%BE%AE%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E5%BE%AE%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>微信收货地址共享接口蕴藏的玄机</title>
-      <link>http://localhost:8080/post/%E5%BE%AE%E4%BF%A1%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80%E5%85%B1%E4%BA%AB%E6%8E%A5%E5%8F%A3%E8%95%B4%E8%97%8F%E7%9A%84%E7%8E%84%E6%9C%BA/</link>
+      <link>https://gudao.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80%E5%85%B1%E4%BA%AB%E6%8E%A5%E5%8F%A3%E8%95%B4%E8%97%8F%E7%9A%84%E7%8E%84%E6%9C%BA/</link>
       <pubDate>Sat, 18 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E5%BE%AE%E4%BF%A1%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80%E5%85%B1%E4%BA%AB%E6%8E%A5%E5%8F%A3%E8%95%B4%E8%97%8F%E7%9A%84%E7%8E%84%E6%9C%BA/</guid>
+      <guid>https://gudao.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80%E5%85%B1%E4%BA%AB%E6%8E%A5%E5%8F%A3%E8%95%B4%E8%97%8F%E7%9A%84%E7%8E%84%E6%9C%BA/</guid>
       <description>最近微信的公众平台接口的变动很大，让人有点晕。今天被“收货地址共享接口”的SHA1算法彻底的玩了一把。 众里寻他。按照JS-SDK的常理这个接</description>
     </item>
     

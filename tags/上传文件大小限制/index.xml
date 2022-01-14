@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>上传文件大小限制 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
+    <link>https://gudao.github.io/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
     <description>Recent content in 上传文件大小限制 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Thu, 26 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Asp.Net MVC3 &#43;uploadify 上传文件大小限制</title>
-      <link>http://localhost:8080/post/asp.net-mvc3-&#43;uploadify-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
+      <link>https://gudao.github.io/post/asp.net-mvc3-&#43;uploadify-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link>
       <pubDate>Thu, 26 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/asp.net-mvc3-&#43;uploadify-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid>
+      <guid>https://gudao.github.io/post/asp.net-mvc3-&#43;uploadify-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid>
       <description>真他妈一下午就光在弄这个了，uploadify总是显示Http Error用 &#39;onError&#39;: function (event,queueId,fileObj,errorObj) { alert(errorObj.info); } 捕获了一下，显示404错误。 最后找到原因是IIS7把文</description>
     </item>
     

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android Market on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/android-market/</link>
+    <link>https://gudao.github.io/tags/android-market/</link>
     <description>Recent content in Android Market on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Wed, 07 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/android-market/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/android-market/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>再见 Android Market，你好 Google Play！</title>
-      <link>http://localhost:8080/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/</link>
+      <link>https://gudao.github.io/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/</link>
       <pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/</guid>
+      <guid>https://gudao.github.io/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/</guid>
       <description>Android Market 经过这么一段时间的演化，已经从原本简单的 Android apps 卖场，变成了从书到音乐到电影无所不包的大集市。为了彰显这个转变 &amp;ndash; 和把重心放在内容上 &amp;ndash; Google 正式启</description>
     </item>
     

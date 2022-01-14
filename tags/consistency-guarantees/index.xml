@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>consistency guarantees on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/consistency-guarantees/</link>
+    <link>https://gudao.github.io/tags/consistency-guarantees/</link>
     <description>Recent content in consistency guarantees on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/consistency-guarantees/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/consistency-guarantees/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redis 集群教程(二)</title>
-      <link>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/</link>
+      <link>https://gudao.github.io/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/</link>
       <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/</guid>
+      <guid>https://gudao.github.io/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/</guid>
       <description>一致性保证 Redis 集群不能严格的保证数据的一致性，这就意味着在实际应用中它会漏写一些数据。异步复制可能是导致此结果的首要原因，下面我们举例说明集群</description>
     </item>
     

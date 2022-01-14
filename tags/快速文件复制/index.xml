@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>快速文件复制 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E5%BF%AB%E9%80%9F%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6/</link>
+    <link>https://gudao.github.io/tags/%E5%BF%AB%E9%80%9F%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6/</link>
     <description>Recent content in 快速文件复制 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Tue, 23 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E5%BF%AB%E9%80%9F%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E5%BF%AB%E9%80%9F%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>windows 文件同步软件</title>
-      <link>http://localhost:8080/post/windows-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</link>
+      <link>https://gudao.github.io/post/windows-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Tue, 23 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/windows-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</guid>
+      <guid>https://gudao.github.io/post/windows-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</guid>
       <description>好久没有推荐软件了，今天要说的windows自带的文件复制工具&amp;ndash;robocopy。 官方使用说明在这里http://technet</description>
     </item>
     

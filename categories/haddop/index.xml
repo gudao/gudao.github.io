@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>haddop on 古道的技术博客</title>
-    <link>http://localhost:8080/categories/haddop/</link>
+    <link>https://gudao.github.io/categories/haddop/</link>
     <description>Recent content in haddop on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Tue, 05 Jun 2012 01:37:56 +0800</lastBuildDate><atom:link href="http://localhost:8080/categories/haddop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Jun 2012 01:37:56 +0800</lastBuildDate><atom:link href="https://gudao.github.io/categories/haddop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hadoop集群安装详细步骤|Hadoop安装配置</title>
-      <link>http://localhost:8080/post/hadoop-install/</link>
+      <link>https://gudao.github.io/post/hadoop-install/</link>
       <pubDate>Tue, 05 Jun 2012 01:37:56 +0800</pubDate>
       
-      <guid>http://localhost:8080/post/hadoop-install/</guid>
+      <guid>https://gudao.github.io/post/hadoop-install/</guid>
       <description>#Hadoop集群安装详细步骤|Hadoop安装配置 Hadoop集群安装 首先我们统一一下定义，在这里所提到的Hadoop是指Hadoop Co</description>
     </item>
     

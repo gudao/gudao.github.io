@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Too many open files on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/too-many-open-files/</link>
+    <link>https://gudao.github.io/tags/too-many-open-files/</link>
     <description>Recent content in Too many open files on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Mon, 03 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/too-many-open-files/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/too-many-open-files/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nginx Too many open files错误解决办法</title>
-      <link>http://localhost:8080/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <link>https://gudao.github.io/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
       <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <guid>https://gudao.github.io/post/nginx-too-many-open-files%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
       <description>应用环境：centos 5.9、 nginx 1.4.1 测试应用并发时，nginx报Too many open files错误。 解决方法： 1、修改/etc/security/lim</description>
     </item>
     

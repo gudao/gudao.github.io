@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>悟 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E6%82%9F/</link>
+    <link>https://gudao.github.io/tags/%E6%82%9F/</link>
     <description>Recent content in 悟 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Fri, 22 Aug 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Aug 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>悟</title>
-      <link>http://localhost:8080/post/%E6%82%9F/</link>
+      <link>https://gudao.github.io/post/%E6%82%9F/</link>
       <pubDate>Fri, 22 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E6%82%9F/</guid>
+      <guid>https://gudao.github.io/post/%E6%82%9F/</guid>
       <description>最近一直在忙公司的新产品，好多事都被搁置了，包括写博客。 工作忙了，就没时间也没精力想其他事情了，但是自己的知识体系还是要思考的。 前几天看到一</description>
     </item>
     

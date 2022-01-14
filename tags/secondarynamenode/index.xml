@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SecondaryNameNode on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/secondarynamenode/</link>
+    <link>https://gudao.github.io/tags/secondarynamenode/</link>
     <description>Recent content in SecondaryNameNode on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Thu, 05 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/secondarynamenode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/secondarynamenode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[转]hadoop管理NameNode AND SecondaryNameNode</title>
-      <link>http://localhost:8080/post/%E8%BD%AChadoop%E7%AE%A1%E7%90%86namenode-and-secondarynamenode/</link>
+      <link>https://gudao.github.io/post/%E8%BD%AChadoop%E7%AE%A1%E7%90%86namenode-and-secondarynamenode/</link>
       <pubDate>Thu, 05 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E8%BD%AChadoop%E7%AE%A1%E7%90%86namenode-and-secondarynamenode/</guid>
+      <guid>https://gudao.github.io/post/%E8%BD%AChadoop%E7%AE%A1%E7%90%86namenode-and-secondarynamenode/</guid>
       <description>【转自】：http://a280606790.iteye.com/blog/870123 光从字面上来理解，很容易让一些初学者先入为主的认为：</description>
     </item>
     

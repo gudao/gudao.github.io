@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>飓风桑迪 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA/</link>
+    <link>https://gudao.github.io/tags/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA/</link>
     <description>Recent content in 飓风桑迪 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Mon, 29 Oct 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Oct 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>飓风桑迪导致美股休市</title>
-      <link>http://localhost:8080/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</link>
+      <link>https://gudao.github.io/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</link>
       <pubDate>Mon, 29 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</guid>
+      <guid>https://gudao.github.io/post/%E9%A3%93%E9%A3%8E%E6%A1%91%E8%BF%AA%E5%AF%BC%E8%87%B4%E7%BE%8E%E8%82%A1%E4%BC%91%E5%B8%82/</guid>
       <description>本来今天对于老美是个重要的日子，wp8和google的发布会都因飓风桑迪的即将出现都推迟了。我苦苦等到9:30结果上网发现美股休市。</description>
     </item>
     

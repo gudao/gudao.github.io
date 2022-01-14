@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Http响应标头 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/http%E5%93%8D%E5%BA%94%E6%A0%87%E5%A4%B4/</link>
+    <link>https://gudao.github.io/tags/http%E5%93%8D%E5%BA%94%E6%A0%87%E5%A4%B4/</link>
     <description>Recent content in Http响应标头 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Wed, 07 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/http%E5%93%8D%E5%BA%94%E6%A0%87%E5%A4%B4/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Mar 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/http%E5%93%8D%E5%BA%94%E6%A0%87%E5%A4%B4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Asp.Net去除没用的Httpheader</title>
-      <link>http://localhost:8080/post/asp.net%E5%8E%BB%E9%99%A4%E6%B2%A1%E7%94%A8%E7%9A%84httpheader/</link>
+      <link>https://gudao.github.io/post/asp.net%E5%8E%BB%E9%99%A4%E6%B2%A1%E7%94%A8%E7%9A%84httpheader/</link>
       <pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/asp.net%E5%8E%BB%E9%99%A4%E6%B2%A1%E7%94%A8%E7%9A%84httpheader/</guid>
+      <guid>https://gudao.github.io/post/asp.net%E5%8E%BB%E9%99%A4%E6%B2%A1%E7%94%A8%E7%9A%84httpheader/</guid>
       <description>使用IIS和Asp.net的Web服务器,通常在默认情况下，HTTP响应头会包含3个Web服务器的自身识别头: 1:X-Powered-By 2:X-AspNet-Version 3:X-AspNetMvc-Version 去除方法分别为： 1：In</description>
     </item>
     

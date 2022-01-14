@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>攒机 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E6%94%92%E6%9C%BA/</link>
+    <link>https://gudao.github.io/tags/%E6%94%92%E6%9C%BA/</link>
     <description>Recent content in 攒机 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Thu, 29 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E6%94%92%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E6%94%92%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>主板前置面板插法</title>
-      <link>http://localhost:8080/post/%E4%B8%BB%E6%9D%BF%E5%89%8D%E7%BD%AE%E9%9D%A2%E6%9D%BF%E6%8F%92%E6%B3%95/</link>
+      <link>https://gudao.github.io/post/%E4%B8%BB%E6%9D%BF%E5%89%8D%E7%BD%AE%E9%9D%A2%E6%9D%BF%E6%8F%92%E6%B3%95/</link>
       <pubDate>Thu, 29 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E4%B8%BB%E6%9D%BF%E5%89%8D%E7%BD%AE%E9%9D%A2%E6%9D%BF%E6%8F%92%E6%B3%95/</guid>
+      <guid>https://gudao.github.io/post/%E4%B8%BB%E6%9D%BF%E5%89%8D%E7%BD%AE%E9%9D%A2%E6%9D%BF%E6%8F%92%E6%B3%95/</guid>
       <description>其实自己攒机还是很值的，今天同事攒了一个，各个配件都好装，就差前置面板了，下面两张截图估计你看了就会自己攒了。</description>
     </item>
     

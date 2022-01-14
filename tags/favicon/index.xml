@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>favicon on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/favicon/</link>
+    <link>https://gudao.github.io/tags/favicon/</link>
     <description>Recent content in favicon on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Sat, 29 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>中秋国庆放假</title>
-      <link>http://localhost:8080/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</link>
+      <link>https://gudao.github.io/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</link>
       <pubDate>Sat, 29 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</guid>
+      <guid>https://gudao.github.io/post/%E4%B8%AD%E7%A7%8B%E5%9B%BD%E5%BA%86%E6%94%BE%E5%81%87/</guid>
       <description>刚收到行政通知，今天中午就可以提前放假了，小兴奋一下同时为公司的牛逼人性关怀表示一下赞同。 我靠，看看这个标题竟然不知道写些什么了。 好吧，还是</description>
     </item>
     

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>图标 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E5%9B%BE%E6%A0%87/</link>
+    <link>https://gudao.github.io/tags/%E5%9B%BE%E6%A0%87/</link>
     <description>Recent content in 图标 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Thu, 14 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E5%9B%BE%E6%A0%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E5%9B%BE%E6%A0%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>iOS图标大小汇总</title>
-      <link>http://localhost:8080/post/ios%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E6%B1%87%E6%80%BB/</link>
+      <link>https://gudao.github.io/post/ios%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E6%B1%87%E6%80%BB/</link>
       <pubDate>Thu, 14 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/ios%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E6%B1%87%E6%80%BB/</guid>
+      <guid>https://gudao.github.io/post/ios%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E6%B1%87%E6%80%BB/</guid>
       <description>关于苹果的一系列设备，如iPhone，iPod Touch，iPad等图标真让人头疼，下面列出来以供参考。 **图片大小 ****(px)** **文件名** **用途</description>
     </item>
     

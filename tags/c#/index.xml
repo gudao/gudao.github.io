@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>c# on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/c#/</link>
+    <link>https://gudao.github.io/tags/c#/</link>
     <description>Recent content in c# on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Wed, 11 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>c#调用c/c&#43;&#43;类库</title>
-      <link>http://localhost:8080/post/c#%E8%B0%83%E7%94%A8cc&#43;&#43;%E7%B1%BB%E5%BA%93/</link>
+      <link>https://gudao.github.io/post/c#%E8%B0%83%E7%94%A8cc&#43;&#43;%E7%B1%BB%E5%BA%93/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/c#%E8%B0%83%E7%94%A8cc&#43;&#43;%E7%B1%BB%E5%BA%93/</guid>
+      <guid>https://gudao.github.io/post/c#%E8%B0%83%E7%94%A8cc&#43;&#43;%E7%B1%BB%E5%BA%93/</guid>
       <description>接触c#久了难免接触其他语言的类库，懂得了类型的对应关系可能对以后的学习带来点便利。 C++C#int*ref intintintunsigned intuintconst char*stringconst void*IntPtr返回值 const char *IntPtr 下面举例说明I</description>
     </item>
     
     <item>
       <title>HDFS文件管理器更新啦</title>
-      <link>http://localhost:8080/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/</link>
+      <link>https://gudao.github.io/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/</link>
       <pubDate>Mon, 26 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/</guid>
+      <guid>https://gudao.github.io/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/</guid>
       <description>这几天没事把HDFS文件管理器的功能重新整理了一下，更新的内容主要有：部署更简单，界面更方便！哈哈，有点自夸，先来张截图炫一下！较第一版《.</description>
     </item>
     
     <item>
       <title>c#访问hadoop(编码问题)【续】</title>
-      <link>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E7%BB%AD/</link>
+      <link>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E7%BB%AD/</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E7%BB%AD/</guid>
+      <guid>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E7%BB%AD/</guid>
       <description>最近有些朋友发邮件讨论C#访问HDFS文件的编码问题，可能是因为做.net的同学对java的不熟吧，HadoopThriftServer.j</description>
     </item>
     
     <item>
       <title>c#访问hadoop(编码问题)</title>
-      <link>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+      <link>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
       <description>环境说明： 客户端：win7下用C#写的winform 服务器：ubuntu10下Hadoop Thrift 问题：客户端连接Hadoop上传、下载二进制文件</description>
     </item>
     
     <item>
       <title>c#访问hadoop</title>
-      <link>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop/</link>
+      <link>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop/</link>
       <pubDate>Sun, 10 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop/</guid>
+      <guid>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop/</guid>
       <description>网上关于Hadoop的内容真是太多了，但是多数都是java方面的，C#的少之又少，因为Hadoop本身是Java实现需要搭建在Linux下，</description>
     </item>
     

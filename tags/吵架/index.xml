@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>吵架 on 古道的技术博客</title>
-    <link>http://localhost:8080/tags/%E5%90%B5%E6%9E%B6/</link>
+    <link>https://gudao.github.io/tags/%E5%90%B5%E6%9E%B6/</link>
     <description>Recent content in 吵架 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Mon, 24 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E5%90%B5%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E5%90%B5%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>你生你的气，我依然爱你</title>
-      <link>http://localhost:8080/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</link>
+      <link>https://gudao.github.io/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</link>
       <pubDate>Mon, 24 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</guid>
+      <guid>https://gudao.github.io/post/%E4%BD%A0%E7%94%9F%E4%BD%A0%E7%9A%84%E6%B0%94%E6%88%91%E4%BE%9D%E7%84%B6%E7%88%B1%E4%BD%A0/</guid>
       <description>周末和媳妇吵架了，这算是有史以来最凶的一次。她没吃饭就回屋了，我在客厅直到困的不行，回屋没说话就睡了！晚上她咳嗽的厉害也没起来帮她倒水，因为</description>
     </item>
     

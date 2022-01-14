@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>随想 on 古道的技术博客</title>
-    <link>http://localhost:8080/categories/%E9%9A%8F%E6%83%B3/</link>
+    <link>https://gudao.github.io/categories/%E9%9A%8F%E6%83%B3/</link>
     <description>Recent content in 随想 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Wed, 05 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/categories/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/categories/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测测你的心有多少平方米？</title>
-      <link>http://localhost:8080/post/test-your-heart/</link>
+      <link>https://gudao.github.io/post/test-your-heart/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:8080/post/test-your-heart/</guid>
+      <guid>https://gudao.github.io/post/test-your-heart/</guid>
       <description>心有多大，舞台就有多大。一个心眼小的人，会处处谨慎，但显得别扭；而心眼大的人，潇洒豪放，但或许被野心所困。如果把我们的心比喻成一个居所,就像</description>
     </item>
     
