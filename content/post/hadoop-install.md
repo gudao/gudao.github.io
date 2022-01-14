@@ -1,13 +1,12 @@
 ---
-title: "(转)Hadoop集群安装详细步骤|Hadoop安装配置"
+title: "Hadoop集群安装详细步骤|Hadoop安装配置"
 date: 2012-06-05T01:37:56+08:00
 draft: false
 tags: ["Hadoop", "安装", "部署"]
 categories: ["haddop"]
 author: "gudao"
-
-
 ---
+
 #Hadoop集群安装详细步骤|Hadoop安装配置
 ============================
 

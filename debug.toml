@@ -1,4 +1,3 @@
-#baseURL = "https://gudao.github.io/"
 baseURL = "http://localhost:8080/"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
