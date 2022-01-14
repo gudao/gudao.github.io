@@ -6,7 +6,6 @@
     <description>Recent content in flv加密解密 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>gudao</copyright>
     <lastBuildDate>Fri, 31 Aug 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/flv%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nginx模块修改(ngx_http_flv_module)</title>

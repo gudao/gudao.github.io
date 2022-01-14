@@ -6,7 +6,6 @@
     <description>Recent content in apt-get install on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>gudao</copyright>
     <lastBuildDate>Mon, 29 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/apt-get-install/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>无法获得锁 /var/lib/dpkg/lock - open (11: 资源临时不可用)</title>

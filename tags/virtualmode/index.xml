@@ -6,7 +6,6 @@
     <description>Recent content in VirtualMode on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>gudao</copyright>
     <lastBuildDate>Wed, 19 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/virtualmode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WinForm ListView不分页加载大量数据</title>
