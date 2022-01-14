@@ -2,18 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redis on 古道的技术博客</title>
-    <link>https://gudao.github.io/categories/redis/</link>
+    <link>http://localhost:8080/categories/redis/</link>
     <description>Recent content in Redis on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Thu, 26 Dec 2013 01:37:56 +0800</lastBuildDate><atom:link href="https://gudao.github.io/categories/redis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Feb 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/categories/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis 集群教程(三)</title>
+      <link>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%B8%89/</link>
+      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%B8%89/</guid>
+      <description>创建并使用集群 前面说了那么多的理论，其实不是我们关心的，下面正式开始说明怎么配置并使用Redis集群。要想创建一个集群首先要有多个运行在集群</description>
+    </item>
+    
+    <item>
+      <title>Redis 集群教程(四)</title>
+      <link>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E5%9B%9B/</link>
+      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E5%9B%9B/</guid>
+      <description>创建集群 现在我们已经有了六个正在运行中的 Redis 实例，接下来我们需要使用这些实例来创建集群，并为每个节点编写配置文件。 通过使用 Redis 集群命令行工具 redis-trib ，</description>
+    </item>
+    
+    <item>
+      <title>Redis 集群教程(二)</title>
+      <link>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/</link>
+      <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/</guid>
+      <description>一致性保证 Redis 集群不能严格的保证数据的一致性，这就意味着在实际应用中它会漏写一些数据。异步复制可能是导致此结果的首要原因，下面我们举例说明集群</description>
+    </item>
+    
     <item>
       <title>Redis 集群教程(一)</title>
-      <link>https://gudao.github.io/post/redis-clustor/</link>
+      <link>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%B8%80/</link>
+      <pubDate>Thu, 26 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%B8%80/</guid>
+      <description>Redis 集群教程 本文依据官方教程（http://redis.io/topics/cluster-tutorial）翻译并夹杂个人理解撰写而成，如有</description>
+    </item>
+    
+    <item>
+      <title>Redis 集群教程(一)</title>
+      <link>http://localhost:8080/post/redis-clustor/</link>
       <pubDate>Thu, 26 Dec 2013 01:37:56 +0800</pubDate>
       
-      <guid>https://gudao.github.io/post/redis-clustor/</guid>
+      <guid>http://localhost:8080/post/redis-clustor/</guid>
       <description>本文依据官方教程（http://redis.io/topics/cluster-tutorial）翻译并夹杂个人理解撰写而成，如有翻译或理解</description>
     </item>
     

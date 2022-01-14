@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flv模块 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/flv%E6%A8%A1%E5%9D%97/</link>
+    <description>Recent content in flv模块 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Thu, 13 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/flv%E6%A8%A1%E5%9D%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows下编译nginx</title>
+      <link>http://localhost:8080/post/windows%E4%B8%8B%E7%BC%96%E8%AF%91nginx/</link>
+      <pubDate>Thu, 13 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/windows%E4%B8%8B%E7%BC%96%E8%AF%91nginx/</guid>
+      <description>前面一篇文章说了怎么修改nginx的flv模块，但是没有说修改完怎么用。如果你是Linux用户自然重新编译nginx就OK了，但偏偏我又是一</description>
+    </item>
+    
+    <item>
+      <title>Nginx模块修改(ngx_http_flv_module)</title>
+      <link>http://localhost:8080/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</link>
+      <pubDate>Fri, 31 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</guid>
+      <description>本文实现内容：增加flv模块参数，跳过片头内容。flv模块默认只有start一个参数，添加一个配置参数iskip来指定是否跳过片头。 如果你对</description>
+    </item>
+    
+  </channel>
+</rss>

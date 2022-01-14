@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IntPtr on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/intptr/</link>
+    <description>Recent content in IntPtr on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Wed, 11 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/intptr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>c#调用c/c&#43;&#43;类库</title>
+      <link>http://localhost:8080/post/c#%E8%B0%83%E7%94%A8cc&#43;&#43;%E7%B1%BB%E5%BA%93/</link>
+      <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/c#%E8%B0%83%E7%94%A8cc&#43;&#43;%E7%B1%BB%E5%BA%93/</guid>
+      <description>接触c#久了难免接触其他语言的类库，懂得了类型的对应关系可能对以后的学习带来点便利。 C++C#int*ref intintintunsigned intuintconst char*stringconst void*IntPtr返回值 const char *IntPtr 下面举例说明I</description>
+    </item>
+    
+  </channel>
+</rss>

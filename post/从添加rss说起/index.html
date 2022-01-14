@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>从添加RSS说起 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="博客在添加新Logo的同时，新添加了RSS订阅功能，不知道细心的你有没有发现。功能刚完成就用google reader订阅了自己（哈哈，有点小" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E4%BB%8E%E6%B7%BB%E5%8A%A0rss%E8%AF%B4%E8%B5%B7/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="从添加RSS说起" />
+<meta property="og:description" content="博客在添加新Logo的同时，新添加了RSS订阅功能，不知道细心的你有没有发现。功能刚完成就用google reader订阅了自己（哈哈，有点小" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E4%BB%8E%E6%B7%BB%E5%8A%A0rss%E8%AF%B4%E8%B5%B7/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-10-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2012-10-08T00:00:00+00:00" />
+
+<meta itemprop="name" content="从添加RSS说起">
+<meta itemprop="description" content="博客在添加新Logo的同时，新添加了RSS订阅功能，不知道细心的你有没有发现。功能刚完成就用google reader订阅了自己（哈哈，有点小"><meta itemprop="datePublished" content="2012-10-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2012-10-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="483">
+<meta itemprop="keywords" content="rel,RSS," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从添加RSS说起"/>
+<meta name="twitter:description" content="博客在添加新Logo的同时，新添加了RSS订阅功能，不知道细心的你有没有发现。功能刚完成就用google reader订阅了自己（哈哈，有点小"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">从添加RSS说起</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-10-08 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"> 服务器 </a>
+            </div>
+          <span class="more-meta"> 约 483 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#rel-属性">rel 属性</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>博客在添加新Logo的同时，新添加了RSS订阅功能，不知道细心的你有没有发现。功能刚完成就用google reader订阅了自己（哈哈，有点小自恋），在订阅地址栏直接输入域名www.front2end.cn，结果显示没有找到可订阅内容！当时就纳闷儿了，为什么别人的网站可以，我的就不可以？</p>
+<p>昨天无意中发现一个网站的源代码中有段类似的内容：</p>
+<pre>&lt;link rel=&#34;<a class="attribute-value">alternate</a>&#34; type=&#34;<a class="attribute-value">application/atom+xml</a>&#34; title=&#34;<a class="attribute-value">Recent Entries</a>&#34; href=&#34;...<a href="view-source:http://www.mnot.net/blog/index.atom" class="attribute-value"></a>&#34;&gt; </pre>
+<p>看到此代码时才恍然大悟，原来是订阅器不知道我的RSS地址，于是在我的博客首页里添加如下内容：</p>
+<pre>&lt;link id=&#34;<a class="attribute-value">RSSLink</a>&#34; href=&#34;<a href="view-source:http://www.front2end.cn/Feed" class="attribute-value">/Feed</a>&#34; rel=&#34;<a class="attribute-value">alternate</a>&#34; type=&#34;<a class="attribute-value">application/rss+xml</a>&#34; title=&#34;<a class="attribute-value">RSS</a>&#34;&gt; </pre>
+<p>哈哈，这下就可以了，订阅时不用再输入订阅的具体地址了。</p>
+<p>扩展内容：</p>
+<h2 id="rel-属性">rel 属性</h2>
+<p>rel 属性描述了当前页面与href所指定文档的关系.</p>
+<ul>
+<li>rel属性通常出现在a,link标 签中</li>
+<li>属性值
+<ul>
+<li>alternate &ndash; 定义交替出现的链接</li>
+<li><code>appendix</code> &ndash; 定义文档的附加信息</li>
+<li><code>bookmark</code> &ndash; 书签</li>
+<li><code>chapter</code> &ndash; 当前文档的章节</li>
+<li><code>contents</code></li>
+<li><code>copyright</code> &ndash; 当前文档的版权</li>
+<li><code>glossary</code> &ndash; 词汇</li>
+<li><code>help</code> &ndash; 链接帮助信息</li>
+<li><code>index</code> &ndash; 当前文档的索引</li>
+<li>next &ndash; 记录文档的下一页.(浏览器可以提前加载此页)</li>
+<li><code>nofollow</code> &ndash; 不被用于计算PageRank</li>
+<li>prev &ndash; 记录文档的上一页.(定义浏览器的后退键)</li>
+<li><code>section</code> &ndash; 作为文档的一部分</li>
+<li>start &ndash; 通知搜索引擎,文档的开始</li>
+<li>stylesheet &ndash; 定义一个外部加载的样式表</li>
+<li><code>subsection</code> &ndash; 作为文档的一小部分</li>
+</ul>
+</li>
+</ul>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2012-10-08
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/rel/">rel</a>
+          <a href="/tags/rss/">RSS</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[nginx小技巧]httpheader准确显示命中状态</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E6%94%BE%E5%81%87%E5%BD%92%E6%9D%A5/">
+            <span class="next-text nav-default">放假归来</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

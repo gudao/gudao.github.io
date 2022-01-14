@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>utf-8 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/utf-8/</link>
+    <description>Recent content in utf-8 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Wed, 13 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/utf-8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>c#访问hadoop(编码问题)</title>
+      <link>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
+      <description>环境说明： 客户端：win7下用C#写的winform 服务器：ubuntu10下Hadoop Thrift 问题：客户端连接Hadoop上传、下载二进制文件</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[转]hadoop管理NameNode AND SecondaryNameNode - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="【转自】：http://a280606790.iteye.com/blog/870123 光从字面上来理解，很容易让一些初学者先入为主的认为：" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E8%BD%AChadoop%E7%AE%A1%E7%90%86namenode-and-secondarynamenode/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[转]hadoop管理NameNode AND SecondaryNameNode" />
+<meta property="og:description" content="【转自】：http://a280606790.iteye.com/blog/870123 光从字面上来理解，很容易让一些初学者先入为主的认为：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E8%BD%AChadoop%E7%AE%A1%E7%90%86namenode-and-secondarynamenode/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-09-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-09-05T00:00:00+00:00" />
+
+<meta itemprop="name" content="[转]hadoop管理NameNode AND SecondaryNameNode">
+<meta itemprop="description" content="【转自】：http://a280606790.iteye.com/blog/870123 光从字面上来理解，很容易让一些初学者先入为主的认为："><meta itemprop="datePublished" content="2013-09-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2013-09-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2758">
+<meta itemprop="keywords" content="hadoop,SecondaryNameNode,namenode," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[转]hadoop管理NameNode AND SecondaryNameNode"/>
+<meta name="twitter:description" content="【转自】：http://a280606790.iteye.com/blog/870123 光从字面上来理解，很容易让一些初学者先入为主的认为："/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[转]hadoop管理NameNode AND SecondaryNameNode</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-09-05 </span>
+        <div class="post-category">
+            <a href="/categories/hadoop/"> Hadoop </a>
+            </div>
+          <span class="more-meta"> 约 2758 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#至于为什么要将snn进程运行在一台非namenode的-机器上这主要出于两点考虑">至于为什么要将SNN进程运行在一台非NameNode的 机器上，这主要出于两点考虑：</a></li>
+            <li><a href="#配置将secondarynamenode运行在另外一台机器上">配置将SecondaryNameNode运行在另外一台机器上</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>【转自】：http://a280606790.iteye.com/blog/870123</p>
+<p>光从字面上来理解，很容易让一些初学者先入为主的认为：SecondaryNameNode（snn）就是NameNode（nn）的热备进程。其实不是。snn是HDFS架构中的一个组成部分，但是经常由于名字而被人误解它真正的用途，其实它真正的用途，是用来保存namenode中对HDFS metadata的信息的备份，并减少namenode重启的时间。对于hadoop进程中 ，要配置好并正确的使用 snn，还是需要做一些工作的。hadoop的默认配置中让 snn进程默认运行在了 namenode 的那台机器上，但是这样的话，如果这台机器出错，宕机，对恢复HDFS文件系统是很大的灾难，更好的方式是：将snn的进程配置在另外一台机器 上运行。</p>
+<p>在hadoop中，namenode负责对HDFS的metadata的持久化存储，并且处理来自客户端的对HDFS的各种操作的交互反馈。为了保证交互速度，HDFS文件系统的metadata是被load到namenode机器的内存中的，并且会将内存中的这些数据保存到磁盘进行持久化存储。为了保证这个持久化过程不会成为HDFS操作的瓶颈，hadoop采取的方式是：没有对任何一次的当前文件系统的snapshot进行持久化，对HDFS最近一段时间的操作list会被保存到namenode中的一个叫Editlog的文件中去。当重启namenode时，除了 load fsImage意外，还会对这个EditLog文件中 记录的HDFS操作进行replay，以恢复HDFS重启之前的最终状态。</p>
+<p>而SecondaryNameNode，会周期性的将EditLog中记录的对HDFS的操作合并到一个checkpoint中，然后清空EditLog。所以namenode的重启就会Load最新的一个checkpoint，并replay EditLog中 记录的hdfs操作，由于EditLog中记录的是从 上一次checkpoint以后到现在的操作列表，所以就会比较小。如果没有snn的这个周期性的合并过程，那么当每次重启namenode的时候，就会花费很长的时间。而这样周期性的合并就能减少重启的时间。同时也能保证HDFS系统的完整性。</p>
+<p>这就是SecondaryNameNode所做的事情。所以snn并不能分担namenode上对HDFS交互性操作的压力。尽管如此，当namenode机器宕机或者namenode进程出问题时，namenode的daemon进程可以通过人工的方式从snn上拷贝一份metadata来恢复HDFS文件系统。</p>
+<h3 id="至于为什么要将snn进程运行在一台非namenode的-机器上这主要出于两点考虑">至于为什么要将SNN进程运行在一台非NameNode的 机器上，这主要出于两点考虑：</h3>
+<ul>
+<li>可扩展性： 创建一个新的HDFS的snapshot需要将namenode中load到内存的metadata信息全部拷贝一遍，这样的操作需要的内存就需要 和namenode占用的内存一样，由于分配给namenode进程的内存其实是对HDFS文件系统的限制，如果分布式文件系统非常的大，那么namenode那台机器的内存就可能会被namenode进程全部占据。</li>
+<li>容错性： 当snn创建一个checkpoint的时候，它会将checkpoint拷贝成metadata的几个拷贝。将这个操作运行到另外一台机器，还可以提供分布式文件系统的容错性。</li>
+</ul>
+<h3 id="配置将secondarynamenode运行在另外一台机器上">配置将SecondaryNameNode运行在另外一台机器上</h3>
+<p>HDFS的一次运行实例是通过在namenode机器上的<tt>$HADOOP_HOME/bin/start-dfs.sh（</tt> 或者<tt>start-all.sh</tt> <tt>） 脚本来启动的。这个脚本会在运行该脚本的机器上启动 namenode进程，而slaves机器上都会启动DataNode进程，slave机器的列表保存在</tt> <tt>conf/slaves文件中，一行一台机器。并且会在另外一台机器上启动一个snn进程，这台机器由</tt> <tt>conf/masters文件指定。所以，这里需要严格注意， </tt> <tt>conf/masters 文件中指定的机器，并不是说jobtracker或者namenode进程要 运行在这台机器上，因为这些进程是运行在 launch bin/start-dfs.sh或者 bin/start-mapred.sh(start-all.sh)的机器上的。所以，masters这个文件名是非常的令人混淆的，应该叫做secondaries会比较合适。然后，通过以下步骤：</tt></p>
+<ul>
+<li>将所有想要运行secondarynamenode进程的机器写到masters文件中，一行一台。</li>
+<li>修改在masters文件中配置了的机器上的conf/hadoop-site.xml文件，加上如下选项：</li>
+</ul>
+<p>Java代码  <a title="收藏这段代码"><img src="http://a280606790.iteye.com/images/icon_star.png" alt="收藏代码"></a></p>
+<ul>
+<li>&lt;span style=&ldquo;font-size: small;&quot;&gt;<property>  </li>
+<li><name>dfs.http.address</name>  </li>
+<li><value>namenode.hadoop-host.com:50070</value>  </li>
+<li></property>  </li>
+<li>  &lt;/span style=&ldquo;font-size: small;&quot;&gt;</li>
+</ul>
+<p> </p>
+<p>      core-site.xml：这里有2个参数可配置，但一般来说我们不做修改。fs.checkpoint.period表示多长时间记录一次hdfs的镜像。默认是1小时。fs.checkpoint.size表示一次记录多大的size，默认64M。</p>
+<p>    </p>
+<p>Java代码  <a title="收藏这段代码"><img src="http://a280606790.iteye.com/images/icon_star.png" alt="收藏代码"></a></p>
+<ul>
+<li>&lt;span style=&ldquo;font-size: small;&quot;&gt;<property>  </li>
+<li>  <name>fs.checkpoint.period</name>  </li>
+<li>  <value>3600</value>  </li>
+<li>  <description>The number of seconds between two periodic checkpoints.  </li>
+<li>  </description>  </li>
+<li></property>  </li>
+<li>  </li>
+<li><property>  </li>
+<li>  <name>fs.checkpoint.size</name>  </li>
+<li>  <value>67108864</value>  </li>
+<li>  <description>The size of the current edit log (in bytes) that triggers  </li>
+<li>       a periodic checkpoint even if the fs.checkpoint.period hasn't expired.  </li>
+<li>  </description>  </li>
+<li></property>  </li>
+<li>  &lt;/span style=&ldquo;font-size: small;&quot;&gt;</li>
+</ul>
+<p> </p>
+<p>3、配置检查。配置完成之后，我们需要检查一下是否成功。我们可以通过查看运行secondarynamenode的机器上文件目录来确定是否成功配置。首先输入jps查看是否存在secondarynamenode进程。如果存在，在查看对应的目录下是否有备份记录。如下图：</p>
+<p><img src="http://hi.csdn.net/attachment/201011/4/0_1288857738S888.gif" alt=""></p>
+<p>该目录一般存在于hadoop.tmp.dir/dfs/namesecondary/下面。</p>
+<p>四、恢复</p>
+<p>1、配置完成了，如何恢复。首先我们kill掉namenode进程，然后将hadoop.tmp.dir目录下的数据删除掉。制造master挂掉情况。</p>
+<p>2、在配置参数dfs.name.dir指定的位置建立一个空文件夹； 把检查点目录的位置赋值给配置参数fs.checkpoint.dir； 启动NameNode，并加上-importCheckpoint。（这句话抄袭的是hadoop-0.20.2/hadoop-0.20.2/docs/cn/hdfs_user_guide.html#Secondary+NameNode，看看文档，有说明）</p>
+<p>3、启动namenode的时候采用hadoop namenode –importCheckpoint</p>
+<p>五、总结</p>
+<p>1、secondarynamenode可以配置多个，master文件里面多写几个就可以。</p>
+<p>2、千万记得如果要恢复数据是需要手动拷贝到namenode机器上的。不是自动的（参看上面写的恢复操作）。</p>
+<p>3、镜像备份的周期时间是可以修改的，如果不想一个小时备份一次，可以改的时间短点。core-site.xml中的fs.checkpoint.period值</p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2013-09-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hadoop/">hadoop</a>
+          <a href="/tags/secondarynamenode/">SecondaryNameNode</a>
+          <a href="/tags/namenode/">namenode</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E4%B8%8D%E6%95%B2%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%A5%E5%AD%90/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">不敲代码的日子</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/">
+            <span class="next-text nav-default">HDFS文件管理器更新啦</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

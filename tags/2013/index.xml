@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2013 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/2013/</link>
+    <description>Recent content in 2013 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Tue, 31 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/2013/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>13年最后一天</title>
+      <link>http://localhost:8080/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</guid>
+      <description>回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，</description>
+    </item>
+    
+  </channel>
+</rss>

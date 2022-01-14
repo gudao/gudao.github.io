@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>大雪 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E5%A4%A7%E9%9B%AA/</link>
+    <description>Recent content in 大雪 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Wed, 20 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E5%A4%A7%E9%9B%AA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>春后大雪</title>
+      <link>http://localhost:8080/post/%E6%98%A5%E5%90%8E%E5%A4%A7%E9%9B%AA/</link>
+      <pubDate>Wed, 20 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E6%98%A5%E5%90%8E%E5%A4%A7%E9%9B%AA/</guid>
+      <description>昨晚一场大雪，赶走了多天的雾霾，京都的空气稍显新鲜。来京4个年头，印象中每年的春节过后一个月内都要下场大雪，估计是预示着冬天的彻底离去。</description>
+    </item>
+    
+  </channel>
+</rss>

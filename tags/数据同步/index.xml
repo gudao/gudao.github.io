@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据同步 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/</link>
+    <description>Recent content in 数据同步 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Fri, 07 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转]CentOS Rsync服务端与Windows cwRsync客户端实现数据同步</title>
+      <link>http://localhost:8080/post/%E8%BD%ACcentos-rsync%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8Ewindows-cwrsync%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/</link>
+      <pubDate>Fri, 07 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%BD%ACcentos-rsync%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8Ewindows-cwrsync%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/</guid>
+      <description>原文地址：http://www.osyunwei.com/archives/3769.html 按照下文配置需要注意两点 1.客户端认证失败 rs</description>
+    </item>
+    
+  </channel>
+</rss>

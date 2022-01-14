@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>413 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/413/</link>
+    <description>Recent content in 413 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 15 Oct 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/413/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[nginx小技巧]413 Request Entity Too Large</title>
+      <link>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</link>
+      <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7413-request-entity-too-large/</guid>
+      <description>某些网站用了Ext.js，但是用Nginx代理后容易出现413错误（ Request Entity Too Large）。可能是因为上传或请求的内容太大解决方法： 修改 client_max_body_size 如： http</description>
+    </item>
+    
+  </channel>
+</rss>

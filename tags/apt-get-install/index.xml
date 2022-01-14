@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apt-get install on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/apt-get-install/</link>
+    <description>Recent content in apt-get install on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 29 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/apt-get-install/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>无法获得锁 /var/lib/dpkg/lock - open (11: 资源临时不可用)</title>
+      <link>http://localhost:8080/post/%E6%97%A0%E6%B3%95%E8%8E%B7%E5%BE%97%E9%94%81-varlibdpkglock-open-11-%E8%B5%84%E6%BA%90%E4%B8%B4%E6%97%B6%E4%B8%8D%E5%8F%AF%E7%94%A8/</link>
+      <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E6%97%A0%E6%B3%95%E8%8E%B7%E5%BE%97%E9%94%81-varlibdpkglock-open-11-%E8%B5%84%E6%BA%90%E4%B8%B4%E6%97%B6%E4%B8%8D%E5%8F%AF%E7%94%A8/</guid>
+      <description>在ubuntu中，当在使用apt-get 安装软件过程中出现死机或强制退出时，下次再使用apt-get install命令时，会出现以下错误： “</description>
+    </item>
+    
+  </channel>
+</rss>

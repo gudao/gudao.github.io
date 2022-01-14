@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on 古道的技术博客</title>
+    <link>http://localhost:8080/categories/ubuntu/</link>
+    <description>Recent content in Ubuntu on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 17 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mount: mounting /dev on /root/dev failed</title>
+      <link>http://localhost:8080/post/mount-mounting-dev-on-rootdev-failed/</link>
+      <pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/mount-mounting-dev-on-rootdev-failed/</guid>
+      <description>整天就跟这些破PC打交道了，烦死人。 今天hadoop集群很不给面子，有一台datanode怎么也起不来。报下面错误： mount: mounting /dev on /root/dev failed: no such file or directory mount:</description>
+    </item>
+    
+    <item>
+      <title>[转]linux 技巧：使用 screen 管理你的远程会话</title>
+      <link>http://localhost:8080/post/%E8%BD%AClinux-%E6%8A%80%E5%B7%A7%E4%BD%BF%E7%94%A8-screen-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BC%9A%E8%AF%9D/</link>
+      <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%BD%AClinux-%E6%8A%80%E5%B7%A7%E4%BD%BF%E7%94%A8-screen-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BC%9A%E8%AF%9D/</guid>
+      <description>http://www.ibm.com/developerworks/cn/linux/l-cn-screen/ 你是不是经常需要 SSH 或者 telent 远程登录到 Linux 服务器？你是不是经常为一些长时间运行的任务而头疼，比如系统备份、ftp 传输等等。通常情况下我们都是为每</description>
+    </item>
+    
+    <item>
+      <title>[转]Linux——查看系统硬件信息</title>
+      <link>http://localhost:8080/post/%E8%BD%AClinux%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%BD%AClinux%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF/</guid>
+      <description>前言：下面实验的信息是我在几台配置不同服务器的测试结果，操作系统分别为Red Hat Enterprise Linux Server release 6.0 (Santiago)、Ubuntu 7.10。所以你看</description>
+    </item>
+    
+    <item>
+      <title>[转]ubuntu10.04不能上网解决</title>
+      <link>http://localhost:8080/post/%E8%BD%ACubuntu10.04%E4%B8%8D%E8%83%BD%E4%B8%8A%E7%BD%91%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Wed, 27 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%BD%ACubuntu10.04%E4%B8%8D%E8%83%BD%E4%B8%8A%E7%BD%91%E8%A7%A3%E5%86%B3/</guid>
+      <description>一、问题 Atheros公司出品的ar8151网卡，硬件ID为1969: 1083在ubuntu下无法正常驱动？ 二、方案 1. 本网卡驱动已经集成在u</description>
+    </item>
+    
+  </channel>
+</rss>

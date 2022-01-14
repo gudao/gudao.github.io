@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>视频转码 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E8%A7%86%E9%A2%91%E8%BD%AC%E7%A0%81/</link>
+    <description>Recent content in 视频转码 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Thu, 23 Aug 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E8%A7%86%E9%A2%91%E8%BD%AC%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>x264参数中文详解（X264 Settings）</title>
+      <link>http://localhost:8080/post/x264%E5%8F%82%E6%95%B0%E4%B8%AD%E6%96%87%E8%AF%A6%E8%A7%A3x264-settings/</link>
+      <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/x264%E5%8F%82%E6%95%B0%E4%B8%AD%E6%96%87%E8%AF%A6%E8%A7%A3x264-settings/</guid>
+      <description>解释x264命令可选项的用途和使用方法。同执行 x264 &amp;ndash;fullhelp 显示顺序。本文主要翻译：mewiki.project357.com/wiki/X264_S</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文件管理器 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/</link>
+    <description>Recent content in 文件管理器 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 26 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HDFS文件管理器更新啦</title>
+      <link>http://localhost:8080/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/</link>
+      <pubDate>Mon, 26 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/</guid>
+      <description>这几天没事把HDFS文件管理器的功能重新整理了一下，更新的内容主要有：部署更简单，界面更方便！哈哈，有点自夸，先来张截图炫一下！较第一版《.</description>
+    </item>
+    
+  </channel>
+</rss>

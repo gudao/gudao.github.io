@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>怎样使用Windows认证连接SQL Server - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="连接方式有两种，如果你是在web.config文件中&amp;lt;connectionStrings&amp;gt;节点中就必须包括Trusted_Con" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8windows%E8%AE%A4%E8%AF%81%E8%BF%9E%E6%8E%A5sql-server/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="怎样使用Windows认证连接SQL Server" />
+<meta property="og:description" content="连接方式有两种，如果你是在web.config文件中&lt;connectionStrings&gt;节点中就必须包括Trusted_Con" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8windows%E8%AE%A4%E8%AF%81%E8%BF%9E%E6%8E%A5sql-server/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-03-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2012-03-12T00:00:00+00:00" />
+
+<meta itemprop="name" content="怎样使用Windows认证连接SQL Server">
+<meta itemprop="description" content="连接方式有两种，如果你是在web.config文件中&lt;connectionStrings&gt;节点中就必须包括Trusted_Con"><meta itemprop="datePublished" content="2012-03-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2012-03-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="214">
+<meta itemprop="keywords" content="sql server," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="怎样使用Windows认证连接SQL Server"/>
+<meta name="twitter:description" content="连接方式有两种，如果你是在web.config文件中&lt;connectionStrings&gt;节点中就必须包括Trusted_Con"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">怎样使用Windows认证连接SQL Server</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-03-12 </span>
+        <div class="post-category">
+            <a href="/categories/.net/"> .Net </a>
+            </div>
+          <span class="more-meta"> 约 214 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="/Content/upload/Img20120312/csmcd0m0.bhb.jpg" alt="">
+连接方式有两种，如果你是在web.config文件中&lt;<strong>connectionStrings</strong>&gt;节点中就必须包括<strong>Trusted_Connection=Yes</strong>或者是<strong>Integrated Security=SSPI</strong>，下面是两个示例：</p>
+<p>&lt;add name=&quot;MyDbConn1&quot; connectionString=&quot;Server=MyServer;Database=MyDb;Trusted_Connection=Yes;&quot;/&gt;</p>
+<p>&lt;add name=&quot;MyDbConn2&quot; connectionString=&quot;Initial Catalog=MyDb;Data Source=MyServer;Integrated Security=SSPI;&quot;/&gt;</p>
+<p>顺便也把帐号登录记一下吧，直接看示例：</p>
+<p>&lt;add name=&quot;MyDbConn3&quot; connectionString=&quot;server=MyServer;database=MyDb;uid=aa;pwd=bb“ /&gt;</p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2012-03-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/sql-server/">sql server</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%AB%99%E6%80%8E%E4%B9%88%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E6%94%AF%E4%BB%98/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">中小型网站怎么快速实现在线支付</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/">
+            <span class="next-text nav-default">DES加密/解密类</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu不能上网问题 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/ubuntu%E4%B8%8D%E8%83%BD%E4%B8%8A%E7%BD%91%E9%97%AE%E9%A2%98/</link>
+    <description>Recent content in ubuntu不能上网问题 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Wed, 27 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/ubuntu%E4%B8%8D%E8%83%BD%E4%B8%8A%E7%BD%91%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转]ubuntu10.04不能上网解决</title>
+      <link>http://localhost:8080/post/%E8%BD%ACubuntu10.04%E4%B8%8D%E8%83%BD%E4%B8%8A%E7%BD%91%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Wed, 27 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%BD%ACubuntu10.04%E4%B8%8D%E8%83%BD%E4%B8%8A%E7%BD%91%E8%A7%A3%E5%86%B3/</guid>
+      <description>一、问题 Atheros公司出品的ar8151网卡，硬件ID为1969: 1083在ubuntu下无法正常驱动？ 二、方案 1. 本网卡驱动已经集成在u</description>
+    </item>
+    
+  </channel>
+</rss>

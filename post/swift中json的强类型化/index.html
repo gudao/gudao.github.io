@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>swift中JSON的强类型化 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="如果你还不了解SwiftyJSON，请参看https://github.com/SwiftyJSON/SwiftyJSON。 SwiftyJS" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/swift%E4%B8%ADjson%E7%9A%84%E5%BC%BA%E7%B1%BB%E5%9E%8B%E5%8C%96/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="swift中JSON的强类型化" />
+<meta property="og:description" content="如果你还不了解SwiftyJSON，请参看https://github.com/SwiftyJSON/SwiftyJSON。 SwiftyJS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/swift%E4%B8%ADjson%E7%9A%84%E5%BC%BA%E7%B1%BB%E5%9E%8B%E5%8C%96/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2016-01-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-01-20T00:00:00+00:00" />
+
+<meta itemprop="name" content="swift中JSON的强类型化">
+<meta itemprop="description" content="如果你还不了解SwiftyJSON，请参看https://github.com/SwiftyJSON/SwiftyJSON。 SwiftyJS"><meta itemprop="datePublished" content="2016-01-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-01-20T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1150">
+<meta itemprop="keywords" content="swfit,json,强类型," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="swift中JSON的强类型化"/>
+<meta name="twitter:description" content="如果你还不了解SwiftyJSON，请参看https://github.com/SwiftyJSON/SwiftyJSON。 SwiftyJS"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">swift中JSON的强类型化</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-01-20 </span>
+        <div class="post-category">
+            <a href="/categories/swift/"> swift </a>
+            </div>
+          <span class="more-meta"> 约 1150 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>如果你还不了解SwiftyJSON，请参看https://github.com/SwiftyJSON/SwiftyJSON。</p>
+<p>SwiftyJSON让你可以用subscript的形式访问JSON，然而这样依然不是我最终想要的效果，比如这种情况：</p>
+<pre>request(.GET, &#34;https://httpbin.org/get&#34;)
+            .responseJSON(completionHandler: { (ress) -&gt; Void in
+                switch ress.result {
+                case .Success(let myjson) :
+                    
+                    let myresult = JSON(myjson)
+                  
+                case .Failure :
+                    print(&#34;error&#34;)
+                }
+               
+            })</pre>
+<p>（我假定你也在用<a href="https://github.com/Alamofire/Alamofire">https://github.com/Alamofire/Alamofire</a>，官方的示例中的json结果如下：</p>
+<pre>{
+  &#34;args&#34;: {}, 
+  &#34;headers&#34;: {
+    &#34;Accept&#34;: &#34;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#34;, 
+    &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;, 
+    &#34;Accept-Language&#34;: &#34;zh-cn&#34;, 
+    &#34;Host&#34;: &#34;httpbin.org&#34;, 
+    &#34;User-Agent&#34;: &#34;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.5 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.5&#34;
+  }, 
+  &#34;origin&#34;: &#34;123.125.226.136&#34;, 
+  &#34;url&#34;: &#34;http://httpbin.org/get&#34;
+}</pre>
+<p>）</p>
+<p>虽然你取到了myresult但是它依然是一个JSON类型的对象，要想获得具体的“headers”里的参数“Accept-Language”需要这样写：</p>
+<p>let theLang = myresult[&quot;headers&quot;][&quot;Accept-Language&quot;].stringValue</p>
+<p>虽然这样已经很简单，但是如果headers里的属性过多，每一个属性的名字你还能记得住嘛？所以强类型的结果就很重要了，我们最理想的状态应该是这样写：</p>
+<p>let theLang =myresult.headers.AcceptLanguage</p>
+<p>怎样才能实现这样的效果呢？</p>
+<p>    把Json结果对应到实体上，然后把SwiftyJSON的返回值跟实体做对应，代码如下：</p>
+<pre>struct HttpHeader {
+    var args:Args,headers:Headers,origin:String,url:String
+    init(myJson:JSON){
+        args = Args()
+        headers = Headers(myJson: myJson[&#34;headers&#34;])
+        origin = myJson[&#34;origin&#34;].stringValue
+        url = myJson[&#34;url&#34;].stringValue
+    }
+}
+
+struct Args {
+}
+
+struct Headers {
+    var Accept:String,AcceptEndcoding:String,AcceptLanguage:String,Host:String,UserAgent:String
+    
+    init(myJson:JSON){
+        Accept = myJson[&#34;Accept&#34;].stringValue
+        AcceptEndcoding = myJson[&#34;Accept-Encoding&#34;].stringValue
+        AcceptLanguage = myJson[&#34;Accept-Language&#34;].stringValue
+        Host = myJson[&#34;Host&#34;].stringValue
+        UserAgent = myJson[&#34;User-Agent&#34;].stringValue
+    }
+}</pre>
+<p>这样刚才的代码就可以用点的方式实现了。</p>
+<p>        </p>
+<pre>        request(.GET, &#34;https://httpbin.org/get&#34;)
+            .responseJSON(completionHandler: { (ress) -&gt; Void in
+                switch ress.result {
+                case .Success(let myjson) :
+                    let r = HttpHeader(myJson: JSON(myjson))
+                    //print(r)
+                    r.headers.AcceptEndcoding
+                case .Failure :
+                    print(&#34;error&#34;)
+                }
+               
+            })</pre>
+<p>如果你觉得上面的实体类写起来太累工作量太大，你可以考虑使用反射。这里我找到了一个<a href="https://github.com/johnlui/JSONNeverDie">https://github.com/johnlui/JSONNeverDie</a>，但是我不推荐，主要原因是性能问题，如果实体类是一个其他类型的数组，就需要循环的去反射，性能必然下降，当然这也是我的猜测，毕竟我没有编码测试，同样这有篇文章供你参考<a href="http://swift.gg/2015/11/23/swift-reflection-api-what-you-can-do/">http://swift.gg/2015/11/23/swift-reflection-api-what-you-can-do/</a>。</p>
+<p>如果你对反射的性能带来的损失忽略不计的话，当然还有别的思路应该也可以实现，比如在序列化的时候利用反射把类型转换了，我收集了一些相关的文档供大家参考。</p>
+<p><a href="https://github.com/evermeer/EVReflection">https://github.com/evermeer/EVReflection</a>：Swift的反射类库</p>
+<p><a href="https://github.com/evermeer/AlamofireJsonToObjects">https://github.com/evermeer/AlamofireJsonToObjects</a>：利用Alamofire和EVReflection实现的强类型化，由于我一直没有找到解决如果实体类中包含其他类的引用时的办法所以放弃了。</p>
+<p><a href="https://github.com/sketchytech/Aldwych_JSON_Swift">https://github.com/sketchytech/Aldwych_JSON_Swift</a>：关于这个类库这里有篇解释文章https://realm.io/news/swift-summit-anthony-levings-json-type-safety/</p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2016-01-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/swfit/">swfit</a>
+          <a href="/tags/json/">json</a>
+          <a href="/tags/%E5%BC%BA%E7%B1%BB%E5%9E%8B/">强类型</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/chinese-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[中文] 《长恨歌》</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%BE%AE%E4%BF%A1%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80%E5%85%B1%E4%BA%AB%E6%8E%A5%E5%8F%A3%E8%95%B4%E8%97%8F%E7%9A%84%E7%8E%84%E6%9C%BA/">
+            <span class="next-text nav-default">微信收货地址共享接口蕴藏的玄机</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

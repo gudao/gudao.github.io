@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on 古道的技术博客</title>
+    <link>http://localhost:8080/categories/android/</link>
+    <description>Recent content in Android on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Fri, 14 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从现在开始学Android吧</title>
+      <link>http://localhost:8080/post/%E4%BB%8E%E7%8E%B0%E5%9C%A8%E5%BC%80%E5%A7%8B%E5%AD%A6android%E5%90%A7/</link>
+      <pubDate>Fri, 14 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E4%BB%8E%E7%8E%B0%E5%9C%A8%E5%BC%80%E5%A7%8B%E5%AD%A6android%E5%90%A7/</guid>
+      <description>之前有过多次学习Android开发的冲动，多数因为恐惧开发环境配置的复杂而退缩了。这几天因为项目的原因，硬着头皮打开了http://deve</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>简单几步让Nginx平滑升级（服务器运维必看） - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="前一篇文章中的Markdwon其实是轻量级博客系统Ghost的默认编辑器，而今天介绍的Nginx也是Ghost部署需要的。我当时为了简单，安" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E8%AE%A9nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E5%BF%85%E7%9C%8B/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="简单几步让Nginx平滑升级（服务器运维必看）" />
+<meta property="og:description" content="前一篇文章中的Markdwon其实是轻量级博客系统Ghost的默认编辑器，而今天介绍的Nginx也是Ghost部署需要的。我当时为了简单，安" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E7%AE%80%E5%8D%95%E5%87%A0%E6%AD%A5%E8%AE%A9nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4%E5%BF%85%E7%9C%8B/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-04-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-04-05T00:00:00+00:00" />
+
+<meta itemprop="name" content="简单几步让Nginx平滑升级（服务器运维必看）">
+<meta itemprop="description" content="前一篇文章中的Markdwon其实是轻量级博客系统Ghost的默认编辑器，而今天介绍的Nginx也是Ghost部署需要的。我当时为了简单，安"><meta itemprop="datePublished" content="2015-04-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2015-04-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="323">
+<meta itemprop="keywords" content="nginx," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="简单几步让Nginx平滑升级（服务器运维必看）"/>
+<meta name="twitter:description" content="前一篇文章中的Markdwon其实是轻量级博客系统Ghost的默认编辑器，而今天介绍的Nginx也是Ghost部署需要的。我当时为了简单，安"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">简单几步让Nginx平滑升级（服务器运维必看）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-04-05 </span>
+        <div class="post-category">
+            <a href="/categories/nginx/"> Nginx </a>
+            </div>
+          <span class="more-meta"> 约 323 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>前一篇文章中的Markdwon其实是轻量级博客系统Ghost的默认编辑器，而今天介绍的Nginx也是Ghost部署需要的。我当时为了简单，安装的Nginx是预编译版的，今天要在Nginx上发布视频，结果把.conf里的MP4模块打开后重启Nginx没有起来，于是用<code>nginx -V</code>查看发现预编译版本竟然没有MP4模块。只好自己手动升级一下Nginx了，作为一名合格的运维人员，升级服务当然要保证服务的正常运行啊，那就是今天所说的平滑升级了，下面写一下Nginx的平滑升级步骤：</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>./configure &ndash;prefix=/usr/share/nginx &ndash;conf-path=/etc/nginx/nginx.conf &ndash;http-log-path=/var/log/nginx/access.log &ndash;error-log-path=/var/log/nginx/error.log &ndash;lock-path=/var/lock/nginx.lock &ndash;pid-path=/run/nginx.pid &ndash;http-client-body-temp-path=/var/lib/nginx/body &ndash;http-fastcgi-temp-path=/var/lib/nginx/fastcgi &ndash;http-proxy-temp-path=/var/lib/nginx/proxy &ndash;http-scgi-temp-path=/var/lib/nginx/scgi &ndash;http-uwsgi-temp-path=/var/lib/nginx/uwsgi &ndash;with-debug &ndash;with-pcre-jit &ndash;with-ipv6 &ndash;with-http_ssl_module &ndash;with-http_stub_status_module  &ndash;with-http_gzip_static_module &ndash;with-http_image_filter_module &ndash;with-http_spdy_module &ndash;with-http_sub_module &ndash;with-http_xslt_module  &ndash;with-http_mp4_module`    </p>
+<ul>
+<li></li>
+</ul>
+<p>`nginx path prefix: &quot;/usr/share/nginx&quot;</p>
+<p>nginx binary file: &quot;/usr/share/nginx/sbin/nginx&quot;</p>
+<p>nginx configuration prefix: &quot;/etc/nginx&quot;</p>
+<p>nginx configuration file: &quot;/etc/nginx/nginx.conf&quot;</p>
+<p>nginx pid file: &quot;/run/nginx.pid&quot;</p>
+<p>nginx error log file: &quot;/var/log/nginx/error.log&quot;</p>
+<p>nginx http access log file: &quot;/var/log/nginx/access.log&quot;</p>
+<p>nginx http client request body temporary files: &quot;/var/lib/nginx/body&quot;</p>
+<p>nginx http proxy temporary files: &quot;/var/lib/nginx/proxy&quot;</p>
+<p>nginx http fastcgi temporary files: &quot;/var/lib/nginx/fastcgi&quot;</p>
+<p>nginx http uwsgi temporary files: &quot;/var/lib/nginx/uwsgi&quot;</p>
+<p>nginx http scgi temporary files: &quot;/var/lib/nginx/scgi&quot;`</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2015-04-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/nginx/">nginx</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%BE%AE%E4%BF%A1%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80%E5%85%B1%E4%BA%AB%E6%8E%A5%E5%8F%A3%E8%95%B4%E8%97%8F%E7%9A%84%E7%8E%84%E6%9C%BA/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">微信收货地址共享接口蕴藏的玄机</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%8F%88%E6%98%AF%E4%B8%80%E5%B9%B42015%E5%B9%B4%E6%9D%A5%E4%BA%86/">
+            <span class="next-text nav-default">又是一年，2015年来了</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

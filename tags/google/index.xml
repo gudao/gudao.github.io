@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/google/</link>
+    <description>Recent content in google on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 14 Jul 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>google上不去后我们该怎么办</title>
+      <link>http://localhost:8080/post/google%E4%B8%8A%E4%B8%8D%E5%8E%BB%E5%90%8E%E6%88%91%E4%BB%AC%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E/</link>
+      <pubDate>Mon, 14 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/google%E4%B8%8A%E4%B8%8D%E5%8E%BB%E5%90%8E%E6%88%91%E4%BB%AC%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E/</guid>
+      <description>自从2014年6月份www.Google.com.hk也彻底上不去以后，我们的生活就变得苦不堪言。百度的搜索结果简直就是惨不忍睹，用了两周的</description>
+    </item>
+    
+    <item>
+      <title>smarthosts 北京服务器Hosts备份</title>
+      <link>http://localhost:8080/post/smarthosts-%E5%8C%97%E4%BA%AC%E6%9C%8D%E5%8A%A1%E5%99%A8hosts%E5%A4%87%E4%BB%BD/</link>
+      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/smarthosts-%E5%8C%97%E4%BA%AC%E6%9C%8D%E5%8A%A1%E5%99%A8hosts%E5%A4%87%E4%BB%BD/</guid>
+      <description>前几天谷歌北京的IP地址总显示403错误，而伟大的smarthosts也总打不开，今天又看了一下终于可以，赶快分享给大家，顺便在此做下备份。</description>
+    </item>
+    
+    <item>
+      <title>[2012-10-26]google最新hosts</title>
+      <link>http://localhost:8080/post/2012-10-26google%E6%9C%80%E6%96%B0hosts/</link>
+      <pubDate>Fri, 26 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/2012-10-26google%E6%9C%80%E6%96%B0hosts/</guid>
+      <description>最近几天google打开又开始慢了，原来一直在203.208.46.180上，大概用了一年多吧。不知是不是伟大的斯巴达要来了，可怜的goog</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[虚拟主机选型姊妹篇]如何部署网站之域名选型 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="上篇文章说了一些关于选择购买虚拟主机的问题，让我再来介绍一下域名的选择、购买和使用。需要注意的是这篇不全是吐槽还是有点干货的噢！ 域名商的计量" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B%E5%A7%8A%E5%A6%B9%E7%AF%87%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E5%9F%9F%E5%90%8D%E9%80%89%E5%9E%8B/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[虚拟主机选型姊妹篇]如何部署网站之域名选型" />
+<meta property="og:description" content="上篇文章说了一些关于选择购买虚拟主机的问题，让我再来介绍一下域名的选择、购买和使用。需要注意的是这篇不全是吐槽还是有点干货的噢！ 域名商的计量" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B%E5%A7%8A%E5%A6%B9%E7%AF%87%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E5%9F%9F%E5%90%8D%E9%80%89%E5%9E%8B/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-04-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-04-16T00:00:00+00:00" />
+
+<meta itemprop="name" content="[虚拟主机选型姊妹篇]如何部署网站之域名选型">
+<meta itemprop="description" content="上篇文章说了一些关于选择购买虚拟主机的问题，让我再来介绍一下域名的选择、购买和使用。需要注意的是这篇不全是吐槽还是有点干货的噢！ 域名商的计量"><meta itemprop="datePublished" content="2013-04-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2013-04-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1890">
+<meta itemprop="keywords" content="购买域名,DNS智能解析," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[虚拟主机选型姊妹篇]如何部署网站之域名选型"/>
+<meta name="twitter:description" content="上篇文章说了一些关于选择购买虚拟主机的问题，让我再来介绍一下域名的选择、购买和使用。需要注意的是这篇不全是吐槽还是有点干货的噢！ 域名商的计量"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[虚拟主机选型姊妹篇]如何部署网站之域名选型</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-04-16 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%BB%BA%E7%AB%99%E6%8A%80%E5%B7%A7/"> 建站技巧 </a>
+            </div>
+          <span class="more-meta"> 约 1890 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><a href="http://www.front2end.cn/blog/how-to-select-web-host.html">上篇文章</a>说了一些关于选择购买虚拟主机的问题，让我再来介绍一下域名的选择、购买和使用。需要注意的是这篇不全是吐槽还是有点干货的噢！</p>
+<p><strong>域名商的计量你要懂</strong></p>
+<p>    当你看到某个域名商打出类似“顶级域名10元注册&hellip;”的广告时，你可要警惕了，这里的10元是指的第一年10元，而且首次注册最多一年，以后续费可就不是这个价了。域名商都不是傻子，这次让你买的便宜了，下次肯定还会从你身上再找补回来，他们为了把你拉过来宁可自己先赔钱。类似的手段还有“免费迁移”、“0元抽奖”等。免费迁移就是当你在其他域名商注册了，可以无条件的帮你“过户”到他们这里来，接下来的事就是等着你高价续费了。0元抽奖也是类似，总之大家记住一点就是“世上没有免费的午餐”。</p>
+<p>    一棒打死所有人不是好做法，特例还是有的，要是某些时候可以低价注册好几年应该真的是域名商在割肉了。还有些情况就是如果你注册的域名只需要用1年或者更短期，就可以去购买这些“优惠”。我就曾在万网做活动时，一口气抽奖中了两个域名的1年使用权，本来是想等域名到期时迁到别的更优质的域名商那里，结果没等我的域名到期我的网站就已经夭折了。所以我还要提醒大家购买域名时不要太冲动，根据自己的业务需要选择合适的购买期限，不是购买时间越长越好，不要觉得一下子把这个域名买断了就很牛逼，先买两年坚持提前续费这个域名一样是你的。如果你的业务真的不需要了，余下的域名费用将是一大笔钱。记得有次服务商的销售打电话说：“我们已经帮贵公司把5年的域名使用权包括相关的.net,.cn,.org,.tv,.hk等一系列的域名都保留了，总价才2万&hellip;&quot;，问我是不是要购买，我当时就想你们怎么不去抢劫啊，抢劫肯定赚的比2W多，我们疯了吗？掏2万块钱买那么一堆烂域名。</p>
+<p><strong>适合自己就好</strong></p>
+<p>    说完服务商，再说说域名。前些天京东将使用多年的360buy.com换成了jd.com估计也是花重金收买的，而且还专门为新域名定制了广告。还有类似的例子就是亚马逊，之前我也记不住亚马逊的amazon.cn，纳闷为什么不换一个让中国人好几点域名，也是后来才惊讶的发现亚马逊换了一个超短域名z.cn。我所知道的超短域名还有谷歌的g.cn，名鞋库的s.cn。短域名看起来固然牛逼，但这种牛逼估计只局限于对于我们这些高技术的吧，对于像我媳妇那些百事不离百度的人，这些短域名倒是还不如长的语义类的域名，因为在她们脑袋里除了汉语拼音加.com(比如京东她们会直接输入www.jingdong.com)就是百度出来的结果了。</p>
+<p>    选择域名总体的原则我归结为一下四点：</p>
+<p>    1、让人容易记；2、能概括网站的主要内容最好；3、能短别长；4、尽量不要有数字或特殊字符。</p>
+<p>    以上4点权重依次递减。拿我的域名来举个例子吧，front2end.cn就违反了第四个原则，中间的2我自己翻译为to，整体的意思是front-end即中文“前端”的意思。但是最终的效果呢？估计我不解释你肯定不知道，所以还是遵循上面的原则吧。</p>
+<p><strong>DNS智能解析大揭秘</strong></p>
+<p>    下面上今天的干货！</p>
+<p>    说到域名不得不提的就是域名解析。一个域名通过解析后就会被转换成一个唯一的IP地址（这里说的是通常，现在可以一个域名被解析到多个IP地址），通过一个IP地址就可以定位到唯一一台服务器，从而定位到唯一的网站了。那么是什么做这个转换的呢？就是传说中的DNS服务器。当你用自己的电脑访问一个域名时，你的电脑可以指定一个DNS服务器，由这个DNS服务器为你将这个域名翻译成对应的IP地址。如果你的电脑没有手动配置DNS，你的使用网络提供商会给你默认分配一个DNS。指向的DNS不同时，相同域名被翻译成的IP地址就有可能不同，这就是为什么当我们访问某个网站的时候，如果打开速度不够快换一个DNS就会快一点的原因。</p>
+<p>  那么DNS智能解析又是什么呢？其实就是域名提供商的一个噱头而已，其根本的原理还是跟上面说的一样，区别就是它在全国各地都有DNS分布。这样以来，访问你网站的每个用户都有一个距离自己较近的DNS，每个DNS服务器上对应你的域名解析的IP地址又是一个距离该用户较近的web服务器，从而到达每个访问用户都能访问到距离自己近的服务器，访问速度自然就是最快的（上面解释时用的距离指的是网络距离）。</p>
+<p>    明白了原理我们就可以选择域名商了，只要看他们的DNS服务器在你用户范围内的分布数量就可以决定了。使用智能DNS的前提是你有不同网络的web服务器，如果你只有一台web服务器就哪凉快哪呆着去吧。</p>
+<p>    最后推荐一个我在用的免费DNS提供商https://www.dnspod.cn/（这个绝对不是广告）。</p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2013-04-16
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D/">购买域名</a>
+          <a href="/tags/dns%E6%99%BA%E8%83%BD%E8%A7%A3%E6%9E%90/">DNS智能解析</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/ios%E9%9A%90%E8%97%8F%E5%90%84%E7%A7%8Dbar/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">iOS隐藏各种bar</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B/">
+            <span class="next-text nav-default">如何部署网站之虚拟主机选型</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

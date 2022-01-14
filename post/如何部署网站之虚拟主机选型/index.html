@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何部署网站之虚拟主机选型 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="俗话说建网站容易，找虚拟主机难啊？在说如何选虚拟主机之前，先来让我吐槽我这个小博客的坎坷经历吧。 一、国外免费的空间，占小便宜吃大亏 我这个小博" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="如何部署网站之虚拟主机选型" />
+<meta property="og:description" content="俗话说建网站容易，找虚拟主机难啊？在说如何选虚拟主机之前，先来让我吐槽我这个小博客的坎坷经历吧。 一、国外免费的空间，占小便宜吃大亏 我这个小博" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-04-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-04-11T00:00:00+00:00" />
+
+<meta itemprop="name" content="如何部署网站之虚拟主机选型">
+<meta itemprop="description" content="俗话说建网站容易，找虚拟主机难啊？在说如何选虚拟主机之前，先来让我吐槽我这个小博客的坎坷经历吧。 一、国外免费的空间，占小便宜吃大亏 我这个小博"><meta itemprop="datePublished" content="2013-04-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2013-04-11T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1678">
+<meta itemprop="keywords" content="虚拟主机,网站空间,服务器托管,VPS," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何部署网站之虚拟主机选型"/>
+<meta name="twitter:description" content="俗话说建网站容易，找虚拟主机难啊？在说如何选虚拟主机之前，先来让我吐槽我这个小博客的坎坷经历吧。 一、国外免费的空间，占小便宜吃大亏 我这个小博"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何部署网站之虚拟主机选型</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-04-11 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%BB%BA%E7%AB%99%E6%8A%80%E5%B7%A7/"> 建站技巧 </a>
+            </div>
+          <span class="more-meta"> 约 1678 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="http://www.webweb.com/aff_banner1.gif" alt="">
+俗话说建网站容易，找虚拟主机难啊？在说如何选虚拟主机之前，先来让我吐槽我这个小博客的坎坷经历吧。</p>
+<p><strong>一、国外免费的空间，占小便宜吃大亏</strong></p>
+<p>    我这个小博客断断续续开了3年了，萌生写博客的念头好像是在看到一条国外免费空间广告后产生的。广告吹嘘的当然牛逼，免费web空间，免费数据库，一键安装wordpress等，很诱人的条件。于是我稚嫩的心灵就被它骗了，最终的结果就是三天两头访问速度极慢甚至无法访问，后台管理不方便不说，最恶心的是提供商在你网站加广告（自动代码注入的哦）。</p>
+<p><strong>二、附着已有资源，提心吊胆</strong></p>
+<p>    在我实在无法忍受免费空间的极慢速度后，我决定铤而走险一把，将我的博客迁至公司的托管服务器上（小声点别让公司领导听见哦），速度杠杠的，管理超爽。当然会随着公司的业务网站的更新服务器需要重启，这些小问题我都忽略不计了，最主要的一点就是怕公司领导发现，不知道你做过“以公谋私”的事吗？感觉只有一点不好受。</p>
+<p><strong>三、虚拟主机，找实惠要小心</strong></p>
+<p>    在内心强烈的战争后，我决定掏三百大洋购买一个虚拟主机。于是我跟提供商客服在QQ上漫长的沟通就开始了，你在没交钱时，所有客服简直都是你的孙子，甚至比你孙子都对你好，问什么说什么，你爱听什么说什么。一旦你交了钱，你们的关系马上对调，甚至连虚拟机主机都是这样。你之前试用的那台服务器速度真的跟我在公司托管时的一样快的要命，交钱之后我真怀疑他们给了换了一个586在跑。别的我也不愿多说，你可以想想一下任何你不愿意想象的情景，我敢说当时的情况真的不堪想想，最后以长时间的QQ谩骂结束。</p>
+<p>    上面的情况不能代表所有情况，但是我对国内这些提供商真的很失望。除了这些提供商的服务态度，再就是他们的“硬件质量”，一百年不变的后台管理程序在哪里一跑就是好几年，只记得在.net framework 4推出1年后，我在国内市面上竟然找不出一家公司的虚拟主机支持，一问客户给我的回答都是：我们有VPS，你在上面什么都可以安装的&hellip;，他娘的我有钱买VPS，问你虚拟主机干鸟用啊？无论是你认为很大牌的万网，美橙，新网，都是这样，尤其<a href="www.net.cn">万网</a>声称自己是“中国&hellip;”，自己恶心没人说你，不扯上我们伟大的祖国你会死啊？对了，说到这里需要指出一下，之前我在<a href="http://www.comsenz.com/">康盛创想</a>买得域名觉得还可以，下次有时间我要专门写篇博客吐槽一下买域名的痛苦。</p>
+<p>  经过2年的慢慢尝试，被骗，再尝试，再被骗&hellip;后来，我才在现在的正在用的<a href="http://www.webweb.com">网易库</a>上“安家”，香港的空间。速度不算快，但是还可以接受，后台管理还算方面，值得提的是人家一直在更新，最初我用时后台没有在线解压，但是没多久就有了，一些细小的功能每过三两个月肯定都有更新。这就让我掏钱掏的舒服点，还有就是我常用的.net framework ，微软他娘的更新那么快，这跟上的速度也还可以接受。说到这有人可能认为我在打广告，说对了，我就是打广告，我都敲了这么多了，没有功劳也有苦劳吧。靠，我直接来个更直接的吧。
+<a href="http://www.webweb.com/signup.asp?upline=gudao119"><img src="http://www.webweb.com/aff_banner1.gif" alt=""></a>
+如果你觉得我上面说的还算真诚，就点一下广告，用我的帐号gudao119做为推荐人注册一个吧，实话说你第一次购买我可以提10%的费用。没事，先不要跳起来，如果你买了还不想让我拿去，给我留言，我半分百全退，仅支付宝支付啊。还有就是想省钱的也可以把我最为推荐人，提成一样全返。</p>
+<p><strong>他娘的我就不信了，我这样还干不过那些垃圾提供商！</strong></p>
+<p><strong>四、VPS，有钱人干的事</strong></p>
+<p>    我没用过VPS但是我觉得如果你的需求不是很特别，还是虚拟主机合适。如果你很有钱，还是去托管服务器吧。这里我推荐一个我认为不错的就是，42区的在北京的石景山哪里的网络好像是北京的一个主节点，所以网速应该可以保证，至于其他服务就不知道了。如果你知道欢迎留言。</p>
+<p><strong>五、服务器托管</strong>**，有实力没话说**</p>
+<p>  我们公司用的这些托管商也都一般，没有我觉得值得推荐的，所以还是少说的好。不过有个原则就是，尽量不要找北京的，服务商可以在北京但是数据中心一定要在外地，天津、河北的网络要比北京的便宜的多。羊毛出在羊身上这句话永远都没错。能扯专线跟自己网在一个局域网的最好，免得整体往机房跑。</p>
+<p>最后再次提醒大家买那种都要谨慎！</p>
+<p>还有我的广告，一定要注册哦！谢了。</p>
+<p><a href="http://www.webweb.com/signup.asp?upline=gudao119"><img src="http://www.webweb.com/aff_banner1.gif" alt=""></a></p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2013-04-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA/">虚拟主机</a>
+          <a href="/tags/%E7%BD%91%E7%AB%99%E7%A9%BA%E9%97%B4/">网站空间</a>
+          <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%89%98%E7%AE%A1/">服务器托管</a>
+          <a href="/tags/vps/">VPS</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B%E5%A7%8A%E5%A6%B9%E7%AF%87%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E5%9F%9F%E5%90%8D%E9%80%89%E5%9E%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[虚拟主机选型姊妹篇]如何部署网站之域名选型</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E6%98%A5%E5%90%8E%E5%A4%A7%E9%9B%AA/">
+            <span class="next-text nav-default">春后大雪</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

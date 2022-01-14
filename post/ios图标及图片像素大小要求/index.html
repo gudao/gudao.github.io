@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>iOS图标及图片像素大小要求 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="icon: Description Size for iPhone 5 and iPod touch (high resolution) Size for iPhone and iPod touch (high resolution) Size for iPad and iPad mini (high resolution) Size for iPad 2 and iPad mini (standard resolution) App icon (**required** for all apps) 120 x 120 120 x 120 152 x 152 76 x 76 App icon for the App Store (**required** for all apps) 1024 x 1024 1024 x 1024" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/ios%E5%9B%BE%E6%A0%87%E5%8F%8A%E5%9B%BE%E7%89%87%E5%83%8F%E7%B4%A0%E5%A4%A7%E5%B0%8F%E8%A6%81%E6%B1%82/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="iOS图标及图片像素大小要求" />
+<meta property="og:description" content="icon: Description Size for iPhone 5 and iPod touch (high resolution) Size for iPhone and iPod touch (high resolution) Size for iPad and iPad mini (high resolution) Size for iPad 2 and iPad mini (standard resolution) App icon (**required** for all apps) 120 x 120 120 x 120 152 x 152 76 x 76 App icon for the App Store (**required** for all apps) 1024 x 1024 1024 x 1024" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/ios%E5%9B%BE%E6%A0%87%E5%8F%8A%E5%9B%BE%E7%89%87%E5%83%8F%E7%B4%A0%E5%A4%A7%E5%B0%8F%E8%A6%81%E6%B1%82/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-01-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-01-24T00:00:00+00:00" />
+
+<meta itemprop="name" content="iOS图标及图片像素大小要求">
+<meta itemprop="description" content="icon: Description Size for iPhone 5 and iPod touch (high resolution) Size for iPhone and iPod touch (high resolution) Size for iPad and iPad mini (high resolution) Size for iPad 2 and iPad mini (standard resolution) App icon (**required** for all apps) 120 x 120 120 x 120 152 x 152 76 x 76 App icon for the App Store (**required** for all apps) 1024 x 1024 1024 x 1024"><meta itemprop="datePublished" content="2014-01-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-01-24T00:00:00+00:00" />
+<meta itemprop="wordCount" content="282">
+<meta itemprop="keywords" content="icon," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="iOS图标及图片像素大小要求"/>
+<meta name="twitter:description" content="icon: Description Size for iPhone 5 and iPod touch (high resolution) Size for iPhone and iPod touch (high resolution) Size for iPad and iPad mini (high resolution) Size for iPad 2 and iPad mini (standard resolution) App icon (**required** for all apps) 120 x 120 120 x 120 152 x 152 76 x 76 App icon for the App Store (**required** for all apps) 1024 x 1024 1024 x 1024"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">iOS图标及图片像素大小要求</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-01-24 </span>
+        <div class="post-category">
+            <a href="/categories/ios/"> iOS </a>
+            </div>
+          <span class="more-meta"> 约 282 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="/Content/upload/Img20140124/s_2aay55qv_t0t.png" alt=""> <strong>icon:</strong></p>
+<table bordercolor="#DFC5A4"><thead><tr><th scope="col">
+Description
+</th><th scope="col">
+Size for iPhone 5 and iPod touch (high resolution)
+</th><th scope="col">
+Size for iPhone and iPod touch (high resolution)
+</th><th scope="col">
+Size for iPad and iPad mini (high resolution)
+</th><th scope="col">
+Size for iPad 2 and iPad mini (standard resolution)
+</th></tr></thead><tbody><tr><td scope="row">
+App icon (**required** for all apps)
+</td><td>
+120 x 120
+</td><td>
+120 x 120
+</td><td>
+152 x 152
+</td><td>
+76 x 76
+</td></tr><tr><td scope="row">
+App icon for the App Store (**required** for all apps)
+</td><td>
+1024 x 1024
+</td><td>
+1024 x 1024
+</td><td>
+1024 x 1024
+</td><td>
+1024 x 1024
+</td></tr><tr><td scope="row">
+Launch image (**required** for all apps)
+</td><td>
+640 x 1136
+</td><td>
+640 x 960
+</td><td>
+1536 x 2048 (portrait)
+<p>2048 x 1536 (landscape)</p>
+</td><td>
+768 x 1024 (portrait)
+<p>1024 x 768 (landscape)</p>
+</td></tr><tr><td scope="row">
+Spotlight search results icon (recommended)
+</td><td>
+80 x 80
+</td><td>
+80 x 80
+</td><td>
+80 x 80
+</td><td>
+40 x 40
+</td></tr><tr><td scope="row">
+Settings icon (recommended)
+</td><td>
+58 x 58
+</td><td>
+58 x 58
+</td><td>
+58 x 58
+</td><td>
+29 x 29
+</td></tr><tr><td scope="row">
+Toolbar and navigation bar icon (optional)
+</td><td>
+About 44 x 44
+</td><td>
+About 44 x 44
+</td><td>
+About 44 x 44
+</td><td>
+About 22 x 22
+</td></tr><tr><td scope="row">
+Tab bar icon (optional)
+</td><td>
+About 50 x 50 (maximum: 96 x 64)
+</td><td>
+About 50 x 50 (maximum: 96 x 64)
+</td><td>
+About 50 x 50 (maximum: 96 x 64)
+</td><td>
+About 25 x 25 (maximum: 48 x 32)
+</td></tr><tr><td scope="row">
+Default Newsstand cover icon for the App Store (**required** for Newsstand apps)
+</td><td>
+At least 1024 pixels on the longest edge
+</td><td>
+At least 1024 pixels on the longest edge
+</td><td>
+At least 1024 pixels on the longest edge
+</td><td>
+At least 512 pixels on the longest edge
+</td></tr><tr><td scope="row">
+Web clip icon (recommended for web apps and websites)
+</td><td>
+120 x 120
+</td><td>
+120 x 120
+</td><td>
+152 x 152
+</td><td>
+76 x 76
+</td></tr></tbody></table>
+<p><strong>launch images</strong>:</p>
+<p>For iPhone 5 and iPod touch (5th generation):</p>
+<ul>
+<li></li>
+</ul>
+<p>For other iPhone and iPod touch devices:</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>For iPad portrait:</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>For iPad landscape:</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2014-01-24
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/icon/">icon</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E5%9B%9B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Redis 集群教程(四)</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/">
+            <span class="next-text nav-default">13年最后一天</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

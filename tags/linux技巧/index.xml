@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux技巧 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/linux%E6%8A%80%E5%B7%A7/</link>
+    <description>Recent content in Linux技巧 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 09 Jul 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/linux%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转]linux 技巧：使用 screen 管理你的远程会话</title>
+      <link>http://localhost:8080/post/%E8%BD%AClinux-%E6%8A%80%E5%B7%A7%E4%BD%BF%E7%94%A8-screen-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BC%9A%E8%AF%9D/</link>
+      <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%BD%AClinux-%E6%8A%80%E5%B7%A7%E4%BD%BF%E7%94%A8-screen-%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BC%9A%E8%AF%9D/</guid>
+      <description>http://www.ibm.com/developerworks/cn/linux/l-cn-screen/ 你是不是经常需要 SSH 或者 telent 远程登录到 Linux 服务器？你是不是经常为一些长时间运行的任务而头疼，比如系统备份、ftp 传输等等。通常情况下我们都是为每</description>
+    </item>
+    
+  </channel>
+</rss>

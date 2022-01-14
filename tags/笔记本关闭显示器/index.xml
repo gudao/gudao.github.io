@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔记本关闭显示器 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%85%B3%E9%97%AD%E6%98%BE%E7%A4%BA%E5%99%A8/</link>
+    <description>Recent content in 笔记本关闭显示器 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Thu, 26 Jul 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%85%B3%E9%97%AD%E6%98%BE%E7%A4%BA%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自己写了个小软件：一键关闭显示器</title>
+      <link>http://localhost:8080/post/%E8%87%AA%E5%B7%B1%E5%86%99%E4%BA%86%E4%B8%AA%E5%B0%8F%E8%BD%AF%E4%BB%B6%E4%B8%80%E9%94%AE%E5%85%B3%E9%97%AD%E6%98%BE%E7%A4%BA%E5%99%A8/</link>
+      <pubDate>Thu, 26 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%87%AA%E5%B7%B1%E5%86%99%E4%BA%86%E4%B8%AA%E5%B0%8F%E8%BD%AF%E4%BB%B6%E4%B8%80%E9%94%AE%E5%85%B3%E9%97%AD%E6%98%BE%E7%A4%BA%E5%99%A8/</guid>
+      <description>中午听着歌睡觉，又心疼自己的本本，于是写了个关闭显示器的小工具，跟大家分享！ 猛击下载，解压直接使用（支持快捷键shift+C）！ 如果你懂点C</description>
+    </item>
+    
+  </channel>
+</rss>

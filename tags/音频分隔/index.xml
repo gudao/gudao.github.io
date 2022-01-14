@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>音频分隔 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E9%9F%B3%E9%A2%91%E5%88%86%E9%9A%94/</link>
+    <description>Recent content in 音频分隔 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Fri, 02 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E9%9F%B3%E9%A2%91%E5%88%86%E9%9A%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[原创]语音识别小工具</title>
+      <link>http://localhost:8080/post/%E5%8E%9F%E5%88%9B%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E5%B0%8F%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E5%8E%9F%E5%88%9B%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E5%B0%8F%E5%B7%A5%E5%85%B7/</guid>
+      <description>一时兴起做了一个语音识别的小工具，功能是剥离的谷歌翻译的！ 先看看谷歌的原创是什么样的: 上面截图只有在使用chrome的情况下才会有的功能，所</description>
+    </item>
+    
+  </channel>
+</rss>

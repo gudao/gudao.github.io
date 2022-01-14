@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>科技 on 古道的技术博客</title>
+    <link>http://localhost:8080/categories/%E7%A7%91%E6%8A%80/</link>
+    <description>Recent content in 科技 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Sun, 04 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/categories/%E7%A7%91%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>红米电信版卡一电信卡显示无服务</title>
+      <link>http://localhost:8080/post/%E7%BA%A2%E7%B1%B3%E7%94%B5%E4%BF%A1%E7%89%88%E5%8D%A1%E4%B8%80%E7%94%B5%E4%BF%A1%E5%8D%A1%E6%98%BE%E7%A4%BA%E6%97%A0%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E7%BA%A2%E7%B1%B3%E7%94%B5%E4%BF%A1%E7%89%88%E5%8D%A1%E4%B8%80%E7%94%B5%E4%BF%A1%E5%8D%A1%E6%98%BE%E7%A4%BA%E6%97%A0%E6%9C%8D%E5%8A%A1/</guid>
+      <description>红米手机显示无服务，建议你按一下方法进行排查一下：①是否正确的插入了SIM卡。②是否插入了错误的SIM卡，如标准版插入电信SIM卡等。③进入</description>
+    </item>
+    
+    <item>
+      <title>[2012-10-26]google最新hosts</title>
+      <link>http://localhost:8080/post/2012-10-26google%E6%9C%80%E6%96%B0hosts/</link>
+      <pubDate>Fri, 26 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/2012-10-26google%E6%9C%80%E6%96%B0hosts/</guid>
+      <description>最近几天google打开又开始慢了，原来一直在203.208.46.180上，大概用了一年多吧。不知是不是伟大的斯巴达要来了，可怜的goog</description>
+    </item>
+    
+    <item>
+      <title>android手机模拟器安装</title>
+      <link>http://localhost:8080/post/android%E6%89%8B%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 11 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/android%E6%89%8B%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/</guid>
+      <description>1.下载Android SDK,地址在http://developer.android.com/sdk/index.html 2.下载并安装JD</description>
+    </item>
+    
+    <item>
+      <title>squid做反向代理 配置</title>
+      <link>http://localhost:8080/post/squid%E5%81%9A%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 20 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/squid%E5%81%9A%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-%E9%85%8D%E7%BD%AE/</guid>
+      <description>最近在研究Squid，看了半天《Squid权威指南》也没配置成功！转发一篇我看了后配置成功的文章！ 本文在介绍 squid 反向代理的工作原理的基础上，指</description>
+    </item>
+    
+    <item>
+      <title>再见 Android Market，你好 Google Play！</title>
+      <link>http://localhost:8080/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/</link>
+      <pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/</guid>
+      <description>Android Market 经过这么一段时间的演化，已经从原本简单的 Android apps 卖场，变成了从书到音乐到电影无所不包的大集市。为了彰显这个转变 &amp;ndash; 和把重心放在内容上 &amp;ndash; Google 正式启</description>
+    </item>
+    
+  </channel>
+</rss>

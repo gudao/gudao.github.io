@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VirtualMode on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/virtualmode/</link>
+    <description>Recent content in VirtualMode on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Wed, 19 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/virtualmode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WinForm ListView不分页加载大量数据</title>
+      <link>http://localhost:8080/post/winform-listview%E4%B8%8D%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD%E5%A4%A7%E9%87%8F%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Wed, 19 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/winform-listview%E4%B8%8D%E5%88%86%E9%A1%B5%E5%8A%A0%E8%BD%BD%E5%A4%A7%E9%87%8F%E6%95%B0%E6%8D%AE/</guid>
+      <description>WinForm的ListView在加载大量数据时会出现闪烁的问题，同时数据加载很慢。如果你的列表中有超过千条的数据且不做特殊处理还是用普通的</description>
+    </item>
+    
+  </channel>
+</rss>

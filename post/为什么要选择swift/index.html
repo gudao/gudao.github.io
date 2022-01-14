@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>为什么要选择Swift - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="苹果推出了全新的语言&amp;ndash;Swift，先不说语言的好坏，但就苹果公司能认识到objc一些的不足，为兼顾其用户开发一门全新语言，这就是" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%80%89%E6%8B%A9swift/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="为什么要选择Swift" />
+<meta property="og:description" content="苹果推出了全新的语言&ndash;Swift，先不说语言的好坏，但就苹果公司能认识到objc一些的不足，为兼顾其用户开发一门全新语言，这就是" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%80%89%E6%8B%A9swift/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-06-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-06-07T00:00:00+00:00" />
+
+<meta itemprop="name" content="为什么要选择Swift">
+<meta itemprop="description" content="苹果推出了全新的语言&ndash;Swift，先不说语言的好坏，但就苹果公司能认识到objc一些的不足，为兼顾其用户开发一门全新语言，这就是"><meta itemprop="datePublished" content="2014-06-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-06-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="772">
+<meta itemprop="keywords" content="swift," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="为什么要选择Swift"/>
+<meta name="twitter:description" content="苹果推出了全新的语言&ndash;Swift，先不说语言的好坏，但就苹果公司能认识到objc一些的不足，为兼顾其用户开发一门全新语言，这就是"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">为什么要选择Swift</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-06-07 </span>
+        <div class="post-category">
+            <a href="/categories/ios/"> iOS </a>
+            </div>
+          <span class="more-meta"> 约 772 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="/Content/upload/Img20140607/s_5ndgvtvw_gnf.png" alt="">
+苹果推出了全新的语言&ndash;Swift，先不说语言的好坏，但就苹果公司能认识到objc一些的不足，为兼顾其用户开发一门全新语言，这就是一件很了不起的事情了。至于Swift 和 Objective-C哪个语言好，知乎上也有好多讨论帖（http://www.zhihu.com/question/24002984），请自行查阅。</p>
+<p>哪到底为什么要选择Swift呢？原因有以下几点：</p>
+<p>    1、向前兼容性</p>
+<p>        如果你是一个新的iOS开发者，Swift的学习成本应该比objc低不少，最起码从语法上来看是这样的；如果你是在Xcode上开发多年的老手，Swift也不会让你以前积累的类库或框架全部浪费掉，Swift可以直接调用，要切换也只是重新熟悉语法上需要花费一点时间，况且如果你熟悉面向对象语言的话，估计熟悉语法也花费不了多少精力。</p>
+<p>    2、时代潮流的产物&ndash;ARC</p>
+<p>        在苹果公司刚推出ARC时，很多人说这个机制不成熟，写出来的应用效率不高等等一些扯淡的话。初期Xcode也低调的在新建项目时让用户自由选择是否使用ARC机制，敢问现在有多少人还在使用手动管理计数器？ARC在其他的语言运行时中早就实现了如.Net、Java，苹果只是顺应潮流罢了，同理Swift也是时代推动的产物罢了，再问有多少人因为objc的语法难理解投向了Android（java语言开发）的怀抱？</p>
+<p>    3、stroyboard</p>
+<p>        如果说stroyboard能让iOS开发变得傻瓜化的话，那么Swift才正在是苹果公司给开发者提供的一块敲门砖。如今的stroyboard在Xcode的新版本中也做为了默认的视图引擎，如同微软在Asp.net 中使用web form把多数http请求封装的多深，以至于拖控件拖了多年的开发这都不知道http请求方式有几种。swfit也正是为把更多的开发者吸引过来做出的一份努力。</p>
+<p>    </p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2014-06-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/swift/">swift</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/google%E4%B8%8A%E4%B8%8D%E5%8E%BB%E5%90%8E%E6%88%91%E4%BB%AC%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">google上不去后我们该怎么办</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E7%BA%A2%E7%B1%B3%E7%94%B5%E4%BF%A1%E7%89%88%E5%8D%A1%E4%B8%80%E7%94%B5%E4%BF%A1%E5%8D%A1%E6%98%BE%E7%A4%BA%E6%97%A0%E6%9C%8D%E5%8A%A1/">
+            <span class="next-text nav-default">红米电信版卡一电信卡显示无服务</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>海量数据处理 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</link>
+    <description>Recent content in 海量数据处理 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Fri, 01 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面试中的海量数据处理问题</title>
+      <link>http://localhost:8080/post/%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</guid>
+      <description>第一部分、十道海量数据处理面试题 1、海量日志数据，提取出某日访问百度次数最多的那个IP。 首先是这一天，并且是访问百度的日志中的IP取出来，逐</description>
+    </item>
+    
+  </channel>
+</rss>

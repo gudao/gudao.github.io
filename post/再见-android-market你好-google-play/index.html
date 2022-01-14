@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>再见 Android Market，你好 Google Play！ - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="Android Market 经过这么一段时间的演化，已经从原本简单的 Android apps 卖场，变成了从书到音乐到电影无所不包的大集市。为了彰显这个转变 &amp;ndash; 和把重心放在内容上 &amp;ndash; Google 正式启" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="再见 Android Market，你好 Google Play！" />
+<meta property="og:description" content="Android Market 经过这么一段时间的演化，已经从原本简单的 Android apps 卖场，变成了从书到音乐到电影无所不包的大集市。为了彰显这个转变 &ndash; 和把重心放在内容上 &ndash; Google 正式启" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E5%86%8D%E8%A7%81-android-market%E4%BD%A0%E5%A5%BD-google-play/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-03-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2012-03-07T00:00:00+00:00" />
+
+<meta itemprop="name" content="再见 Android Market，你好 Google Play！">
+<meta itemprop="description" content="Android Market 经过这么一段时间的演化，已经从原本简单的 Android apps 卖场，变成了从书到音乐到电影无所不包的大集市。为了彰显这个转变 &ndash; 和把重心放在内容上 &ndash; Google 正式启"><meta itemprop="datePublished" content="2012-03-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2012-03-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="434">
+<meta itemprop="keywords" content="Android Market,google play," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="再见 Android Market，你好 Google Play！"/>
+<meta name="twitter:description" content="Android Market 经过这么一段时间的演化，已经从原本简单的 Android apps 卖场，变成了从书到音乐到电影无所不包的大集市。为了彰显这个转变 &ndash; 和把重心放在内容上 &ndash; Google 正式启"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">再见 Android Market，你好 Google Play！</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-03-07 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%A7%91%E6%8A%80/"> 科技 </a>
+            </div>
+          <span class="more-meta"> 约 434 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="http://www.blogcdn.com/www.engadget.com/media/2012/03/google-play-logo-black.png" alt="Google Play replaces Android Market, your new source for apps, books, movies and music">
+Android Market 经过这么一段时间的演化，已经从原本简单的 Android apps 卖场，变成了从书到音乐到电影无所不包的大集市。为了彰显这个转变 &ndash; 和把重心放在内容上 &ndash; Google 正式启动了名为「Play」的新平台。这为旗下的各种内容提供了一个方便的品牌，例如 Books、Music 和 Videos 等 app 便更名成了「Play Books」、「Play Music」和「Play Movies」，而原本的 Android Market 则变成了「Play Store」。未来 Google 有意将策略从以 Android 为核心，转移到基於云端，服务所有的平台，因此 Google 未来在上面的黑棒子里也将增加一个「Play」项目，将 Play 平台带到所有的浏览器里。Android 2.2 以上的使用者应该在近几日内就会看到更新（暂时不确定我们这边会不会跟进，或者会不会有什么语言上的在地化），不过初期除了名字换一下之外，内容暂时是换汤不换药。同时在转变的初期，Google 将有一个为期七天的「Seven Days to Play」特卖活动，有什么想买的 Apps、书、电影、音乐的话，可以看准时机下手喔！继续阅读里有个非常 Google 风的介绍影片。</p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2012-03-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/android-market/">Android Market</a>
+          <a href="/tags/google-play/">google play</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/asp.net%E5%8E%BB%E9%99%A4%E6%B2%A1%E7%94%A8%E7%9A%84httpheader/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Asp.Net去除没用的Httpheader</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/html-css-%E7%94%9F%E5%8A%A8%E7%9A%84%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%9B%BE%E4%B9%A6/">
+            <span class="next-text nav-default">HTML &amp; CSS | 生动的网站设计图书</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

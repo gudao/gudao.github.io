@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>信号 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E4%BF%A1%E5%8F%B7/</link>
+    <description>Recent content in 信号 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Sun, 11 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E4%BF%A1%E5%8F%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>无线路由信号莫名搜不到了</title>
+      <link>http://localhost:8080/post/%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E4%BF%A1%E5%8F%B7%E8%8E%AB%E5%90%8D%E6%90%9C%E4%B8%8D%E5%88%B0%E4%BA%86/</link>
+      <pubDate>Sun, 11 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E6%97%A0%E7%BA%BF%E8%B7%AF%E7%94%B1%E4%BF%A1%E5%8F%B7%E8%8E%AB%E5%90%8D%E6%90%9C%E4%B8%8D%E5%88%B0%E4%BA%86/</guid>
+      <description>你有没有遇到这种情况，电脑、手机昨天还可以连接无线路由上网今天突然上不去了，或者在家还可以上网来单位怎么也搜不到单位的无线信号，或者别人的手</description>
+    </item>
+    
+  </channel>
+</rss>

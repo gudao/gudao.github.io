@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>视图高度 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E8%A7%86%E5%9B%BE%E9%AB%98%E5%BA%A6/</link>
+    <description>Recent content in 视图高度 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Thu, 14 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E8%A7%86%E5%9B%BE%E9%AB%98%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>教你如何计算iPhone的屏幕高度</title>
+      <link>http://localhost:8080/post/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97iphone%E7%9A%84%E5%B1%8F%E5%B9%95%E9%AB%98%E5%BA%A6/</link>
+      <pubDate>Thu, 14 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97iphone%E7%9A%84%E5%B1%8F%E5%B9%95%E9%AB%98%E5%BA%A6/</guid>
+      <description>iPhone的各版本都是以点为计数单位的，所以给开发者带来了不少方便。但是你知道怎么计算你的应用的布局吗？ 下面先列出几个常用的默认控件的大小</description>
+    </item>
+    
+  </channel>
+</rss>

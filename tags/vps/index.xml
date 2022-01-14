@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPS on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/vps/</link>
+    <description>Recent content in VPS on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Thu, 11 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何部署网站之虚拟主机选型</title>
+      <link>http://localhost:8080/post/%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B/</link>
+      <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E4%B9%8B%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E9%80%89%E5%9E%8B/</guid>
+      <description>俗话说建网站容易，找虚拟主机难啊？在说如何选虚拟主机之前，先来让我吐槽我这个小博客的坎坷经历吧。 一、国外免费的空间，占小便宜吃大亏 我这个小博</description>
+    </item>
+    
+  </channel>
+</rss>

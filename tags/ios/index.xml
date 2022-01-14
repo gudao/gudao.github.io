@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IOS on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/ios/</link>
+    <description>Recent content in IOS on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Fri, 14 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从现在开始学Android吧</title>
+      <link>http://localhost:8080/post/%E4%BB%8E%E7%8E%B0%E5%9C%A8%E5%BC%80%E5%A7%8B%E5%AD%A6android%E5%90%A7/</link>
+      <pubDate>Fri, 14 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E4%BB%8E%E7%8E%B0%E5%9C%A8%E5%BC%80%E5%A7%8B%E5%AD%A6android%E5%90%A7/</guid>
+      <description>之前有过多次学习Android开发的冲动，多数因为恐惧开发环境配置的复杂而退缩了。这几天因为项目的原因，硬着头皮打开了http://deve</description>
+    </item>
+    
+    <item>
+      <title>iOS图标大小汇总</title>
+      <link>http://localhost:8080/post/ios%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Thu, 14 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/ios%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E6%B1%87%E6%80%BB/</guid>
+      <description>关于苹果的一系列设备，如iPhone，iPod Touch，iPad等图标真让人头疼，下面列出来以供参考。 **图片大小 ****(px)** **文件名** **用途</description>
+    </item>
+    
+    <item>
+      <title>教你如何计算iPhone的屏幕高度</title>
+      <link>http://localhost:8080/post/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97iphone%E7%9A%84%E5%B1%8F%E5%B9%95%E9%AB%98%E5%BA%A6/</link>
+      <pubDate>Thu, 14 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97iphone%E7%9A%84%E5%B1%8F%E5%B9%95%E9%AB%98%E5%BA%A6/</guid>
+      <description>iPhone的各版本都是以点为计数单位的，所以给开发者带来了不少方便。但是你知道怎么计算你的应用的布局吗？ 下面先列出几个常用的默认控件的大小</description>
+    </item>
+    
+    <item>
+      <title>[IOS笔记]一周学习心得</title>
+      <link>http://localhost:8080/post/ios%E7%AC%94%E8%AE%B0%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/ios%E7%AC%94%E8%AE%B0%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/</guid>
+      <description>学习IOS开发差不多一周了，读的书是电子版的《Beginning IOS 6 Development》没有找到中文版，无奈只能啃英文版。还好英文写的还</description>
+    </item>
+    
+    <item>
+      <title>[IOS笔记]视图切换</title>
+      <link>http://localhost:8080/post/ios%E7%AC%94%E8%AE%B0%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/ios%E7%AC%94%E8%AE%B0%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2/</guid>
+      <description>在IOS应用中多视图必不可少，视图切换的效果自然也很重要，下面就贴上视图切换的代码： 先设置以下内容： [UIView beginAnimations:@&amp;quot;view filip&amp;quot; context:nil];//切换</description>
+    </item>
+    
+    <item>
+      <title>Xcode快捷键</title>
+      <link>http://localhost:8080/post/xcode%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/xcode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>1. 文件CMD + N: 新文件CMD + SHIFT + N: 新项目CMD + O: 打开CMD + S: 保存CMD + SHIFT + S: 另存为CMD + W: 关闭窗口CMD + SHIFT + W: 关闭文件2. 编辑C</description>
+    </item>
+    
+    <item>
+      <title>[IOS笔记]控件状态</title>
+      <link>http://localhost:8080/post/ios%E7%AC%94%E8%AE%B0%E6%8E%A7%E4%BB%B6%E7%8A%B6%E6%80%81/</link>
+      <pubDate>Sun, 17 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/ios%E7%AC%94%E8%AE%B0%E6%8E%A7%E4%BB%B6%E7%8A%B6%E6%80%81/</guid>
+      <description>任何IOS控件都包含四种状态： 正常：最常见的状态，初始状态。 高亮：当控件正在被使用时所处的状态，对于按钮来说，当手指触摸按钮时这个按钮就处于</description>
+    </item>
+    
+    <item>
+      <title>IOS学习中</title>
+      <link>http://localhost:8080/post/ios%E5%AD%A6%E4%B9%A0%E4%B8%AD/</link>
+      <pubDate>Sat, 16 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/ios%E5%AD%A6%E4%B9%A0%E4%B8%AD/</guid>
+      <description>大年初七就开始上班了，唉！今年的计划本来是想学Java做android开发的，无奈公司安排开发iphone客户端，那就学习ios吧，反正都是</description>
+    </item>
+    
+  </channel>
+</rss>

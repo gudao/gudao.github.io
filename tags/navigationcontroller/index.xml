@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>navigationController on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/navigationcontroller/</link>
+    <description>Recent content in navigationController on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Wed, 17 Apr 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/navigationcontroller/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS隐藏各种bar</title>
+      <link>http://localhost:8080/post/ios%E9%9A%90%E8%97%8F%E5%90%84%E7%A7%8Dbar/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/ios%E9%9A%90%E8%97%8F%E5%90%84%E7%A7%8Dbar/</guid>
+      <description>隐藏顶部状态栏 [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone]; 隐藏Nav self.navigationController.navigationBar.translucent =YES; [self.navigationController setNavigationBarHidden:YES animated:NO]; 隐藏TabBar 在初始时使用self.hidesBottomBarWhenPushed=YES; self</description>
+    </item>
+    
+  </channel>
+</rss>

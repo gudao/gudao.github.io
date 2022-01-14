@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[转]CentOS Rsync服务端与Windows cwRsync客户端实现数据同步 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="原文地址：http://www.osyunwei.com/archives/3769.html 按照下文配置需要注意两点 1.客户端认证失败 rs" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E8%BD%ACcentos-rsync%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8Ewindows-cwrsync%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[转]CentOS Rsync服务端与Windows cwRsync客户端实现数据同步" />
+<meta property="og:description" content="原文地址：http://www.osyunwei.com/archives/3769.html 按照下文配置需要注意两点 1.客户端认证失败 rs" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E8%BD%ACcentos-rsync%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8Ewindows-cwrsync%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-09-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2012-09-07T00:00:00+00:00" />
+
+<meta itemprop="name" content="[转]CentOS Rsync服务端与Windows cwRsync客户端实现数据同步">
+<meta itemprop="description" content="原文地址：http://www.osyunwei.com/archives/3769.html 按照下文配置需要注意两点 1.客户端认证失败 rs"><meta itemprop="datePublished" content="2012-09-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2012-09-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2577">
+<meta itemprop="keywords" content="rsync,数据同步," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[转]CentOS Rsync服务端与Windows cwRsync客户端实现数据同步"/>
+<meta name="twitter:description" content="原文地址：http://www.osyunwei.com/archives/3769.html 按照下文配置需要注意两点 1.客户端认证失败 rs"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[转]CentOS Rsync服务端与Windows cwRsync客户端实现数据同步</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-09-07 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"> 服务器 </a>
+            </div>
+          <span class="more-meta"> 约 2577 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="/Content/upload/Img20120907/qv2qdap0.dze.jpg" alt="">
+<strong>原文地址：<a href="http://www.osyunwei.com/archives/3769.html">http://www.osyunwei.com/archives/3769.html</a></strong></p>
+<p>按照下文配置需要注意两点</p>
+<p>1.客户端认证失败    rsync.pass文件的权限必须为其他用户不可访问。查看rsync.log下面会有如下提示：    secrets file must not be other-accessible (see strict modes option)2.配置文件问题    rsyncd.conf文件中最好别有注释</p>
+<p><strong>说明：</strong>
+1、Rsync服务端系统：CentOS 5.5IP地址：192.168.21.160数据存放目录：/data/osyunwei2、cwRsync客户端系统：Windows Server 2003IP地址：192.168.21.130同步的目录：D:\osyunwei<strong>实现目的：<strong>cwRsync客户端每天凌晨3:00钟自动同步Rsync服务端/data/osyunwei目录中的数据到D:\osyunwei目录</strong>一、Rsync服务端配置</strong>1、关闭SELINUXvi /etc/selinux/config #编辑防火墙配置文件#SELINUX=enforcing #注释掉#SELINUXTYPE=targeted #注释掉SELINUX=disabled #增加:wq #保存，关闭shutdown -r now #重启系统2、开启防火墙tcp 873端口（Rsync默认端口）vi /etc/sysconfig/iptables #编辑防火墙配置文件-A RH-Firewall-1-INPUT -m state &ndash;state NEW -m tcp -p tcp &ndash;dport 873 -j ACCEPT:wq! #保存/etc/init.d/iptables restart #最后重启防火墙使配置生效3、安装Rsync服务端软件yum install rsync xinetd   #安装vi /etc/xinetd.d/rsync  #编辑配置文件，设置开机启动rsyncdisable = no #修改为/etc/init.d/xinetd start  #启动（CentOS中是以xinetd 来管理Rsync服务的）4、创建rsyncd.conf配置文件vi /etc/rsyncd.conf  #创建配置文件，添加以下代码log file = /var/log/rsyncd.log   #日志文件位置，启动rsync后自动产生这个文件，无需提前创建。[osyunwei]    #自定义名称path = /data/osyunwei   #Rsync服务端数据目录路径comment = osyunwei    #模块名称与[osyunwei]自定义名称相同uid = root  #设置rsync运行权限为rootgid = root  #设置rsync运行权限为rootport=873    #默认端口read only = no   #设置为no，cwRsync客户端可上传文件,yes只读write only = no  #设置为no，cwRsync客户端可下载文件,yes不能下载auth users = osyunweibakuser   #执行数据同步的用户名，可以设置多个，用英文状态下逗号隔开secrets file = /etc/rsync.pass   #用户认证配置文件，里面保存用户名称和密码，后面会创建这个文件hosts allow = 192.168.21.130  #允许进行数据同步的客户端IP地址，可以设置多个，用英文状态下逗号隔开hosts deny = 192.168.21.254   #禁止数据同步的客户端IP地址，可以设置多个，用英文状态下逗号隔开list = yes  #显示Rsync服务端资源列表:wq! #保存5、创建用户认证文件vi  /etc/rsync.pass     #配置文件，添加以下内容osyunweibakuser:123456  #格式，用户名:密码，可以设置多个，每行一个用户名:密码:wq! #保存6、设置文件权限chmod 600 /etc/rsyncd.conf  #设置文件所有者读取、写入权限chmod 600 /etc/rsync.pass   #设置文件所有者读取、写入权限7、启动rsync/etc/init.d/xinetd start   #启动service xinetd stop   #停止service xinetd restart #重新启动<strong>二、cwRsync客户端设置</strong>1、下载cwRsync客户端软件下载地址：<a href="http://jaist.dl.sourceforge.net/project/sereds/cwRsync/4.0.3/cwRsync_4.0.3_Installer.zip">http://jaist.dl.sourceforge.net/project/sereds/cwRsync/4.0.3/cwRsync_4.0.3_Installer.zip</a>2、安装cwRsync客户端   解压cwRsync_4.0.3_Installer.zip 双击打开cwRsync_4.0.3_Installer.exe   Next 下一步   IAgree 同意安装   Next   默认安装路径 C:\Program Files\cwRsync   Install 安装   Close 安装完成，关闭3、测试是否与Rsync服务端通信成功开始-运行-cmd输入cd C:\Program Files\cwRsync\bin   回车再输入telnet 192.168.21.160 873   回车出现telnet界面，说明与Rsync服务端通信成功备注 C:\Program Files\cwRsync\bin  是指cwRsync程序安装路径4、cwRsync客户端同步Rsync服务端的数据开始-运行-cmd，输入cd C:\Program Files\cwRsync\bin 回车再输入rsync &ndash;port=873 -vzrtopg   &ndash;progress &ndash;delete <a href="mailto:osyunweibakuser@192.168.21.160">osyunweibakuser@192.168.21.160</a>::osyunwei /cygdrive/d/osyunwei输入密码：123456 回车开始同步数据，等待执行完成，可以打开D:\osyunwei 与Rsync服务端/data/osyunwei目录中的数据对比一下，查看是否相同说明：d/osyunwei 代表D:\osyunweiosyunwei 代表/etc/rsyncd.conf文件中自定义的模块名称comment = osyunwei192.168.21.160  #Rsync服务端IP地址osyunweibakuser    #执行数据同步的用户&ndash;port=873  #端口-vzrtopg &ndash;progress #显示同步过程详细信息&ndash;delete  #从cwRsync客户端D:\osyunwei目录中删除与Rsync服务端/data/osyunwei目录中不相同的数据，即保证两边的数据完全一致<strong>三、在cwRsync客户端的任务计划中添加批处理脚本文件，每天凌晨3:00钟自动同步Rsync服务端/data/osyunwei目录中的数据到D:\osyunwei目录</strong>1、打开C:\Program Files\cwRsync\bin目录新建passwd.txt输入123456保存继续在C:\Program Files\cwRsync\bin目录新建osyunwei.bat输入@echo offecho.echo 开始同步数据，请稍等&hellip;echo.cd C:\Program Files\cwRsync\binrsync -vzrtopg &ndash;port=873 &ndash;progress &ndash;delete <a href="mailto:osyunweibakuser@192.168.21.160">osyunweibakuser@192.168.21.160</a>::osyunwei /cygdrive/d/osyunwei &lt; passwd.txtecho.echo 数据同步完成echo.最后保存退出2、添加批处理脚本到Windows任务计划开始-设置-控制面板-任务计划打开添加任务计划，下一步浏览，选择打开C:\Program Files\cwRsync\bin目录里面的osyunwei.bat执行这个任务，选择每天，下一步起始时间：3:00运行这个任务：每天，下一步输入Windows系统管理员的登录密码，下一步完成扩展说明：如果要调整同步的时间，打开任务计划里面的osyunwei切换到日程安排来选项设置，还可以打开高级来设置每隔几分钟运行一次osyunwei.bat这个脚本<strong>至此，CentOS Rsync服务端与Windows cwRsync客户端实现数据同步完成</strong></p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2012-09-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/rsync/">rsync</a>
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/">数据同步</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/windows%E4%B8%8B%E7%BC%96%E8%AF%91nginx/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">windows下编译nginx</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/">
+            <span class="next-text nav-default">Nginx模块修改(ngx_http_flv_module)</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

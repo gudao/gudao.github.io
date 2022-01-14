@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android模拟器 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/android%E6%A8%A1%E6%8B%9F%E5%99%A8/</link>
+    <description>Recent content in Android模拟器 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 11 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/android%E6%A8%A1%E6%8B%9F%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>android手机模拟器安装</title>
+      <link>http://localhost:8080/post/android%E6%89%8B%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 11 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/android%E6%89%8B%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85/</guid>
+      <description>1.下载Android SDK,地址在http://developer.android.com/sdk/index.html 2.下载并安装JD</description>
+    </item>
+    
+  </channel>
+</rss>

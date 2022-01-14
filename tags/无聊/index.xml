@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>无聊 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/%E6%97%A0%E8%81%8A/</link>
+    <description>Recent content in 无聊 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 14 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E6%97%A0%E8%81%8A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不敲代码的日子</title>
+      <link>http://localhost:8080/post/%E4%B8%8D%E6%95%B2%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%A5%E5%AD%90/</link>
+      <pubDate>Mon, 14 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E4%B8%8D%E6%95%B2%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%A5%E5%AD%90/</guid>
+      <description>最近因为一直在跟进公司的移动客户端项目，大概连续有一个月没有敲代码。不写代码没有感觉到渴望，不像其他爱好不玩就手痒痒，反而有点厌倦的样子。其</description>
+    </item>
+    
+  </channel>
+</rss>

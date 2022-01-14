@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jw palyer中文编码 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/jw-palyer%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81/</link>
+    <description>Recent content in jw palyer中文编码 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Mon, 17 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/jw-palyer%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jw player 中文文件名问题</title>
+      <link>http://localhost:8080/post/jw-player-%E4%B8%AD%E6%96%87%E6%96%87%E4%BB%B6%E5%90%8D%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 17 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/jw-player-%E4%B8%AD%E6%96%87%E6%96%87%E4%BB%B6%E5%90%8D%E9%97%AE%E9%A2%98/</guid>
+      <description>可恶的jwplayer不能用中文做为file参数，发送到服务器端的参数总是编码有问题，今天终于找到问题解决方法了。 用JS的encodeURI</description>
+    </item>
+    
+  </channel>
+</rss>

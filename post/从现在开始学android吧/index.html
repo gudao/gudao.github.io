@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>从现在开始学Android吧 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="之前有过多次学习Android开发的冲动，多数因为恐惧开发环境配置的复杂而退缩了。这几天因为项目的原因，硬着头皮打开了http://deve" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E4%BB%8E%E7%8E%B0%E5%9C%A8%E5%BC%80%E5%A7%8B%E5%AD%A6android%E5%90%A7/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="从现在开始学Android吧" />
+<meta property="og:description" content="之前有过多次学习Android开发的冲动，多数因为恐惧开发环境配置的复杂而退缩了。这几天因为项目的原因，硬着头皮打开了http://deve" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E4%BB%8E%E7%8E%B0%E5%9C%A8%E5%BC%80%E5%A7%8B%E5%AD%A6android%E5%90%A7/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-03-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-03-14T00:00:00+00:00" />
+
+<meta itemprop="name" content="从现在开始学Android吧">
+<meta itemprop="description" content="之前有过多次学习Android开发的冲动，多数因为恐惧开发环境配置的复杂而退缩了。这几天因为项目的原因，硬着头皮打开了http://deve"><meta itemprop="datePublished" content="2014-03-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-03-14T00:00:00+00:00" />
+<meta itemprop="wordCount" content="875">
+<meta itemprop="keywords" content="iOS,Android," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从现在开始学Android吧"/>
+<meta name="twitter:description" content="之前有过多次学习Android开发的冲动，多数因为恐惧开发环境配置的复杂而退缩了。这几天因为项目的原因，硬着头皮打开了http://deve"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">从现在开始学Android吧</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-03-14 </span>
+        <div class="post-category">
+            <a href="/categories/android/"> Android </a>
+            </div>
+          <span class="more-meta"> 约 875 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="/Content/upload/Img20140314/s_3zqkgwvz_kmt.jpg" alt="">
+    之前有过多次学习Android开发的冲动，多数因为恐惧开发环境配置的复杂而退缩了。这几天因为项目的原因，硬着头皮打开了http://developer.android.com,结果被ADT的简单着实得感动了一把，而且官方的API Guides写得也很是通俗易懂（比起iOS的guide容易多了），看来真的是时候开始学习Android开发了。</p>
+<p>    我才开始学不到一周，所以这篇不能算经验总结，只能算是一个iOS和Android初学者对这两种技术在入门方面难易程度的瞎比比。</p>
+<p>1、语言学习成本</p>
+<p>    iOS使用的Objective-C(简称OC)，光看着名字的长度就知道这TM不是一门好学的语言，不过话说回来OC还是一门不错的语言。</p>
+<p>    Android使用的Java，大公司基本上都在招这种人，所以即使你学了Java不愿意做Android了，照样还可以去找一个不错的工作。（再次感叹我们这帮跟随C#多年的苦逼同志，想TM换个大公司待待吧，没得挑，用.Net的大公司一只手都能数过来。）</p>
+<p>2、硬件成本</p>
+<p>    iOS开发机器需要Mac家族的硬件，我知道的最便宜的Mac Mini 差不多5k左右还要另购显示器，如果需要真机调式的话，再弄个iPhone4啊iPhone5啊，iPad什么的，总的算下来没有15K，玩都玩不了。</p>
+<p>    Android只要你有小黑（Thinkpad），再加一部千元智能机，总共不到5K玩的溜溜的。</p>
+<p>3、入门教程</p>
+<p>    两者官方提供的都是英文，iOS有部分中文内容了，而且可以下载PDF版本。Android的暂时我还没有发现有中文版本，但是其文档组织的很实用，不像iOS的，到处都是引用链接，刚看没两句话，一个链接（欲练此功，详见这里）简直就是一张蜘蛛网。</p>
+<p>4、开发工具</p>
+<p>    两者就现在的开发工具可以说不相上下了，ADT只需要配置一个JDK环境一切都OK，而XCode5的下载速度在国内还是有点慢，而且中间不能断网。</p>
+<p>5、模拟器</p>
+<p>    这点不得说乔老爷子做的确实不错，启动速度快，和真机的差别也小。Android的模拟器如果你的电脑是2010前买的，我劝你还是直接上真机吧。</p>
+<p>6、想到了再说，如果你也想吐槽欢迎回复。</p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2014-03-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ios/">iOS</a>
+          <a href="/tags/android/">Android</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E7%BA%A2%E7%B1%B3%E7%94%B5%E4%BF%A1%E7%89%88%E5%8D%A1%E4%B8%80%E7%94%B5%E4%BF%A1%E5%8D%A1%E6%98%BE%E7%A4%BA%E6%97%A0%E6%9C%8D%E5%8A%A1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">红米电信版卡一电信卡显示无服务</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%B8%89/">
+            <span class="next-text nav-default">Redis 集群教程(三)</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flv加密解密 on 古道的技术博客</title>
+    <link>http://localhost:8080/tags/flv%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</link>
+    <description>Recent content in flv加密解密 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>gudao</copyright>
+    <lastBuildDate>Fri, 31 Aug 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/flv%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx模块修改(ngx_http_flv_module)</title>
+      <link>http://localhost:8080/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</link>
+      <pubDate>Fri, 31 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/</guid>
+      <description>本文实现内容：增加flv模块参数，跳过片头内容。flv模块默认只有start一个参数，添加一个配置参数iskip来指定是否跳过片头。 如果你对</description>
+    </item>
+    
+  </channel>
+</rss>

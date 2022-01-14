@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[转]cwsync使用详解 - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="1、cwsync 服务器和客户端软件下载地址http://www.itefix.no/i2/downloadhttp://switch.dl." /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:8080/post/%E8%BD%ACcwsync%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[转]cwsync使用详解" />
+<meta property="og:description" content="1、cwsync 服务器和客户端软件下载地址http://www.itefix.no/i2/downloadhttp://switch.dl." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:8080/post/%E8%BD%ACcwsync%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-09-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2012-09-19T00:00:00+00:00" />
+
+<meta itemprop="name" content="[转]cwsync使用详解">
+<meta itemprop="description" content="1、cwsync 服务器和客户端软件下载地址http://www.itefix.no/i2/downloadhttp://switch.dl."><meta itemprop="datePublished" content="2012-09-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2012-09-19T00:00:00+00:00" />
+<meta itemprop="wordCount" content="3233">
+<meta itemprop="keywords" content="cwrsync," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[转]cwsync使用详解"/>
+<meta name="twitter:description" content="1、cwsync 服务器和客户端软件下载地址http://www.itefix.no/i2/downloadhttp://switch.dl."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[转]cwsync使用详解</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-09-19 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"> 服务器 </a>
+            </div>
+          <span class="more-meta"> 约 3233 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#module-definitions-remember-cygwin-naming-conventions--cwork-becomes-cygwincworkdbbackup-项目名称随便取path--cygdrivefrsync-文件目录此处路径代表frsync目录read-only--false-只读一般是false完全控制list--noauth-users--yjm-认证用户名transfer-logging--yes">Module definitions# Remember cygwin naming conventions : c:\work becomes /cygwin/c/work#[dbbackup]                      ←项目名称，随便取path = /cygdrive/f/rsync ←文件目录（此处路径代表f:/rsync目录)read only = false               ←只读（一般是false完全控制）list = noauth users = yjm               ←认证用户名transfer logging = yes                </a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="/Content/upload/Img20120907/qv2qdap0.dze.jpg" alt=""> 1、cwsync 服务器和客户端软件下载地址<a href="http://www.itefix.no/i2/download">http://www.itefix.no/i2/download</a><a href="http://switch.dl.sourceforge.net/sourceforge/sereds">http://switch.dl.sourceforge.net/sourceforge/sereds</a></p>
+<table><tbody><tr><td valign="top">
+提示：
+<p>在需要传同步文件出来的windows服务器上安装同步Rsync Server软件cwRsync_Server_2.0.10_Installer后，会在服务器上建一个管理员级别的SvcwRsync用户，可以修改密码但是我一般不修改，在此服务器上会增加一个RsyncServer服务，并且会设成自动启动。</p>
+</td></tr></tbody></table>
+<p>2、把目录C:\Program Files\cwRsyncServer\bin填加到当前用户的path里。（这路径是看个人安装的路径不同而改变）</p>
+<p>3、编写Rsync Server配置文件rsyncd.conf的一般格式如下：</p>
+<table><tbody><tr><td valign="top">
+########################################### uid = 0 gid = 0   使用匿名传输时必须加入以上2行use chroot = falsestrict modes = false#hosts allow = 192.168.0.2        ←表示只允许某一个IP地址访问hosts allow = *                   ←表示允许所有地址访问log file = rsyncd.log        日志文件pid file = rsyncd.pid        进程文件secrets file = password   在当前目录下password目录存放的连接用户和密码yjm:123max connections = 100     最大连接数100人 
+<h1 id="module-definitions-remember-cygwin-naming-conventions--cwork-becomes-cygwincworkdbbackup-项目名称随便取path--cygdrivefrsync-文件目录此处路径代表frsync目录read-only--false-只读一般是false完全控制list--noauth-users--yjm-认证用户名transfer-logging--yes">Module definitions# Remember cygwin naming conventions : c:\work becomes /cygwin/c/work#[dbbackup]                      ←项目名称，随便取path = /cygdrive/f/rsync ←文件目录（此处路径代表f:/rsync目录)read only = false               ←只读（一般是false完全控制）list = noauth users = yjm               ←认证用户名transfer logging = yes                </h1>
+<p>[test]path = /cygdrive/d/yingread only = truelist = noauth users = yjmtransfer logging = yes #####################################</p>
+</td></tr></tbody></table>
+<p>rsync客户端命令参数详解</p>
+<p>-v, &ndash;verbose 详细模式输出</p>
+<p>-q, &ndash;quiet 精简输出模式</p>
+<p>-c, &ndash;checksum 打开校验开关，强制对文件传输进行校验</p>
+<p>-a, &ndash;archive 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD</p>
+<p>-r, &ndash;recursive 对子目录以递归模式处理</p>
+<p>-R, &ndash;relative 使用相对路径信息</p>
+<p>-b, &ndash;backup 创建备份，也就是对于目的已经存在有同样的文件名时，将老的文件重新命名为~filename。可以使用&ndash;suffix选项来指定不同的备份文件前缀。</p>
+<p>&ndash;backup-dir 将备份文件(如~filename)存放在在目录下。</p>
+<p>-suffix=SUFFIX 定义备份文件前缀</p>
+<p>-u, &ndash;update 仅仅进行更新，也就是跳过所有已经存在于DST，并且文件时间晚于要备份的文件。(不覆盖更新的文件)</p>
+<p>-l, &ndash;links 保留软链结</p>
+<p>-L, &ndash;copy-links 想对待常规文件一样处理软链结</p>
+<p>&ndash;copy-unsafe-links 仅仅拷贝指向SRC路径目录树以外的链结</p>
+<p>&ndash;safe-links 忽略指向SRC路径目录树以外的链结</p>
+<p>-H, &ndash;hard-links 保留硬链结</p>
+<p>-p, &ndash;perms 保持文件权限</p>
+<p>-o, &ndash;owner 保持文件属主信息</p>
+<p>-g, &ndash;group 保持文件属组信息</p>
+<p>-D, &ndash;devices 保持设备文件信息</p>
+<p>-t, &ndash;times 保持文件时间信息</p>
+<p>-S, &ndash;sparse 对稀疏文件进行特殊处理以节省DST的空间</p>
+<p>-n, &ndash;dry-run现实哪些文件将被传输</p>
+<p>-W, &ndash;whole-file 拷贝文件，不进行增量检测</p>
+<p>-x, &ndash;one-file-system 不要跨越文件系统边界</p>
+<p>-B, &ndash;block-size=SIZE 检验算法使用的块尺寸，默认是700字节</p>
+<p>-e, &ndash;rsh=COMMAND 指定使用rsh、ssh方式进行数据同步</p>
+<p>&ndash;rsync-path=PATH 指定远程服务器上的rsync命令所在路径信息</p>
+<p>-C, &ndash;cvs-exclude 使用和CVS一样的方法自动忽略文件，用来排除那些不希望传输的文件</p>
+<p>&ndash;existing 仅仅更新那些已经存在于DST的文件，而不备份那些新创建的文件</p>
+<p>&ndash;delete 删除那些DST中SRC没有的文件</p>
+<p>&ndash;delete-excluded 同样删除接收端那些被该选项指定排除的文件</p>
+<p>&ndash;delete-after 传输结束以后再删除</p>
+<p>&ndash;ignore-errors 及时出现IO错误也进行删除</p>
+<p>&ndash;max-delete=NUM 最多删除NUM个文件</p>
+<p>&ndash;partial 保留那些因故没有完全传输的文件，以是加快随后的再次传输</p>
+<p>&ndash;force 强制删除目录，即使不为空</p>
+<p>&ndash;numeric-ids 不将数字的用户和组ID匹配为用户名和组名</p>
+<p>&ndash;timeout=TIME IP超时时间，单位为秒</p>
+<p>-I, &ndash;ignore-times 不跳过那些有同样的时间和长度的文件</p>
+<p>&ndash;size-only 当决定是否要备份文件时，仅仅察看文件大小而不考虑文件时间</p>
+<p>&ndash;modify-window=NUM 决定文件是否时间相同时使用的时间戳窗口，默认为0</p>
+<p>-T &ndash;temp-dir=DIR 在DIR中创建临时文件</p>
+<p>&ndash;compare-dest=DIR 同样比较DIR中的文件来决定是否需要备份</p>
+<p>-P 等同于 &ndash;partial</p>
+<p>&ndash;progress 显示备份过程</p>
+<p>-z, &ndash;compress 对备份的文件在传输时进行压缩处理</p>
+<p>&ndash;exclude=PATTERN 指定排除不需要传输的文件模式</p>
+<p>&ndash;include=PATTERN 指定不排除而需要传输的文件模式</p>
+<p>&ndash;exclude-from=FILE 排除FILE中指定模式的文件</p>
+<p>&ndash;include-from=FILE 不排除FILE指定模式匹配的文件</p>
+<p>&ndash;version 打印版本信息</p>
+<p>&ndash;address 绑定到特定的地址</p>
+<p>&ndash;config=FILE 指定其他的配置文件，不使用默认的rsyncd.conf文件</p>
+<p>&ndash;port=PORT 指定其他的rsync服务端口</p>
+<p>&ndash;blocking-io 对远程shell使用阻塞IO</p>
+<p>-stats 给出某些文件的传输状态</p>
+<p>&ndash;progress 在传输时现实传输过程</p>
+<p>&ndash;log-format=formAT 指定日志文件格式</p>
+<p>&ndash;password-file=FILE 从FILE中得到密码</p>
+<p>&ndash;bwlimit=KBPS 限制I/O带宽，KBytes per second</p>
+<p>-h, &ndash;help 显示帮助信息</p>
+<p> </p>
+<p>3.1设置服务器目录中的权限，在备份目录添加SvcwRsync用户的完全控制权限</p>
+<p> </p>
+<p>4在客户端测试连接</p>
+<p>telnet 192.168.1.200 873(默认是873端口)</p>
+<p>4.1 差异备份</p>
+<p>rsync -avr 192.168.1.200::mydoc /cygdrive/e/test （表示匿名连接）</p>
+<p>将192.168.1.200上zhmj01t目录同步到本机E:\test目录中</p>
+<p> </p>
+<p>4.2设置备份计划</p>
+<p>       4.2.1 创建自动备份脚本</p>
+<p>Echo off</p>
+<p>@rsync -avr 192.168.1.200::mydoc /cygdrive/e/test</p>
+<p>:: 将起保存为sync.bat文件</p>
+<p> </p>
+<p>       4.2.2添加计划任务</p>
+<pre>At  05:00  /every:M,T,W,Th,F,S,Su  e:\sync.bat</pre>
+<p> </p>
+<p> </p>
+<p>5、帮助</p>
+<p> </p>
+<p>错误1: rsync: read error: Connection reset by peer (104)</p>
+<p>rsync error: error in rsync protocol data stream (code 12) at io.c(794) [receive</p>
+<p>r=3.0.2]</p>
+<p>解决：很大可能是服务器端没有开启 rsync 服务。开启服务。</p>
+<p> </p>
+<p>错误2：@ERROR: chdir failed</p>
+<p>rsync error: error starting client-server protocol (code 5) at main.c(1495) [rec</p>
+<p>eiver=3.0.2]</p>
+<p>解决：服务器端同步目录没有权限，cwrsync默认用户是Svcwrsync。为同步目录添加用户Svcwrsync权限。</p>
+<p> </p>
+<p>错误3：@ERROR: failed to open lock file</p>
+<p>rsync error: error starting client-server protocol (code 5) at main.c(1495) [rec</p>
+<p>eiver=3.0.2]</p>
+<p>解决：配置文件 rsync.conf中添加 lock file = rsyncd.lock 即可解决。</p>
+<p>Q：如何通过ssh进行rsync，而且无须输入密码？</p>
+<p>A：可以通过以下几个步骤</p>
+<ol>
+<li>
+<p>通过ssh-keygen在server A上建立SSH keys，不要指定密码，你会在~/.ssh下看到identity和identity.pub文件</p>
+</li>
+<li>
+<p>在server B上的home目录建立子目录.ssh</p>
+</li>
+<li>
+<p>将A的identity.pub拷贝到server B上</p>
+</li>
+<li>
+<p>将identity.pub加到~[user b]/.ssh/authorized_keys</p>
+</li>
+<li>
+<p>于是server A上的A用户，可通过下面命令以用户B ssh到server B上了</p>
+</li>
+</ol>
+<p>                e.g. ssh -l userB serverB</p>
+<p>这样就使server A上的用户A就可以ssh以用户B的身份无需密码登陆到server B上了。</p>
+<p> </p>
+<p>Q：如何通过在不危害安全的情况下通过防火墙使用rsync?</p>
+<p>A：解答如下：</p>
+<p>这通常有两种情况，一种是服务器在防火墙内，一种是服务器在防火墙外。</p>
+<p>无论哪种情况，通常还是使用ssh，这时最好新建一个备份用户，并且配置sshd仅允许这个用户通过RSA认证方式进入。</p>
+<p>如果服务器在防火墙内，则最好限定客户端的IP地址，拒绝其它所有连接。</p>
+<p>如果客户机在防火墙内，则可以简单允许防火墙打开TCP端口22的ssh外发连接就ok了。</p>
+<p> </p>
+<p>Q：我能将更改过或者删除的文件也备份上来吗？</p>
+<p>A：当然可以：</p>
+<p>你可以使用如：rsync -other -options -backupdir = ./backup-2000-2-13 &hellip;这样的命令来实现。</p>
+<p>这样如果源文件:/path/to/some/file.c改变了，那么旧的文件就会被移到./backup-2000-2-13/path/to/some/file.c，</p>
+<p>这里这个目录需要自己</p>
+<p>手工建立起来</p>
+<p> </p>
+<p>Q：我需要在防火墙上开放哪些端口以适应rsync？</p>
+<p>A：视情况而定</p>
+<p>rsync可以直接通过873端口的tcp连接传文件，也可以通过22端口的ssh来进行文件传递，但你也可以通过下列命令改变它的端口：</p>
+<p>rsync &ndash;port 8730 otherhost:: 或者 rsync -e ssh -p 2002 otherhost:</p>
+<p> </p>
+<p>Q：我如何通过rsync只复制目录结构，忽略掉文件呢？</p>
+<p>A：rsync -av &ndash;include */ &ndash;exclude * source-dir dest-dir</p>
+<p> </p>
+<p>Q：为什么我总会出现&quot;Read-only file system&quot;的错误呢？</p>
+<p>A：看看是否忘了设&quot;read only = no&quot;了</p>
+<p> </p>
+<p>Q：为什么我会出现@ERROR: invalid gid的错误呢？</p>
+<p>A：rsync使用时默认是用uid=nobody;gid=nobody来运行的，如果你的系统不存在nobody组的话，就会出现这样的错误，可以试试gid = nogroup或者其它</p>
+<p> </p>
+<p>Q：绑定端口873失败是怎么回事？</p>
+<p>A：如果你不是以root权限运行这一守护进程的话，因为1024端口以下是特权端口，会出现这样的错误。你可以用&ndash;port参数来改变。</p>
+<p> </p>
+<p>Q：为什么我认证失败？</p>
+<p>A：从你的命令行看来：</p>
+<p>你用的是：</p>
+<p>&gt; bash$ rsync -a 144.16.251.213::test test</p>
+<p>&gt; Password:</p>
+<p>&gt; @ERROR: auth failed on module test</p>
+<p>&gt; I dont understand this. Can somebody explain as to how to acomplish this.</p>
+<p>&gt; All suggestions are welcome.</p>
+<p>应该是没有以你的用户名登陆导致的问题，试试rsync -a <a href="mailto:max@144.16.251.213">max@144.16.251.213</a>::test test</p>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2012-09-19
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/cwrsync/">cwrsync</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9D%82%E8%B0%88/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">软件更新杂谈</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/jw-player-%E4%B8%AD%E6%96%87%E6%96%87%E4%BB%B6%E5%90%8D%E9%97%AE%E9%A2%98/">
+            <span class="next-text nav-default">jw player 中文文件名问题</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'gudao';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:8080/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>gudao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

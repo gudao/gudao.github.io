@@ -2,18 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>部署 on 古道的技术博客</title>
-    <link>https://gudao.github.io/tags/%E9%83%A8%E7%BD%B2/</link>
+    <link>http://localhost:8080/tags/%E9%83%A8%E7%BD%B2/</link>
     <description>Recent content in 部署 on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>gudao</copyright>
-    <lastBuildDate>Tue, 05 Jun 2012 01:37:56 +0800</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8080/tags/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用hugo搭建github博客</title>
+      <link>http://localhost:8080/post/hugo-blog/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/hugo-blog/</guid>
+      <description>Hugo 初步认识 之前用wordpress 部署过自己的博客，需要PHP环境和数据库后来觉得麻烦关停了。认识hugo是开始使用 golang 后发现的，刚开始觉得麻</description>
+    </item>
+    
     <item>
       <title>(转)Hadoop集群安装详细步骤|Hadoop安装配置</title>
-      <link>https://gudao.github.io/post/hadoop-install/</link>
+      <link>http://localhost:8080/post/%E8%BD%AChadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:8080/post/%E8%BD%AChadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+      <description>Hadoop集群安装 首先我们统一一下定义，在这里所提到的Hadoop是指Hadoop Common，主要提供DFS（分布式文件存储）与Map/</description>
+    </item>
+    
+    <item>
+      <title>Hadoop集群安装详细步骤|Hadoop安装配置</title>
+      <link>http://localhost:8080/post/hadoop-install/</link>
       <pubDate>Tue, 05 Jun 2012 01:37:56 +0800</pubDate>
       
-      <guid>https://gudao.github.io/post/hadoop-install/</guid>
+      <guid>http://localhost:8080/post/hadoop-install/</guid>
       <description>#Hadoop集群安装详细步骤|Hadoop安装配置 Hadoop集群安装 首先我们统一一下定义，在这里所提到的Hadoop是指Hadoop Co</description>
     </item>
     
