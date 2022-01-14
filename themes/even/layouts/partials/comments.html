@@ -1,4 +1,13 @@
 {{ if and .IsPage (ne .Params.comment false) -}}
+<script src="https://utteranc.es/client.js"
+        repo="gudao/gudao.github.io"
+        issue-term="title"
+        label="blog"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
   <!-- Disqus -->
   {{- if .Site.DisqusShortname -}}
     <div id="disqus_thread"></div>
