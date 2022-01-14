@@ -2,7 +2,7 @@
 title: "使用hugo搭建github博客"
 description: ""
 tags: [ "hugo", "部署", ]
-lastmod: 2022-01-13
+lastmod: 2022-01-14
 date: 2022-01-13
 draft: false
 categories:
@@ -13,8 +13,60 @@ slug: "hugo-blog"
 之前用wordpress 部署过自己的博客，需要PHP环境和数据库后来觉得麻烦关停了。认识hugo是开始使用 golang 后发现的，刚开始觉得麻烦没有用
 最近硬着头皮要做个博客。
 ## 架构说明
- 
+ hugo 根据 markdown 格式的文件，生成对应的HTML 文件发布到在线的web 服务器上。同时可以实现本地自己web 服务预览。
+ 起初我遇到的主要问题是：源文件管理和静态文件不能分开管理，hugo 默认会在站点根目录生成一个`public`文件夹，如果直接提交到git 上的话 markdown
+ 源文件和生成的静态文件都融在了一起给提交确认带来了太多不便。原来想把 public 文件夹当做一个分支处理，但是 github 的站点托管又不支持自定义文件夹，
+ 后来在翻看 hugo [官方文档](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 时，偶然发现 github 支持 workflow ,
+ 通过创建一个`.github/workflows/gh-pages.yml` 文件即可启动 Github Action，自动将 .md 文件生成至'gh-pages'分支。这样比起在本地生成静态
+ 文件再推送至 git 简单了不少，而且源代码管理的文件也干净了许多。
 ## 本地部署
 [下载地址](https://github.com/gohugoio/hugo/releases)
+我用的是mac arm版本的，用 `hugo new site xxx` 生成一个站点文件夹，再找一个自己喜欢的样式（在这里挑吧[theme](https://themes.gohugo.io/)）。
+我用的是 even ，一般在theme 中都会有一个 `exampleSite`文件夹，把里面的config.toml 拷贝至站点根目录，按照自己的信息修改即可。
+这里需要注意的是最好不要用git clone 直接下载theme，建议用Download Zip的形式下载到本地解压到themes文件夹即可。
+这样做的原因是，如果你用clone的方式，在你把站点整个推送至git的时候，这个theme 文件夹就成了一个子模块，github执行Build时会报 git submodule 拉取错误。
+
 ## github集成
+### 添加yml文件
+	``` yml
+	name: github pages
+	
+	on:
+	  push:
+	    branches:
+	      - main  # Set a branch to deploy
+	  pull_request:
+	
+	jobs:
+	  deploy:
+	    runs-on: ubuntu-20.04
+	    steps:
+	      - uses: actions/checkout@v2
+	        with:
+	          submodules: true  # Fetch Hugo themes (true OR recursive)
+	          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+	
+	      - name: Setup Hugo
+	        uses: peaceiris/actions-hugo@v2
+	        with:
+	          hugo-version: 'latest'
+	          # extended: true
+	
+	      - name: Build
+	        run: hugo -t even //注意这里
+	
+	      - name: Deploy
+	        uses: peaceiris/actions-gh-pages@v3
+	        if: github.ref == 'refs/heads/main'
+	        with:
+	          github_token: ${{ secrets.GITHUB_TOKEN }}
+	          publish_dir: ./public
+	``` 
+	
+### 修改 hugo 命令
+注意 Build 步骤要按照自己使用的样式名称，并且是不要加server的
+### 配置github Page 设置
+在github的这个路径 Settings > GitHub Pages 选择 `gh-pages`分支即可。
 ## 写作编辑器
+找了好多款markdown的编辑器，要不就是没有预览,要不就是保存文件和新建文件太费劲。最后还是用了HbuilderX。 能按照文件夹管理文件，
+	对MarkDown语法支持又好。就这样吧。
