@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gudao.github.io/post/hugo-blog/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-01-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-01-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-14T00:00:00+00:00" />
 
 <meta itemprop="name" content="使用hugo搭建github博客">
 <meta itemprop="description" content="Hugo 初步认识 之前用wordpress 部署过自己的博客，需要PHP环境和数据库后来觉得麻烦关停了。认识hugo是开始使用 golang 后发现的，刚开始觉得麻"><meta itemprop="datePublished" content="2022-01-13T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2022-01-13T00:00:00+00:00" />
-<meta itemprop="wordCount" content="111">
+<meta itemprop="dateModified" content="2022-01-14T00:00:00+00:00" />
+<meta itemprop="wordCount" content="978">
 <meta itemprop="keywords" content="hugo,部署," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用hugo搭建github博客"/>
 <meta name="twitter:description" content="Hugo 初步认识 之前用wordpress 部署过自己的博客，需要PHP环境和数据库后来觉得麻烦关停了。认识hugo是开始使用 golang 后发现的，刚开始觉得麻"/>
@@ -132,8 +132,8 @@
         <div class="post-category">
             <a href="/categories/go/"> go </a>
             </div>
-          <span class="more-meta"> 约 111 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 978 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -147,7 +147,13 @@
       <ul>
         <li><a href="#架构说明">架构说明</a></li>
         <li><a href="#本地部署">本地部署</a></li>
-        <li><a href="#github集成">github集成</a></li>
+        <li><a href="#github集成">github集成</a>
+          <ul>
+            <li><a href="#添加yml文件">添加yml文件</a></li>
+            <li><a href="#修改-hugo-命令">修改 hugo 命令</a></li>
+            <li><a href="#配置github-page-设置">配置github Page 设置</a></li>
+          </ul>
+        </li>
         <li><a href="#写作编辑器">写作编辑器</a></li>
       </ul>
     </li>
@@ -160,10 +166,62 @@
 <p>之前用wordpress 部署过自己的博客，需要PHP环境和数据库后来觉得麻烦关停了。认识hugo是开始使用 golang 后发现的，刚开始觉得麻烦没有用
 最近硬着头皮要做个博客。</p>
 <h2 id="架构说明">架构说明</h2>
+<p>hugo 根据 markdown 格式的文件，生成对应的HTML 文件发布到在线的web 服务器上。同时可以实现本地自己web 服务预览。
+起初我遇到的主要问题是：源文件管理和静态文件不能分开管理，hugo 默认会在站点根目录生成一个<code>public</code>文件夹，如果直接提交到git 上的话 markdown
+源文件和生成的静态文件都融在了一起给提交确认带来了太多不便。原来想把 public 文件夹当做一个分支处理，但是 github 的站点托管又不支持自定义文件夹，
+后来在翻看 hugo <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">官方文档</a> 时，偶然发现 github 支持 workflow ,
+通过创建一个<code>.github/workflows/gh-pages.yml</code> 文件即可启动 Github Action，自动将 .md 文件生成至&rsquo;gh-pages&rsquo;分支。这样比起在本地生成静态
+文件再推送至 git 简单了不少，而且源代码管理的文件也干净了许多。</p>
 <h2 id="本地部署">本地部署</h2>
-<p><a href="https://github.com/gohugoio/hugo/releases">下载地址</a></p>
+<p><a href="https://github.com/gohugoio/hugo/releases">下载地址</a>
+我用的是mac arm版本的，用 <code>hugo new site xxx</code> 生成一个站点文件夹，再找一个自己喜欢的样式（在这里挑吧<a href="https://themes.gohugo.io/">theme</a>）。
+我用的是 even ，一般在theme 中都会有一个 <code>exampleSite</code>文件夹，把里面的config.toml 拷贝至站点根目录，按照自己的信息修改即可。
+这里需要注意的是最好不要用git clone 直接下载theme，建议用Download Zip的形式下载到本地解压到themes文件夹即可。
+这样做的原因是，如果你用clone的方式，在你把站点整个推送至git的时候，这个theme 文件夹就成了一个子模块，github执行Build时会报 git submodule 拉取错误。</p>
 <h2 id="github集成">github集成</h2>
+<h3 id="添加yml文件">添加yml文件</h3>
+<pre><code>``` yml
+name: github pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: hugo -t even //注意这里
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+``` 
+</code></pre>
+<h3 id="修改-hugo-命令">修改 hugo 命令</h3>
+<p>注意 Build 步骤要按照自己使用的样式名称，并且是不要加server的</p>
+<h3 id="配置github-page-设置">配置github Page 设置</h3>
+<p>在github的这个路径 Settings &gt; GitHub Pages 选择 <code>gh-pages</code>分支即可。</p>
 <h2 id="写作编辑器">写作编辑器</h2>
+<p>找了好多款markdown的编辑器，要不就是没有预览,要不就是保存文件和新建文件太费劲。最后还是用了HbuilderX。 能按照文件夹管理文件，
+对MarkDown语法支持又好。就这样吧。</p>
 
     </div>
 
@@ -175,7 +233,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-01-13
+        2022-01-14
         
     </span>
   </p>
