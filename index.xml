@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>[中文] 《长恨歌》</title>
-      <link>https://gudao.github.io/post/chinese-preview/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>https://gudao.github.io/post/chinese-preview/</guid>
-      <description>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难</description>
-    </item>
-    
-    <item>
       <title>swift中JSON的强类型化</title>
       <link>https://gudao.github.io/post/swift%E4%B8%ADjson%E7%9A%84%E5%BC%BA%E7%B1%BB%E5%9E%8B%E5%8C%96/</link>
       <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
@@ -135,10 +126,10 @@
     
     <item>
       <title>13年最后一天</title>
-      <link>https://gudao.github.io/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</link>
+      <link>https://gudao.github.io/post/2013%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</link>
       <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://gudao.github.io/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</guid>
+      <guid>https://gudao.github.io/post/2013%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</guid>
       <description>回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，</description>
     </item>
     
@@ -422,6 +413,15 @@
     </item>
     
     <item>
+      <title>.net Hadoop资源管理器发布</title>
+      <link>https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/</link>
+      <pubDate>Fri, 11 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/</guid>
+      <description>终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把</description>
+    </item>
+    
+    <item>
       <title>新年新计划</title>
       <link>https://gudao.github.io/post/%E6%96%B0%E5%B9%B4%E6%96%B0%E8%AE%A1%E5%88%92/</link>
       <pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate>
@@ -540,10 +540,10 @@
     
     <item>
       <title>[2012-10-26]google最新hosts</title>
-      <link>https://gudao.github.io/post/2012-10-26google%E6%9C%80%E6%96%B0hosts/</link>
+      <link>https://gudao.github.io/post/google%E6%9C%80%E6%96%B0hosts/</link>
       <pubDate>Fri, 26 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://gudao.github.io/post/2012-10-26google%E6%9C%80%E6%96%B0hosts/</guid>
+      <guid>https://gudao.github.io/post/google%E6%9C%80%E6%96%B0hosts/</guid>
       <description>最近几天google打开又开始慢了，原来一直在203.208.46.180上，大概用了一年多吧。不知是不是伟大的斯巴达要来了，可怜的goog</description>
     </item>
     
@@ -792,20 +792,11 @@
     
     <item>
       <title>(转)Hadoop集群安装详细步骤|Hadoop安装配置</title>
-      <link>https://gudao.github.io/post/%E8%BD%AChadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+      <link>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://gudao.github.io/post/%E8%BD%AChadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
       <description>Hadoop集群安装 首先我们统一一下定义，在这里所提到的Hadoop是指Hadoop Common，主要提供DFS（分布式文件存储）与Map/</description>
-    </item>
-    
-    <item>
-      <title>Hadoop集群安装笔记</title>
-      <link>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/</guid>
-      <description>安装过程遇到不少问题。具体安装步骤请参照上一篇转载。 安装完系统后，开启ssh 1、查看是否有/etc/ssh/sshd_config文件 cat /etc/ssh/sshd_config 2</description>
     </item>
     
     <item>
@@ -968,6 +959,24 @@
       
       <guid>https://gudao.github.io/post/%E6%96%B0%E7%AB%99%E6%AC%A2%E8%BF%8E%E8%B4%B4/</guid>
       <description>这个可是纯自己做的网站！争取不断完善，等到成型以后就开源给大家。 测试一下发代码的效果。 protected void Application_Start() { AreaRegistration.RegisterAllAreas(); RegisterGlobalFilters(GlobalFilters.Filters); RegisterRoutes(RouteTable.Routes); //log log4net.Config.XmlConfigurator.Configure(); }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gudao.github.io/post/2022-01-15pdf-to-txt-translate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-01-15pdf-to-txt-translate/</guid>
+      <description>PDF文件结构 最先找到的介绍比较详细的，下面还列出了几篇比较好的文章。 C# Parsing 类实现的 PDF 文件分析器 C# 用过的一个类库 一篇解析比较详细的文章，还有对</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gudao.github.io/post/2022-01-15read-team-geek/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-01-15read-team-geek/</guid>
+      <description>谦虚 Humility 没有人是宇宙的中心，谁都不是万能的，谁都会犯错，你必须努力的提高自己。 尊重 Respect 你必须真心实意的关心你的同事，他们是活生生的人。他们的能力</description>
     </item>
     
     <item>

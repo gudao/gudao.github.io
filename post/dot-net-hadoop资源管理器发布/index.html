@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>13年最后一天 - 古道的技术博客</title>
+  <title>.net Hadoop资源管理器发布 - 古道的技术博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="古道" /><meta name="description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+<meta name="author" content="古道" /><meta name="description" content="终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.92.0 with theme even" />
 
 
-<link rel="canonical" href="https://gudao.github.io/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/" />
+<link rel="canonical" href="https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,20 +39,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="13年最后一天" />
-<meta property="og:description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，" />
+<meta property="og:title" content=".net Hadoop资源管理器发布" />
+<meta property="og:description" content="终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gudao.github.io/post/13%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2013-12-31T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-12-31T00:00:00+00:00" />
+<meta property="og:url" content="https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-01-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-01-11T00:00:00+00:00" />
 
-<meta itemprop="name" content="13年最后一天">
-<meta itemprop="description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，"><meta itemprop="datePublished" content="2013-12-31T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2013-12-31T00:00:00+00:00" />
-<meta itemprop="wordCount" content="911">
-<meta itemprop="keywords" content="2013,2014," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="13年最后一天"/>
-<meta name="twitter:description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，"/>
+<meta itemprop="name" content=".net Hadoop资源管理器发布">
+<meta itemprop="description" content="终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把"><meta itemprop="datePublished" content="2013-01-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2013-01-11T00:00:00+00:00" />
+<meta itemprop="wordCount" content="599">
+<meta itemprop="keywords" content="C#,Hadoop,Thrift,.net,资源管理器," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=".net Hadoop资源管理器发布"/>
+<meta name="twitter:description" content="终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -125,14 +125,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">13年最后一天</h1>
+      <h1 class="post-title">.net Hadoop资源管理器发布</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2013-12-31 </span>
+        <span class="post-time"> 2013-01-11 </span>
         <div class="post-category">
-            <a href="/categories/%E5%8D%9A%E5%AE%A2/"> 博客 </a>
+            <a href="/categories/hadoop/"> Hadoop </a>
             </div>
-          <span class="more-meta"> 约 911 字 </span>
+          <span class="more-meta"> 约 599 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -145,20 +145,12 @@
   </div>
 </div>
     <div class="post-content">
-      <p><img src="/Content/upload/Img20131231/s_b1xjp0pk_4zy.jpg" alt="">
-    回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，着实没学到什么东西，再次验证了技术要在实践中掌握啊。年初是打算学习java的，是想运用在hadoop上或者为将来跳槽打造一块敲门砖，结果也是以失败告终。不过在兴起微博、微信以后，我越来越感觉到技术将不再是帮助我走向成功的道路，具体什么是，我还在寻找中&hellip;</p>
-<p><strong>生活</strong></p>
-<p>今年有一件令人欢欣鼓舞的事就是媳妇怀孕了，在未来的半个月中我们就要见到我们的宝宝了。媳妇给取的小名叫可可，希望他或她能够健康快乐地成长。</p>
-<p>    哥哥的生意经过了一番周折终于稳定了下来，希望在新的一年里他能够大赚一把，然后分给我一丢丢就行了，哈哈。</p>
-<p>    6月份老爸来北京住了不到一周，没能带他出去转转，再找机会一定去。还是希望老爸能把自己的身体照顾好。</p>
-<p><strong>学习</strong></p>
-<p>13年计划至少读5本书：2本技术，1本历史，2本财经，到现在看来2本技术的目标应该超出了，历史方面的碰都没碰，财经的倒是碰了但是没读完，而且没什么收获。</p>
-<p>    再次下达目标：1本技术，2本历史，1本财经，1本人际关系。</p>
-<p><strong>工作</strong></p>
-<p>    人无论干什么终归是要吃饭的，所以要劳动。不得不承认今年花在生活上的时间要远大于工作，没能给公司创造出巨大的贡献（没有给公司创造巨大贡献就有点于心不忍，我这种员工太好了吧）。2014年重新定位一下自我，争取把公司在移动端方面的缺失弥补一下，争取给客户、销售都有一个耳目一新的感觉。</p>
-<p><strong>理财</strong></p>
-<p>    炒股一年多了，中间有快回本的时候，最近又跌下去了，唉，感慨一下现在没有精力晚上熬夜到22:30半看行情了。9月份弄了点余额宝到现在收益了800多，哈哈，少了点哈，但是比存银行好吧。今年这些做互联网的公司多数耐不住自己的本行都盯上了金融这块蛋糕，不看好现在的形势，但是能给我们这些散户带来点小收益也是一件很不错的事情嘛。前几天给媳妇表了一个态说，要在两年内买一辆30w的车，暂时看来有难度，而且很有难度，努力呗，没有目标怎么有动力，对吧。</p>
-<p>    最后还有一个巨牛逼的想法，就是媳妇想移民澳大利亚，5年之内把这个想法实现。看到这里，想朝这里砸鸡蛋、吐口水的尽管来吧，大爷就是说了怎么着？！</p>
+      <p><img src="/Content/upload/Img20130111/fpg53zh0.rd4.jpg" alt="">
+终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把一个初步的版本发布了，下面来几张截图看看效果。</p>
+<p><img src="/Content/attached/image/20130111/zatvwnye_cmr.jpg" alt=""></p>
+<p><img src="/Content/attached/image/20130111/qhpdvz4s_bsc.jpg" alt=""></p>
+<p>  本项目主要为了解决Windows平台下的访问Hadoop文件的问题。使用Hadoop文件系统的朋友应该都知道Hadoop是Java语言开发的，并且需要部署在Linux平台上，所以这就对于.Net平台的开发者带来诸多困难。本项目以C#语言通过thrift方式连接Hadoop的HDFS提供Hadoop文件的读、写、删除、重命名、列表等功能，同时提供一个WinForm形式的资源管理器，可以方面Windows平台下的用户集中管理文件（Hadoop本身提供了一个Web形式的文件浏览接口，但是不能满足现有文件管理需求）。 项目现有提供的功能包括：  1、列表。可以以资源管理器方式列表文件及文件信息（如：文件格式、大小等）  2、文件下载。可以将HDFS中的文件下载到本地，可以单个或批量，按照列表下载。  3、文件上传。可以将本地的文件上传至HDFS，同样支持单个、批量。  4、文件修改。可以直接重命名、复制、粘贴、剪切HDFS中的文件。  5、删除文件恢复。可以自定义文件删除恢复机制，在指定的时间段内恢复文件。</p>
+<p>源码放在了github上，有兴趣的可以去<a href="https://github.com/gudao/NetHadoop">这里</a>（https://github.com/gudao/NetHadoop）交流。</p>
 <hr>
 
     </div>
@@ -171,7 +163,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2013-12-31
+        2013-01-11
         
     </span>
   </p>
@@ -180,17 +172,20 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/2013/">2013</a>
-          <a href="/tags/2014/">2014</a>
+          <a href="/tags/c/">C#</a>
+          <a href="/tags/hadoop/">Hadoop</a>
+          <a href="/tags/thrift/">Thrift</a>
+          <a href="/tags/.net/">.net</a>
+          <a href="/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/">资源管理器</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/ios%E5%9B%BE%E6%A0%87%E5%8F%8A%E5%9B%BE%E7%89%87%E5%83%8F%E7%B4%A0%E5%A4%A7%E5%B0%8F%E8%A6%81%E6%B1%82/">
+        <a class="prev" href="/post/ios%E5%AD%A6%E4%B9%A0%E4%B8%AD/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">iOS图标及图片像素大小要求</span>
+            <span class="prev-text nav-default">IOS学习中</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/">
-            <span class="next-text nav-default">Redis 集群教程(二)</span>
+        <a class="next" href="/post/%E6%96%B0%E5%B9%B4%E6%96%B0%E8%AE%A1%E5%88%92/">
+            <span class="next-text nav-default">新年新计划</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -265,6 +260,18 @@
 
 
 
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?20a6c4437c408bbccea7ff5868c50686";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 
 </body>

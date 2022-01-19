@@ -122,29 +122,6 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/">DES加密/解密类</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-03-09 </span>
-      <div class="post-category">
-          <a href="/categories/.net/"> .Net </a>
-          </div>
-        <span class="more-meta"> 约 135 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      /// &lt;summary&gt; /// 加密数据 /// &lt;/summary&gt; /// &lt;param name=&#34;Text&#34;&gt;&lt;/param&gt; /// &lt;param name=&#34;sKey&#34;&gt;&lt;/param&gt; /// &lt;returns&gt;&lt;/returns&gt; public static string Encrypt(string Text,string sKey) { DESCryptoServiceProvider des = new DESCryptoServiceProvider(); byte[] inputByteArray; inputByteArray=Encoding.Default.GetBytes(Text); des.Key = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, &#34;md5&#34;).Substring(0, 8)); des.IV = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, &#34;md5&#34;).Substring(0, 8)); System.IO.MemoryStream ms=new System.IO.MemoryStream(); CryptoStream cs=new CryptoStream(ms,des.CreateEncryptor(),CryptoStreamMode.Write); cs.Write(inputByteArray,0,inputByteArray.Length); cs.FlushFinalBlock(); StringBuilder ret=new StringBuilder(); foreach( byte b in ms.ToArray()) { ret.AppendFormat(&#34;{0:X2}&#34;,b); } return ret.ToString(); } /// &lt;summary&gt; /// 解密数
-    </div>
-    <div class="read-more">
-      <a href="/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/50%E4%B8%AA%E7%B2%BE%E5%BF%83%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AC%E5%8F%B8%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99%E9%89%B4%E8%B5%8F/">50个精心设计的公司与电子商务网站鉴赏</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2012-03-07 </span>
@@ -283,6 +260,48 @@
 
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2022-01-15pdf-to-txt-translate/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+        <span class="more-meta"> 约 121 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      PDF文件结构 最先找到的介绍比较详细的，下面还列出了几篇比较好的文章。 C# Parsing 类实现的 PDF 文件分析器 C# 用过的一个类库 一篇解析比较详细的文章，还有对
+    </div>
+    <div class="read-more">
+      <a href="/post/2022-01-15pdf-to-txt-translate/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2022-01-15read-team-geek/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+        <span class="more-meta"> 约 923 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      谦虚 Humility 没有人是宇宙的中心，谁都不是万能的，谁都会犯错，你必须努力的提高自己。 尊重 Respect 你必须真心实意的关心你的同事，他们是活生生的人。他们的能力
+    </div>
+    <div class="read-more">
+      <a href="/post/2022-01-15read-team-geek/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/redis-cluster2/"></a></h1>
     <div class="post-meta">
       <span class="post-time"> 0001-01-01 </span>
@@ -366,6 +385,18 @@
 
 
 
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?20a6c4437c408bbccea7ff5868c50686";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 
 </body>

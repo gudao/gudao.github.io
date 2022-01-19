@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hadoop on 古道的技术博客</title>
+    <title>hadoop on 古道的技术博客</title>
     <link>https://gudao.github.io/tags/hadoop/</link>
-    <description>Recent content in Hadoop on 古道的技术博客</description>
+    <description>Recent content in hadoop on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 Nov 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>.net Hadoop资源管理器发布</title>
+      <link>https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/</link>
+      <pubDate>Fri, 11 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/</guid>
+      <description>终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把</description>
+    </item>
+    
+    <item>
       <title>c#访问hadoop(编码问题)【续】</title>
       <link>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E7%BB%AD/</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
@@ -81,20 +90,11 @@
     
     <item>
       <title>(转)Hadoop集群安装详细步骤|Hadoop安装配置</title>
-      <link>https://gudao.github.io/post/%E8%BD%AChadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+      <link>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://gudao.github.io/post/%E8%BD%AChadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
       <description>Hadoop集群安装 首先我们统一一下定义，在这里所提到的Hadoop是指Hadoop Common，主要提供DFS（分布式文件存储）与Map/</description>
-    </item>
-    
-    <item>
-      <title>Hadoop集群安装笔记</title>
-      <link>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/</guid>
-      <description>安装过程遇到不少问题。具体安装步骤请参照上一篇转载。 安装完系统后，开启ssh 1、查看是否有/etc/ssh/sshd_config文件 cat /etc/ssh/sshd_config 2</description>
     </item>
     
     <item>

@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>.net Hadoop资源管理器发布</title>
+      <link>https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/</link>
+      <pubDate>Fri, 11 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/dot-net-hadoop%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83/</guid>
+      <description>终于可以发布第一版本Hadoop的资源管理器了，之前写过c#访问Hadoop文件的文章，有不少朋友发邮件询问详细的连接代码。经过几天的努力把</description>
+    </item>
+    
+    <item>
       <title>c#访问hadoop(编码问题)【续】</title>
       <link>https://gudao.github.io/post/c#%E8%AE%BF%E9%97%AEhadoop%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E7%BB%AD/</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>

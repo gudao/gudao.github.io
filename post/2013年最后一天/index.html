@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hadoop集群安装笔记 - 古道的技术博客</title>
+  <title>13年最后一天 - 古道的技术博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="古道" /><meta name="description" content="安装过程遇到不少问题。具体安装步骤请参照上一篇转载。 安装完系统后，开启ssh 1、查看是否有/etc/ssh/sshd_config文件 cat /etc/ssh/sshd_config 2" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
+<meta name="author" content="古道" /><meta name="description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，" /><meta name="keywords" content="gudao, golang, go, C#, .net core" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.92.0 with theme even" />
 
 
-<link rel="canonical" href="https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/" />
+<link rel="canonical" href="https://gudao.github.io/post/2013%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,20 +39,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Hadoop集群安装笔记" />
-<meta property="og:description" content="安装过程遇到不少问题。具体安装步骤请参照上一篇转载。 安装完系统后，开启ssh 1、查看是否有/etc/ssh/sshd_config文件 cat /etc/ssh/sshd_config 2" />
+<meta property="og:title" content="13年最后一天" />
+<meta property="og:description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gudao.github.io/post/hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2012-06-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2012-06-05T00:00:00+00:00" />
+<meta property="og:url" content="https://gudao.github.io/post/2013%E5%B9%B4%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-12-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-12-31T00:00:00+00:00" />
 
-<meta itemprop="name" content="Hadoop集群安装笔记">
-<meta itemprop="description" content="安装过程遇到不少问题。具体安装步骤请参照上一篇转载。 安装完系统后，开启ssh 1、查看是否有/etc/ssh/sshd_config文件 cat /etc/ssh/sshd_config 2"><meta itemprop="datePublished" content="2012-06-05T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2012-06-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="602">
-<meta itemprop="keywords" content="Hadoop," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hadoop集群安装笔记"/>
-<meta name="twitter:description" content="安装过程遇到不少问题。具体安装步骤请参照上一篇转载。 安装完系统后，开启ssh 1、查看是否有/etc/ssh/sshd_config文件 cat /etc/ssh/sshd_config 2"/>
+<meta itemprop="name" content="13年最后一天">
+<meta itemprop="description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，"><meta itemprop="datePublished" content="2013-12-31T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2013-12-31T00:00:00+00:00" />
+<meta itemprop="wordCount" content="911">
+<meta itemprop="keywords" content="2013,2014," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="13年最后一天"/>
+<meta name="twitter:description" content="回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -125,14 +125,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Hadoop集群安装笔记</h1>
+      <h1 class="post-title">13年最后一天</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2012-06-05 </span>
+        <span class="post-time"> 2013-12-31 </span>
         <div class="post-category">
-            <a href="/categories/hadoop/"> Hadoop </a>
+            <a href="/categories/%E5%8D%9A%E5%AE%A2/"> 博客 </a>
             </div>
-          <span class="more-meta"> 约 602 字 </span>
+          <span class="more-meta"> 约 911 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -145,9 +145,20 @@
   </div>
 </div>
     <div class="post-content">
-      <p><img src="/Content/upload/Img20120605/nlpnzrjq.ohh.jpg" alt="">
-安装过程遇到不少问题。具体安装步骤请参照上一篇转载。</p>
-<p>安装完系统后，开启ssh    1、查看是否有/etc/ssh/sshd_config文件        cat /etc/ssh/sshd_config    2、如果有则：        /etc/init.d/ssh 　restart       没有这个文件则：        sudo apt-get install 　ssh    3.ssh-keygen -t rsa        回车        执行命令    sudo passwd root 设置root用户密码重新登录root帐号创建文件夹    /usr/hadoop/bak下载jdk修改jdk权限可以执行./jdk-6u32-linux-i586.bin复制以下内容： gedit /etc/environmentPATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/hadoop/bak/jdk1.6.0_32/bin&quot;CLASSPATH=&quot;.:/usr/hadoop/bak/jdk1.6.0_32/lib&quot;JAVA_HOME=&quot;/usr/hadoop/bak/jdk1.6.0_32&quot;sudo update-alternatives &ndash;install /usr/bin/java java /usr/hadoop/bak/jdk1.6.0_32/bin/java 300sudo update-alternatives &ndash;install /usr/bin/javac javac /usr/hadoop/bak/jdk1.6.0_32/bin/javac 300复制conf文件添加ssh无密码登录    将id_rsa.pub的内容复制到每个机器（也包括本机）的/root/.ssh/authorized_keys文件中。    如果authorized_keys不存在，则使用touch     /root/.ssh/authorized_keys生成一个；如果该文件已经存在    复制authorized_keys    cat /root/.ssh/id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys    确认可以连接成功，    ssh IP        如果不能且显示Agent admitted failure to sign using the key.    则运行    ssh-add /root/.ssh/id_rsa    如果显示Identity added: /root/.ssh/id_rsa (/root/.ssh/id_rsa)则为成功，如果显示    Could not open a connection to your authentication agent.则为错误，先运行    ssh-agent bash    再运行ssh-add /root/.ssh/id_rsa动态添加节点    1.把新机器的增加到conf/slaves文件中（datanode或者tasktracker crash则可跳过）    2.在新机器上进入hadoop安装目录          $bin/hadoop-daemon.sh start datanode          $bin/hadoop-daemon.sh start tasktracker    3.在namenode上          $bin/hadoop balancer</p>
+      <p><img src="/Content/upload/Img20131231/s_b1xjp0pk_4zy.jpg" alt="">
+    回顾了一下2013年写的博客，没有几篇平均一个月也就2篇吧，少了点，争取14年多写多总结。从年初的学习iOS到中间的搁浅再到后来的重拾，唉，着实没学到什么东西，再次验证了技术要在实践中掌握啊。年初是打算学习java的，是想运用在hadoop上或者为将来跳槽打造一块敲门砖，结果也是以失败告终。不过在兴起微博、微信以后，我越来越感觉到技术将不再是帮助我走向成功的道路，具体什么是，我还在寻找中&hellip;</p>
+<p><strong>生活</strong></p>
+<p>今年有一件令人欢欣鼓舞的事就是媳妇怀孕了，在未来的半个月中我们就要见到我们的宝宝了。媳妇给取的小名叫可可，希望他或她能够健康快乐地成长。</p>
+<p>    哥哥的生意经过了一番周折终于稳定了下来，希望在新的一年里他能够大赚一把，然后分给我一丢丢就行了，哈哈。</p>
+<p>    6月份老爸来北京住了不到一周，没能带他出去转转，再找机会一定去。还是希望老爸能把自己的身体照顾好。</p>
+<p><strong>学习</strong></p>
+<p>13年计划至少读5本书：2本技术，1本历史，2本财经，到现在看来2本技术的目标应该超出了，历史方面的碰都没碰，财经的倒是碰了但是没读完，而且没什么收获。</p>
+<p>    再次下达目标：1本技术，2本历史，1本财经，1本人际关系。</p>
+<p><strong>工作</strong></p>
+<p>    人无论干什么终归是要吃饭的，所以要劳动。不得不承认今年花在生活上的时间要远大于工作，没能给公司创造出巨大的贡献（没有给公司创造巨大贡献就有点于心不忍，我这种员工太好了吧）。2014年重新定位一下自我，争取把公司在移动端方面的缺失弥补一下，争取给客户、销售都有一个耳目一新的感觉。</p>
+<p><strong>理财</strong></p>
+<p>    炒股一年多了，中间有快回本的时候，最近又跌下去了，唉，感慨一下现在没有精力晚上熬夜到22:30半看行情了。9月份弄了点余额宝到现在收益了800多，哈哈，少了点哈，但是比存银行好吧。今年这些做互联网的公司多数耐不住自己的本行都盯上了金融这块蛋糕，不看好现在的形势，但是能给我们这些散户带来点小收益也是一件很不错的事情嘛。前几天给媳妇表了一个态说，要在两年内买一辆30w的车，暂时看来有难度，而且很有难度，努力呗，没有目标怎么有动力，对吧。</p>
+<p>    最后还有一个巨牛逼的想法，就是媳妇想移民澳大利亚，5年之内把这个想法实现。看到这里，想朝这里砸鸡蛋、吐口水的尽管来吧，大爷就是说了怎么着？！</p>
 <hr>
 
     </div>
@@ -160,7 +171,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2012-06-05
+        2013-12-31
         
     </span>
   </p>
@@ -169,16 +180,17 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/hadoop/">Hadoop</a>
+          <a href="/tags/2013/">2013</a>
+          <a href="/tags/2014/">2014</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/%E8%BD%AChadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">
+        <a class="prev" href="/post/ios%E5%9B%BE%E6%A0%87%E5%8F%8A%E5%9B%BE%E7%89%87%E5%83%8F%E7%B4%A0%E5%A4%A7%E5%B0%8F%E8%A6%81%E6%B1%82/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">(转)Hadoop集群安装详细步骤|Hadoop安装配置</span>
+            <span class="prev-text nav-default">iOS图标及图片像素大小要求</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/hadoop-install/">
-            <span class="next-text nav-default">Hadoop集群安装详细步骤|Hadoop安装配置</span>
+        <a class="next" href="/post/redis-%E9%9B%86%E7%BE%A4%E6%95%99%E7%A8%8B%E4%BA%8C/">
+            <span class="next-text nav-default">Redis 集群教程(二)</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -253,6 +265,18 @@
 
 
 
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?20a6c4437c408bbccea7ff5868c50686";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 
 </body>
