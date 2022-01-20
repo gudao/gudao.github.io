@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术团队 on 古道的技术博客</title>
+    <link>https://gudao.github.io/tags/%E6%8A%80%E6%9C%AF%E5%9B%A2%E9%98%9F/</link>
+    <description>Recent content in 技术团队 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E6%8A%80%E6%9C%AF%E5%9B%A2%E9%98%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《极客与团队》笔记</title>
+      <link>https://gudao.github.io/post/2022-01-15read-team-geek/</link>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-01-15read-team-geek/</guid>
+      <description>《极客与团队》原版名称为，绝对是技术管理类书籍中的经典之作，一口气读了一半，感触颇丰。 谦虚 Humility 没有人是宇宙的中心，谁都不是万能的，谁都会犯错，</description>
+    </item>
+    
+  </channel>
+</rss>

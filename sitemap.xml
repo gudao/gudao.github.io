@@ -3,7 +3,56 @@
   
   <url>
     <loc>https://gudao.github.io/categories/</loc>
-    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gudao.github.io/post/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gudao.github.io/tags/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gudao.github.io/post/2022-01-15read-team-geek/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gudao.github.io/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gudao.github.io/tags/%E6%8A%80%E6%9C%AF%E5%9B%A2%E9%98%9F/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gudao.github.io/tags/%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gudao.github.io/categories/%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,28 +72,7 @@
   </url>
   
   <url>
-    <loc>https://gudao.github.io/post/</loc>
-    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/tags/</loc>
-    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://gudao.github.io/post/hugo-blog/</loc>
-    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/</loc>
     <lastmod>2022-01-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2061,12 +2089,6 @@
   
   <url>
     <loc>https://gudao.github.io/post/2022-01-15pdf-to-txt-translate/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/post/2022-01-15read-team-geek/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
