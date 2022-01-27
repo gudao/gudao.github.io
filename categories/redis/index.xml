@@ -43,14 +43,5 @@
       <description>Redis 集群教程 本文依据官方教程（http://redis.io/topics/cluster-tutorial）翻译并夹杂个人理解撰写而成，如有</description>
     </item>
     
-    <item>
-      <title>Redis 集群教程(一)</title>
-      <link>https://gudao.github.io/post/redis-clustor/</link>
-      <pubDate>Thu, 26 Dec 2013 01:37:56 +0800</pubDate>
-      
-      <guid>https://gudao.github.io/post/redis-clustor/</guid>
-      <description>本文依据官方教程（http://redis.io/topics/cluster-tutorial）翻译并夹杂个人理解撰写而成，如有翻译或理解</description>
-    </item>
-    
   </channel>
 </rss>

@@ -415,27 +415,6 @@
   </url>
   
   <url>
-    <loc>https://gudao.github.io/tags/cluster/</loc>
-    <lastmod>2013-12-26T01:37:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/tags/redis/</loc>
-    <lastmod>2013-12-26T01:37:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/post/redis-clustor/</loc>
-    <lastmod>2013-12-26T01:37:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://gudao.github.io/tags/hosts/</loc>
     <lastmod>2013-12-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -2111,24 +2090,6 @@
   <url>
     <loc>https://gudao.github.io/post/%E6%96%B0%E7%AB%99%E6%AC%A2%E8%BF%8E%E8%B4%B4/</loc>
     <lastmod>2012-02-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/post/2022-01-15pdf-to-txt-translate/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/post/other-mind/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gudao.github.io/post/redis-cluster2/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

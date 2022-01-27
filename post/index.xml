@@ -170,15 +170,6 @@
     </item>
     
     <item>
-      <title>Redis 集群教程(一)</title>
-      <link>https://gudao.github.io/post/redis-clustor/</link>
-      <pubDate>Thu, 26 Dec 2013 01:37:56 +0800</pubDate>
-      
-      <guid>https://gudao.github.io/post/redis-clustor/</guid>
-      <description>本文依据官方教程（http://redis.io/topics/cluster-tutorial）翻译并夹杂个人理解撰写而成，如有翻译或理解</description>
-    </item>
-    
-    <item>
       <title>smarthosts 北京服务器Hosts备份</title>
       <link>https://gudao.github.io/post/smarthosts-%E5%8C%97%E4%BA%AC%E6%9C%8D%E5%8A%A1%E5%99%A8hosts%E5%A4%87%E4%BB%BD/</link>
       <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
@@ -977,33 +968,6 @@
       
       <guid>https://gudao.github.io/post/%E6%96%B0%E7%AB%99%E6%AC%A2%E8%BF%8E%E8%B4%B4/</guid>
       <description>这个可是纯自己做的网站！争取不断完善，等到成型以后就开源给大家。 测试一下发代码的效果。 protected void Application_Start() { AreaRegistration.RegisterAllAreas(); RegisterGlobalFilters(GlobalFilters.Filters); RegisterRoutes(RouteTable.Routes); //log log4net.Config.XmlConfigurator.Configure(); }</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gudao.github.io/post/2022-01-15pdf-to-txt-translate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudao.github.io/post/2022-01-15pdf-to-txt-translate/</guid>
-      <description>PDF文件结构 最先找到的介绍比较详细的，下面还列出了几篇比较好的文章。 C# Parsing 类实现的 PDF 文件分析器 C# 用过的一个类库 一篇解析比较详细的文章，还有对</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gudao.github.io/post/other-mind/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudao.github.io/post/other-mind/</guid>
-      <description>问题 是否能做好自己的定位 哪些条件是为了完成这个定位所必要的条件 你的核心是什么 哪些是不重要的 答案 完成目标用户的特定需求 认准了一件事要坚持做完 不</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gudao.github.io/post/redis-cluster2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudao.github.io/post/redis-cluster2/</guid>
-      <description></description>
     </item>
     
   </channel>
