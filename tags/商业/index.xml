@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>商业 on 古道的技术博客</title>
+    <link>https://gudao.github.io/tags/%E5%95%86%E4%B8%9A/</link>
+    <description>Recent content in 商业 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E5%95%86%E4%B8%9A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《商业简史》笔记</title>
+      <link>https://gudao.github.io/post/2022-01-27business-history/</link>
+      <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-01-27business-history/</guid>
+      <description>商业到底是什么 交易是商业的本质；信息不对称和信用不传递是交易过程中的阻力；让交易成本越来越低才是商业的进步。 交易成本类型 搜寻成本，你所花费在</description>
+    </item>
+    
+  </channel>
+</rss>

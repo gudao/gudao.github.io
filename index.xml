@@ -6,7 +6,16 @@
     <description>Recent content on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《商业简史》笔记</title>
+      <link>https://gudao.github.io/post/2022-01-27business-history/</link>
+      <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-01-27business-history/</guid>
+      <description>商业到底是什么 交易是商业的本质；信息不对称和信用不传递是交易过程中的阻力；让交易成本越来越低才是商业的进步。 交易成本类型 搜寻成本，你所花费在</description>
+    </item>
+    
     <item>
       <title>《极客与团队》笔记</title>
       <link>https://gudao.github.io/post/2022-01-15read-team-geek/</link>
@@ -977,6 +986,15 @@
       
       <guid>https://gudao.github.io/post/2022-01-15pdf-to-txt-translate/</guid>
       <description>PDF文件结构 最先找到的介绍比较详细的，下面还列出了几篇比较好的文章。 C# Parsing 类实现的 PDF 文件分析器 C# 用过的一个类库 一篇解析比较详细的文章，还有对</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gudao.github.io/post/other-mind/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/other-mind/</guid>
+      <description>问题 是否能做好自己的定位 哪些条件是为了完成这个定位所必要的条件 你的核心是什么 哪些是不重要的 答案 完成目标用户的特定需求 认准了一件事要坚持做完 不</description>
     </item>
     
     <item>
