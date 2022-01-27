@@ -1,3 +1,13 @@
+---
+title: "PDF结构 研究"
+date: 2022-01-27
+draft: true
+keywords: ["商业本质","交易"]
+description: ""
+tags: ["商业","战略"]
+categories: ["商业"]
+author: "古道" 
+---
 [PDF文件结构](https://lazymind.me/2017/10/pdf-structure/)
 最先找到的介绍比较详细的，下面还列出了几篇比较好的文章。
 
