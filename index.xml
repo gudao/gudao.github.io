@@ -6,7 +6,16 @@
     <description>Recent content on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转]Raft 论文 中文版</title>
+      <link>https://gudao.github.io/post/2022-01-28raft-zh/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-01-28raft-zh/</guid>
+      <description>寻找一种易于理解的一致性算法（扩展版） 寻找一种易于理解的一致性算法（扩展版） 摘要 1 介绍 2 复制状态机 3 Paxos 算法的问题 4 为了可理解性的设计 5 Raft 一致</description>
+    </item>
+    
     <item>
       <title>《商业简史》笔记</title>
       <link>https://gudao.github.io/post/2022-01-27business-history/</link>

@@ -6,7 +6,34 @@
     <description>Recent content in Tags on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>raft</title>
+      <link>https://gudao.github.io/tags/raft/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/raft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://gudao.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>转载</title>
+      <link>https://gudao.github.io/tags/%E8%BD%AC%E8%BD%BD/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/%E8%BD%AC%E8%BD%BD/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>商业</title>
       <link>https://gudao.github.io/tags/%E5%95%86%E4%B8%9A/</link>
