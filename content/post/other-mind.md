@@ -22,3 +22,35 @@ author: "古道"
 
 # 认准了一件事要坚持做完
 # 不着急不害怕不要脸
+
+``` shell
+THIS_NAME=node01
+THIS_IP=127.0.0.1
+CLUSTER=node01=http://${THIS_IP}:2380,node02=http://${THIS_IP}:2381,
+TOKEN=haha
+./etcd --data-dir=data.etcd1 --name ${THIS_NAME} \
+	--initial-advertise-peer-urls http://${THIS_IP}:2380 --listen-peer-urls http://${THIS_IP}:2380 \
+	--advertise-client-urls http://${THIS_IP}:2379 --listen-client-urls http://${THIS_IP}:2379 \
+	--initial-cluster ${CLUSTER} \
+	--initial-cluster-state new --initial-cluster-token ${TOKEN}
+	
+	./etcd  --name node02 \
+		--data-dir=data.etcd2 \
+		--initial-advertise-peer-urls http://127.0.0.1:2381 \
+		--listen-peer-urls http://127.0.0.1:2381 \
+		--advertise-client-urls http://127.0.0.1:2378 \
+		--listen-client-urls http://127.0.0.1:2378 \
+		--discovery https://discovery.etcd.io/088c30f8069dca507c126cbb7e5251dd
+		
+		--initial-cluster ${CLUSTER} \
+		--initial-cluster-state new \
+		--initial-cluster-token ${TOKEN}
+		
+	./etcd  --name node03 \
+		--data-dir=data.etcd3 \
+		--initial-advertise-peer-urls http://127.0.0.1:2382 \
+		--listen-peer-urls http://127.0.0.1:2382 \
+		--advertise-client-urls http://127.0.0.1:2377 \
+		--listen-client-urls http://127.0.0.1:2377 \
+		--discovery https://discovery.etcd.io/088c30f8069dca507c126cbb7e5251dd
+```
