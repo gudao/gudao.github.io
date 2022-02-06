@@ -6,7 +6,16 @@
     <description>Recent content on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动态规划问题</title>
+      <link>https://gudao.github.io/post/2022-02-06%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-02-06%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/</guid>
+      <description>先来看个老套的例子，斐波那次序列：0,1,1,2,3,5,8,13,21后一个数等于前两个数的和。 如果求第n个数是几？ 动态规划 按照常理的计算</description>
+    </item>
+    
     <item>
       <title>[转]Raft 论文 中文版</title>
       <link>https://gudao.github.io/post/2022-01-28raft-zh/</link>
