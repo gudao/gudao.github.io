@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gorse on 古道的技术博客</title>
+    <link>https://gudao.github.io/tags/gorse/</link>
+    <description>Recent content in Gorse on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/gorse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>推荐系统Gorse介绍</title>
+      <link>https://gudao.github.io/post/2022-02-22gorse-intro/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-02-22gorse-intro/</guid>
+      <description>简介 Gorse ，官方网址https://docs.gorse.io/ Gorse 是一个用 Go 编写的开源推荐系统。Gorse 旨在成为一个通用的开源推荐系统，可以很</description>
+    </item>
+    
+  </channel>
+</rss>
