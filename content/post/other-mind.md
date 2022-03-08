@@ -18,7 +18,11 @@ author: "古道"
 * 完成目标用户的特定需求
 * 
 
-
+407059028
+1000000007
+pNt^10W21b_dx
+10 20  35 23 54 33
+10*35*54 /20*
 
 # 认准了一件事要坚持做完
 # 不着急不害怕不要脸
@@ -54,3 +58,12 @@ TOKEN=haha
 		--listen-client-urls http://127.0.0.1:2377 \
 		--discovery https://discovery.etcd.io/088c30f8069dca507c126cbb7e5251dd
 ```
+新基建信息产业库微信小程序
+
+pm2 list #查看所有应用
+pm2 delete all #删除所有应用
+pm2 bin/www start #以fork形式启动应用
+pm2 start ecosystem.config.js #以配置文件形式启动
+最终启动成功的参数为：pm2 start ecosystem.config.js --env pro
+本次问题排查，多次尝试使用ecosystem.config.js形式启动，并更改其中的参数都未果。期间也曾使用 -env 参数尝试，
+但因ecosystem中的配置为  "NODE_ENV": "production",故也把--env 设置为 production ，没能成功，就放弃了该方法。后来看到app.js 也有pro的设置没有猜测到更换--env参数，有点遗憾。
