@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.93.2 with theme even" />
 
 
 <link rel="canonical" href="https://gudao.github.io/post/2022-02-06%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/" />
@@ -177,19 +177,19 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">FibonacciWithFor</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">0</span> <span class="p">{</span><span class="k">return</span> <span class="mi">0</span><span class="p">}</span>
-	<span class="nx">pre</span><span class="o">:=</span><span class="mi">0</span>
-	<span class="nx">next</span><span class="o">:=</span><span class="mi">1</span>
-	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-		<span class="nx">sum</span><span class="o">:=</span><span class="nx">pre</span><span class="o">+</span><span class="nx">next</span>
-		<span class="nx">pre</span><span class="p">=</span><span class="nx">next</span> <span class="c1">//把后一个值给到前一个便于后一轮计算
-</span><span class="c1"></span>		<span class="nx">next</span><span class="p">=</span><span class="nx">sum</span>
-		<span class="c1">//fmt.Println(&#34;i:&#34;,i,&#34;pre:&#34;,pre,&#34;next:&#34;,next)
-</span><span class="c1"></span>	<span class="p">}</span>
-	<span class="k">return</span> <span class="nx">next</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">FibonacciWithFor</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">0</span> <span class="p">{</span><span class="k">return</span> <span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">pre</span><span class="o">:=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">next</span><span class="o">:=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">sum</span><span class="o">:=</span><span class="nx">pre</span><span class="o">+</span><span class="nx">next</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">pre</span><span class="p">=</span><span class="nx">next</span> <span class="c1">//把后一个值给到前一个便于后一轮计算
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">next</span><span class="p">=</span><span class="nx">sum</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">//fmt.Println(&#34;i:&#34;,i,&#34;pre:&#34;,pre,&#34;next:&#34;,next)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">next</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中定义前后两个变量，依次代表f(n-2)和f(n-1)的值。
 这种安装人脑常理的计算方式就是 <strong>动态规划</strong> 了,那么我们再看如果是计算机思维的解答方式 <strong>递归</strong></p>
@@ -213,18 +213,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">0</span><span class="p">{</span><span class="k">return</span> <span class="mi">0</span><span class="p">}</span>
-	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">1</span><span class="p">{</span><span class="k">return</span> <span class="mi">1</span><span class="p">}</span>
-	<span class="k">return</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">//测试方法
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">TestFibonacci</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Fibonacci 0:&#34;</span><span class="p">,</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1">//Fibonacci 0: 0
-</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Fibonacci 1:&#34;</span><span class="p">,</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1">//Fibonacci 1: 1
-</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Fibonacci 10:&#34;</span><span class="p">,</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span><span class="c1">//Fibonacci 10: 55
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">0</span><span class="p">{</span><span class="k">return</span> <span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">1</span><span class="p">{</span><span class="k">return</span> <span class="mi">1</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//测试方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">TestFibonacci</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Fibonacci 0:&#34;</span><span class="p">,</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1">//Fibonacci 0: 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Fibonacci 1:&#34;</span><span class="p">,</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1">//Fibonacci 1: 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Fibonacci 10:&#34;</span><span class="p">,</span><span class="nf">Fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span><span class="c1">//Fibonacci 10: 55
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>代码很像公式且测试方法能得到正确的结果。
 <img src="/images/fibonacci01.png" alt="暴力递归图1">
@@ -254,26 +254,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">,</span><span class="nx">dp</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">0</span><span class="p">{</span><span class="k">return</span> <span class="mi">0</span><span class="p">}</span>
-	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">1</span><span class="p">{</span><span class="k">return</span> <span class="mi">1</span><span class="p">}</span>
-	<span class="k">if</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">{</span><span class="k">return</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]}</span>
-	<span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]=</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nx">dp</span><span class="p">)</span><span class="o">+</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="nx">dp</span><span class="p">)</span>
-	<span class="c1">//fmt.Println(&#34;dp:&#34;,dp,&#34;n:&#34;,n)
-</span><span class="c1"></span>	<span class="k">return</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nf">FibonacciMa</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-	<span class="nx">dp</span><span class="o">:=</span><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span><span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-	<span class="k">return</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">dp</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">//测试方法
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">TestFibonacciWithCache</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;FibonacciWithCache 0:&#34;</span><span class="p">,</span><span class="nf">FibonacciMa</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;FibonacciWithCache 1:&#34;</span><span class="p">,</span><span class="nf">FibonacciMa</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;FibonacciWithCache 10:&#34;</span><span class="p">,</span><span class="nf">FibonacciMa</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">,</span><span class="nx">dp</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">0</span><span class="p">{</span><span class="k">return</span> <span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">n</span><span class="o">==</span><span class="mi">1</span><span class="p">{</span><span class="k">return</span> <span class="mi">1</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">{</span><span class="k">return</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]=</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nx">dp</span><span class="p">)</span><span class="o">+</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="nx">dp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//fmt.Println(&#34;dp:&#34;,dp,&#34;n:&#34;,n)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">return</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">FibonacciMa</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">dp</span><span class="o">:=</span><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span><span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nf">FibonacciWithCache</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">dp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//测试方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">TestFibonacciWithCache</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;FibonacciWithCache 0:&#34;</span><span class="p">,</span><span class="nf">FibonacciMa</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;FibonacciWithCache 1:&#34;</span><span class="p">,</span><span class="nf">FibonacciMa</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;FibonacciWithCache 10:&#34;</span><span class="p">,</span><span class="nf">FibonacciMa</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>你可以打开<code>FibonacciWithCache</code>中的输出可以看到dp数组的变化过程，最后的dp是<code>dp: [0 0 1 2 3 5 8 13 21 34 55]</code>,值得注意的是
 因为递归的是n所以数组的长度需要比n多一个，避免索引溢出。</p>
@@ -312,9 +312,9 @@
           <a href="/tags/%E9%80%92%E5%BD%92/">递归</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/2022-02-22gorse-intro/">
+        <a class="prev" href="/post/oauth2-and-openid-connect/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">推荐系统Gorse介绍</span>
+            <span class="prev-text nav-default">如何理解认证和授权</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/post/2022-01-28raft-zh/">
@@ -386,7 +386,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
 
 
 

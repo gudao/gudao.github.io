@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用Github Action 打包镜像并发布到Docker - 古道的技术博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="古道" /><meta name="description" content="使用Github Action 打包镜像推送至阿里云容器镜像服务，然后利用镜像发布至阿里云ECS 自建Docker中" /><meta name="keywords" content="Github Action, Docker, Aliyun, Golang" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.93.2 with theme even" />
+
+
+<link rel="canonical" href="https://gudao.github.io/post/2022-03-08github-action-golang/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="使用Github Action 打包镜像并发布到Docker" />
+<meta property="og:description" content="使用Github Action 打包镜像推送至阿里云容器镜像服务，然后利用镜像发布至阿里云ECS 自建Docker中" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gudao.github.io/post/2022-03-08github-action-golang/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-03-08T00:00:00+00:00" />
+
+<meta itemprop="name" content="使用Github Action 打包镜像并发布到Docker">
+<meta itemprop="description" content="使用Github Action 打包镜像推送至阿里云容器镜像服务，然后利用镜像发布至阿里云ECS 自建Docker中"><meta itemprop="datePublished" content="2022-03-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-03-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1960">
+<meta itemprop="keywords" content="Github Action,ACR,Docker," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Github Action 打包镜像并发布到Docker"/>
+<meta name="twitter:description" content="使用Github Action 打包镜像推送至阿里云容器镜像服务，然后利用镜像发布至阿里云ECS 自建Docker中"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">古道</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">古道</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用Github Action 打包镜像并发布到Docker</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-03-08 </span>
+        <div class="post-category">
+            <a href="/categories/docker/"> Docker </a>
+            </div>
+          <span class="more-meta"> 约 1960 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#缘起">缘起</a></li>
+    <li><a href="#步骤">步骤</a>
+      <ul>
+        <li><a href="#github-action">Github Action</a></li>
+        <li><a href="#构建镜像">构建镜像</a></li>
+        <li><a href="#推送镜像至acr">推送镜像至ACR</a></li>
+        <li><a href="#拉取镜像并运行">拉取镜像并运行</a></li>
+        <li><a href="#最后">最后</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="缘起">缘起</h1>
+<p>希望通过自动构建把 Golang 项目发布至ECS自建的Docker中。</p>
+<h1 id="步骤">步骤</h1>
+<h2 id="github-action">Github Action</h2>
+<p>Github 的Action 中有不少成型的 workflow 可以参考。
+<img src="%5B2022-03-08%5Dgithub-action-golang_files/1.jpg" alt="Github Action">
+利用这些模板可以快速让你了解 Action 语法，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># workflow名称</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 触发条件，当main分支有推送时或者main分支有pull request 时</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="l">main ] </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="l">main ]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#具体执行内容</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#基于ubuntu操作系统</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#步骤 签出代码</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 类似这种uses,可以通过 https://github.com/actions/checkout 查看其详情</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Set up Go</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/setup-go@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># action 中可以自定义一些参数 通过with形式传入</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">go-version</span><span class="p">:</span><span class="w"> </span><span class="m">1.17</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">go build -v ./...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">go test -v ./...</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>看上面的注释你应该有了大概的了解，更多入门操作可以看阮一峰的<a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html">GitHub Actions 入门教程</a>
+或者<a href="https://docs.github.com/cn/actions/learn-github-actions/understanding-github-actions">官方的快速入门</a>
+我在这里走的弯路主要是【以为所有的操作都可以通过增加 steps 下的name 来完成】。
+按照这个思路 将 steps 组织成了这样，<code>checkout -&gt; setup-go -&gt; build go -&gt; docker build -&gt; acr login-&gt; docker push -&gt; ssh login -&gt;docker run</code>
+以上都是伪代码，大致就是 把代码签出来安装go 依赖，然后build 成可执行文件。将可执行文件 build 至docker 镜像中，然后推送至镜像仓库，最后使用ssh登录到ECS 运行镜像。
+结果在docker build 步骤一直报错。可能是我理解问题，以为所有的执行步骤都是在同一个文件夹下执行，所以试图在 go build 出 可执行文件时，直接复制至Docker 中然后打包成镜像，直接推送至阿里云镜像仓库。然而一直没能成功就转向了使用Dockerfile build。</p>
+<h2 id="构建镜像">构建镜像</h2>
+<p>最终的dockerfile如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">FROM golang:1.17 AS builder</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 为我们的镜像设置必要的环境变量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">ENV GO111MODULE=on \</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">CGO_ENABLED=0 \</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">GOOS=linux \</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">GOARCH=amd64 \</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">GOPROXY=https://goproxy.cn,direct</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">WORKDIR /builder</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 将代码复制到容器中</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">COPY . .</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 安装依赖</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">RUN go mod download</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 将我们的代码编译成二进制可执行文件 app</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">RUN go build -o app .</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">###################</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 接下来创建一个小镜像</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">###################</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">FROM scratch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 从builder镜像中把/dist/app 拷贝到当前目录</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">COPY --from=builder /builder/app /</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 需要运行的命令</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">ENTRYPOINT [&#34;/app&#34;]</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>因为没有能够在 github Action中实现build image，所以只能利用dockerfile 先在本地先build完再推向镜像仓库了。</p>
+<h2 id="推送镜像至acr">推送镜像至ACR</h2>
+<p>因为阿里云有发布 <a href="https://github.com/aliyun/acr-login">acr-login</a>，就直接使用了。其中的secrets.ACCESSKEY_ID和secrets.ACCESSKEY_SECRET
+设置路径在 github 对应 repository 的<code> Settings -&gt; Secrets -&gt; Actions -&gt; New repository secret</code>。
+Vaule 来自阿里云的头像下拉列表的AccessKey管理菜单。
+aliyun/acr-login 还提供了private registry 的登录方式，一定不要选错了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">		- name: Login to ACR
+</span></span><span class="line"><span class="cl">        uses: aliyun/acr-login@v1
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          region-id: cn-beijing
+</span></span><span class="line"><span class="cl">          access-key-id: &#34;${{ secrets.ACCESSKEY_ID }}&#34;
+</span></span><span class="line"><span class="cl">          access-key-secret: &#34;${{ secrets.ACCESSKEY_SECRET }}&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里在列举几个你可能用到的action</p>
+<ul>
+<li><a href="https://github.com/actions/checkout">actions/checkout@v2</a> 签出代码</li>
+<li><a href="https://github.com/actions/setup-go">actions/setup-go</a> 安装go环境</li>
+<li><a href="https://github.com/actions/setup-node">actions/setup-node</a> 安装node 环境</li>
+<li><a href="https://github.com/actions-hub/docker">actions-hub/docker/login@master</a> 登录docker</li>
+<li><a href="https://github.com/actions-hub/docker">actions-hub/docker@master</a> 推送到docker hub</li>
+<li><a href="https://github.com/appleboy/scp-action">appleboy/scp-action@master</a> SSH远程登录服务器</li>
+</ul>
+<h2 id="拉取镜像并运行">拉取镜像并运行</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">      - name: Server Start
+</span></span><span class="line"><span class="cl">        uses: appleboy/ssh-action@master
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">            host: ${{ secrets.HOST }}
+</span></span><span class="line"><span class="cl">            username: ${{ secrets.USERNAME }}
+</span></span><span class="line"><span class="cl">            password: ${{ secrets.PASSWORD }}
+</span></span><span class="line"><span class="cl">            port: ${{ secrets.PORT }}
+</span></span><span class="line"><span class="cl">            script: |
+</span></span><span class="line"><span class="cl">              docker pull registry.cn-beijing.aliyuncs.com/gudao2008/${{ env.IMAGE_Name }}:${{ env.IMAGE_TAG }}
+</span></span><span class="line"><span class="cl">              docker container stop ${{ env.IMAGE_Name}} || echo &#34;停止容器[${{ env.IMAGE_Name}}]异常&#34;
+</span></span><span class="line"><span class="cl">              docker container rm ${{ env.IMAGE_Name}} || echo &#34;删除容器[${{ env.IMAGE_Name}}]异常&#34;
+</span></span><span class="line"><span class="cl">              docker container run -d --name ${{ env.IMAGE_Name }} -it registry.cn-beijing.aliyuncs.com/gudao2008/${{ env.IMAGE_Name }}:${{ env.IMAGE_TAG }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在这一步遇到的问题是在执行时一直报错，先是因为这里的script 参数不同与action run里的参数格式。action中直接使用$.变量就行了，在script中需要用全局的 ${{}} 包裹才行。
+后就开始报<code>20***/03/08 02:25:11 dial tcp ***:***: i/o timeout</code> 超时错误，以为是拉取镜像操作超时呢，把镜像仓库都改成了公开，还是无果。后来尝试在服务器上直接运行看是否能成功，结果成功了。才把原因定位到ssh登录超时，改了ECS安全组策略后终于成功了。</p>
+<h2 id="最后">最后</h2>
+<p>完整的cli.yml如下,配合上面的dockerfile是可以直接运行的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">name: Go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">on:
+</span></span><span class="line"><span class="cl">  push:
+</span></span><span class="line"><span class="cl">    branches: [ main ]
+</span></span><span class="line"><span class="cl">  pull_request:
+</span></span><span class="line"><span class="cl">    branches: [ main ]
+</span></span><span class="line"><span class="cl">env:
+</span></span><span class="line"><span class="cl">  IMAGE_TAG: ${{ github.sha }}
+</span></span><span class="line"><span class="cl">  IMAGE_Name: go_template
+</span></span><span class="line"><span class="cl">jobs:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  build:
+</span></span><span class="line"><span class="cl">    runs-on: ubuntu-latest
+</span></span><span class="line"><span class="cl">    steps:
+</span></span><span class="line"><span class="cl">      - uses: actions/checkout@v2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      #      - name: Set up Go
+</span></span><span class="line"><span class="cl">#        uses: actions/setup-go@v2
+</span></span><span class="line"><span class="cl">#        with:
+</span></span><span class="line"><span class="cl">#          go-version: 1.17
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">#      - name: Build
+</span></span><span class="line"><span class="cl">#        run: go build -o app .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      #登录
+</span></span><span class="line"><span class="cl">      - name: Login to ACR
+</span></span><span class="line"><span class="cl">        uses: aliyun/acr-login@v1
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          region-id: cn-beijing
+</span></span><span class="line"><span class="cl">          access-key-id: &#34;${{ secrets.GUDAO_ACCESSKEY_ID }}&#34;
+</span></span><span class="line"><span class="cl">          access-key-secret: &#34;${{ secrets.GUDAO_ACCESSKEY_SECRET }}&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      #打包
+</span></span><span class="line"><span class="cl">      - name: Build and push image
+</span></span><span class="line"><span class="cl">        run: |
+</span></span><span class="line"><span class="cl">          docker build -t registry.cn-beijing.aliyuncs.com/gudao2008/$IMAGE_Name:$IMAGE_TAG .
+</span></span><span class="line"><span class="cl">          docker push registry.cn-beijing.aliyuncs.com/gudao2008/$IMAGE_Name:$IMAGE_TAG
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # 发布 镜像仓库改为公开
+</span></span><span class="line"><span class="cl">      - name: Server Start
+</span></span><span class="line"><span class="cl">        uses: appleboy/ssh-action@master
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">            host: ${{ secrets.HOST }}
+</span></span><span class="line"><span class="cl">            username: ${{ secrets.USERNAME }}
+</span></span><span class="line"><span class="cl">            password: ${{ secrets.PASSWORD }}
+</span></span><span class="line"><span class="cl">            port: ${{ secrets.PORT }}
+</span></span><span class="line"><span class="cl">            script: |
+</span></span><span class="line"><span class="cl">              docker pull registry.cn-beijing.aliyuncs.com/gudao2008/${{ env.IMAGE_Name }}:${{ env.IMAGE_TAG }}
+</span></span><span class="line"><span class="cl">              docker container stop ${{ env.IMAGE_Name}} || echo &#34;停止容器[${{ env.IMAGE_Name}}]异常&#34;
+</span></span><span class="line"><span class="cl">              docker container rm ${{ env.IMAGE_Name}} || echo &#34;删除容器[${{ env.IMAGE_Name}}]异常&#34;
+</span></span><span class="line"><span class="cl">              docker container run -d --name ${{ env.IMAGE_Name }} -it registry.cn-beijing.aliyuncs.com/gudao2008/${{ env.IMAGE_Name }}:${{ env.IMAGE_TAG }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://blog.51cto.com/youthfighter/4805540">基于Github Action部署Nextjs项目到阿里云ESC</a></li>
+<li><a href="https://www.gitdig.com/post/github-action/">一个实用版本的 Github Actions 持续集成样例</a></li>
+<li><a href="https://mincong.io/cn/github-actions-acr/">GitHub Actions持续集成阿里云容器镜像服务（ACR）</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">古道</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-03-08
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/github-action/">Github Action</a>
+          <a href="/tags/acr/">ACR</a>
+          <a href="/tags/docker/">Docker</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/2022-02-22gorse-intro/">
+            <span class="next-text nav-default">推荐系统Gorse介绍</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <script src="https://utteranc.es/client.js"
+        repo="gudao/gudao.github.io"
+        issue-term="title"
+        label="blog"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:gudao2008@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gudao" class="iconfont icon-github" title="github"></a>
+  <a href="https://gudao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>古道</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?20a6c4437c408bbccea7ff5868c50686";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>

@@ -6,7 +6,34 @@
     <description>Recent content in Tags on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ACR</title>
+      <link>https://gudao.github.io/tags/acr/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/acr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://gudao.github.io/tags/docker/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github Action</title>
+      <link>https://gudao.github.io/tags/github-action/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/github-action/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Gorse</title>
       <link>https://gudao.github.io/tags/gorse/</link>
@@ -22,6 +49,24 @@
       <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://gudao.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>授权</title>
+      <link>https://gudao.github.io/tags/%E6%8E%88%E6%9D%83/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/%E6%8E%88%E6%9D%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>认证</title>
+      <link>https://gudao.github.io/tags/%E8%AE%A4%E8%AF%81/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/tags/%E8%AE%A4%E8%AF%81/</guid>
       <description></description>
     </item>
     

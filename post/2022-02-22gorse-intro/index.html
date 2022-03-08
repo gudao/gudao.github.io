@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.93.2 with theme even" />
 
 
 <link rel="canonical" href="https://gudao.github.io/post/2022-02-22gorse-intro/" />
@@ -241,48 +241,48 @@ Gorse 是一个单节点训练和分布式预测推荐系统。Gorse 将数据�
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Item {
-
-ItemId     string //唯一编号
-
-IsHidden   bool //是否显示，当设置为true是，这个项目不在推荐结果里出现
-
-Categories []string //分类，项目所属分类便于 项目之间的关联
-
-Timestamp  Time //更新时间，判断这个项目是否为新的
-
-Labels     []string //关键词或者tag, 不能为空
-
-Comment    string //备注或者名称，方便后台显示
-
-}
-
-User {
-
-UserId    string //用户唯一编号
-
-Labels    []string //关键词或者tag
-
-Subscribe  string //
-
-Comment    string //备注或者名称，方便后台显示
-
-}
-
-Feedback {
-
-    FeedbackType string //反馈类型，
-
-    UserId       string //用户编号
-
-    ItemId       string //项目编号
-
-    Timestamp    Time //反馈的时间
-
- Comment          string //备注
-
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Item {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ItemId     string //唯一编号
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">IsHidden   bool //是否显示，当设置为true是，这个项目不在推荐结果里出现
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Categories []string //分类，项目所属分类便于 项目之间的关联
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Timestamp  Time //更新时间，判断这个项目是否为新的
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Labels     []string //关键词或者tag, 不能为空
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Comment    string //备注或者名称，方便后台显示
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">User {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">UserId    string //用户唯一编号
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Labels    []string //关键词或者tag
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Subscribe  string //
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Comment    string //备注或者名称，方便后台显示
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Feedback {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    FeedbackType string //反馈类型，
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    UserId       string //用户编号
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ItemId       string //项目编号
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Timestamp    Time //反馈的时间
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> Comment          string //备注
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中 FeedbackType、UserId、ItemId 三个字段为联合主键。</p>
 <p>反馈就是用户和物品之间产生的一些事件，可以是正向的或者负向的，例如分享、点赞等等都属于用户对物品的正向反馈，如果用户阅读之后没有进一步的正向反馈，那么认为用户对该物品的反馈是负向的，为了方便记录，Gorse并没有直接提供负向反馈的概念而提供了已读反馈的概念。如果用户查看了物品，那么记录一个已读反馈。接着，如果用户给了物品正反馈，那么已读反馈被正反馈覆盖。反之，如果用户没有给出正反馈，那么已读反馈视为负反馈。</p>
@@ -306,16 +306,16 @@ Feedback {
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="l">//The feedback types for positive events.</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="l">positive_feedback_types = [&#34;star&#34;,&#34;like&#34;,&#34;completed&#34;]</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="l">//The feedback types for read events.</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="l">read_feedback_types = [&#34;play&#34;]</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="l">FeedbackType 可取范围即：start、like、completed、play</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">//The feedback types for positive events.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">positive_feedback_types = [&#34;star&#34;,&#34;like&#34;,&#34;completed&#34;]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">//The feedback types for read events.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">read_feedback_types = [&#34;play&#34;]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">FeedbackType 可取范围即：start、like、completed、play</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>正向反馈对应操作：点赞、收藏、播放完成80%
 已读反馈对应操作：视频播放</p>
@@ -370,9 +370,13 @@ Feedback {
           <a href="/tags/gorse/">Gorse</a>
           </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/post/2022-02-06%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98/">
-            <span class="next-text nav-default">动态规划问题</span>
+        <a class="prev" href="/post/2022-03-08github-action-golang/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">使用Github Action 打包镜像并发布到Docker</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/oauth2-and-openid-connect/">
+            <span class="next-text nav-default">如何理解认证和授权</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -440,7 +444,7 @@ Feedback {
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
 
 
 

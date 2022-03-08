@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Github Action 打包镜像并发布到Docker</title>
+      <link>https://gudao.github.io/post/2022-03-08github-action-golang/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-03-08github-action-golang/</guid>
+      <description>缘起 希望通过自动构建把 Golang 项目发布至ECS自建的Docker中。 步骤 Github Action Github 的Action 中有不少成型的 workflow 可以参考。 利用这些模板可以快速让你了解</description>
+    </item>
+    
     <item>
       <title>推荐系统Gorse介绍</title>
       <link>https://gudao.github.io/post/2022-02-22gorse-intro/</link>
@@ -14,6 +23,15 @@
       
       <guid>https://gudao.github.io/post/2022-02-22gorse-intro/</guid>
       <description>简介 Gorse ，官方网址https://docs.gorse.io/ Gorse 是一个用 Go 编写的开源推荐系统。Gorse 旨在成为一个通用的开源推荐系统，可以很</description>
+    </item>
+    
+    <item>
+      <title>如何理解认证和授权</title>
+      <link>https://gudao.github.io/post/oauth2-and-openid-connect/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/oauth2-and-openid-connect/</guid>
+      <description>授权 Client Credentials Grant 先从简单的说，授权的意思就是告诉拿东西的人，你想要这个东西，看他给不给你？给你就是授权成功，不给就是授权失败。 拿着东西的这个人就是</description>
     </item>
     
     <item>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github Action on 古道的技术博客</title>
+    <link>https://gudao.github.io/tags/github-action/</link>
+    <description>Recent content in Github Action on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/github-action/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Github Action 打包镜像并发布到Docker</title>
+      <link>https://gudao.github.io/post/2022-03-08github-action-golang/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-03-08github-action-golang/</guid>
+      <description>缘起 希望通过自动构建把 Golang 项目发布至ECS自建的Docker中。 步骤 Github Action Github 的Action 中有不少成型的 workflow 可以参考。 利用这些模板可以快速让你了解</description>
+    </item>
+    
+  </channel>
+</rss>

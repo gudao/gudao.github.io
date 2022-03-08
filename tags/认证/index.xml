@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>认证 on 古道的技术博客</title>
+    <link>https://gudao.github.io/tags/%E8%AE%A4%E8%AF%81/</link>
+    <description>Recent content in 认证 on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/%E8%AE%A4%E8%AF%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何理解认证和授权</title>
+      <link>https://gudao.github.io/post/oauth2-and-openid-connect/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/oauth2-and-openid-connect/</guid>
+      <description>授权 Client Credentials Grant 先从简单的说，授权的意思就是告诉拿东西的人，你想要这个东西，看他给不给你？给你就是授权成功，不给就是授权失败。 拿着东西的这个人就是</description>
+    </item>
+    
+  </channel>
+</rss>
