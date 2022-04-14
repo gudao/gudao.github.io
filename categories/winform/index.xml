@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Winform on 古道的技术博客</title>
+    <link>https://gudao.github.io/categories/winform/</link>
+    <description>Recent content in Winform on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/categories/winform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 7 下CEF应用支持 MP4 Flash播放 趟坑记</title>
+      <link>https://gudao.github.io/post/2022-04-13win7-run-cesharp-winform/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-04-13win7-run-cesharp-winform/</guid>
+      <description>最终解决方案 最终实现的场景是可以在Windows 7及以上版本的Windows操作系统上运行一个开机自启动的全屏浏览器，同时支持 HTML5语法</description>
+    </item>
+    
+  </channel>
+</rss>

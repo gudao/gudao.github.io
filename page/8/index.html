@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.93.2 with theme even" />
+<meta name="generator" content="Hugo 0.96.0 with theme even" />
 
 
 <link rel="canonical" href="https://gudao.github.io/" />
@@ -120,6 +120,52 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/">[nginx小技巧]Request Header Or Cookie Too Large </a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-10-12 </span>
+      <div class="post-category">
+          <a href="/categories/nginx/"> Nginx </a>
+          </div>
+        <span class="more-meta"> 约 16 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      方法： 在http中添加 client_header_buffer_size 32k; large_client_header_buffers 4 32k;
+    </div>
+    <div class="read-more">
+      <a href="/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7request-header-or-cookie-too-large-/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/">[nginx小技巧]httpheader准确显示命中状态</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-10-10 </span>
+      <div class="post-category">
+          <a href="/categories/nginx/"> Nginx </a>
+          </div>
+        <span class="more-meta"> 约 169 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      nginx缓没缓存请求是我们关心的问题，把缓存状态显示在header里是个不错的选择。 方法如下： 使用$upstream_cache_stat
+    </div>
+    <div class="read-more">
+      <a href="/post/nginx%E5%B0%8F%E6%8A%80%E5%B7%A7httpheader%E5%87%86%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%91%BD%E4%B8%AD%E7%8A%B6%E6%80%81/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/%E4%BB%8E%E6%B7%BB%E5%8A%A0rss%E8%AF%B4%E8%B5%B7/">从添加RSS说起</a></h1>
@@ -300,52 +346,6 @@
     </div>
     <div class="read-more">
       <a href="/post/%E8%BD%ACcentos-rsync%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8Ewindows-cwrsync%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/">Nginx模块修改(ngx_http_flv_module)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-08-31 </span>
-      <div class="post-category">
-          <a href="/categories/nginx/"> Nginx </a>
-          </div>
-        <span class="more-meta"> 约 996 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      本文实现内容：增加flv模块参数，跳过片头内容。flv模块默认只有start一个参数，添加一个配置参数iskip来指定是否跳过片头。 如果你对
-    </div>
-    <div class="read-more">
-      <a href="/post/nginx%E6%A8%A1%E5%9D%97%E4%BF%AE%E6%94%B9ngx_http_flv_module/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E6%8E%A8%E8%8D%90c#%E5%86%99%E7%9A%84%E7%B1%BB%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/">【推荐】C#写的类资源管理器</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-08-27 </span>
-      <div class="post-category">
-          <a href="/categories/.net/"> .Net </a>
-          </div>
-        <span class="more-meta"> 约 1 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      http://www.codeproject.com/Articles/15059/C-File-Browser#Background
-    </div>
-    <div class="read-more">
-      <a href="/post/%E6%8E%A8%E8%8D%90c#%E5%86%99%E7%9A%84%E7%B1%BB%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

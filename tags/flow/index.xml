@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flow on 古道的技术博客</title>
+    <link>https://gudao.github.io/tags/flow/</link>
+    <description>Recent content in flow on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/flow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>阿里云流水线打包镜像并发布到Docker</title>
+      <link>https://gudao.github.io/post/2022-03-16aliyun-flow-docker/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-03-16aliyun-flow-docker/</guid>
+      <description>继上一篇用Github Action 部署后，公司内部的站点也陆续实现了自动化部署，因为大部分的中间件都是阿里系列的，所以首先选用的就是云效系列中的流水线</description>
+    </item>
+    
+  </channel>
+</rss>

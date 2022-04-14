@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 7 下CEF应用支持 MP4 Flash播放 趟坑记</title>
+      <link>https://gudao.github.io/post/2022-04-13win7-run-cesharp-winform/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-04-13win7-run-cesharp-winform/</guid>
+      <description>最终解决方案 最终实现的场景是可以在Windows 7及以上版本的Windows操作系统上运行一个开机自启动的全屏浏览器，同时支持 HTML5语法</description>
+    </item>
+    
+    <item>
+      <title>阿里云流水线打包镜像并发布到Docker</title>
+      <link>https://gudao.github.io/post/2022-03-16aliyun-flow-docker/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-03-16aliyun-flow-docker/</guid>
+      <description>继上一篇用Github Action 部署后，公司内部的站点也陆续实现了自动化部署，因为大部分的中间件都是阿里系列的，所以首先选用的就是云效系列中的流水线</description>
+    </item>
+    
     <item>
       <title>使用Github Action 打包镜像并发布到Docker</title>
       <link>https://gudao.github.io/post/2022-03-08github-action-golang/</link>
