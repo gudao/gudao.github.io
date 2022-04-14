@@ -18,10 +18,10 @@ author: "古道"
 如果你的需求环境支持 Windows 10 建议使用更高版本的CEF，49 和 84 在 [HTMT5TEST](https://www.html5test.com) 的整体得分分别为 478 和 466，虽然总分让人意外但是细看下面的支持项
 尤其在 javascript 支持上来看，还是新版本的支持的比较好，如果想在语法上使用些比较新的语法糖，个人建议还是用84的。
 
-![49.0.1 得分]([2022-04-13]win7-run-cesharp-winform_files/1.jpg)
-![84.4.10 得分]([2022-04-13]win7-run-cesharp-winform_files/2.jpg)
-![49.0.1 JS支持情况]([2022-04-13]win7-run-cesharp-winform_files/3.jpg)
-![84.4.10 JS支持情况]([2022-04-13]win7-run-cesharp-winform_files/4.jpg)
+![49.0.1 得分](win7-run-cesharp-winform_files/1.jpg)
+![84.4.10 得分](win7-run-cesharp-winform_files/2.jpg)
+![49.0.1 JS支持情况](win7-run-cesharp-winform_files/3.jpg)
+![84.4.10 JS支持情况](win7-run-cesharp-winform_files/4.jpg)
 # 趟坑开始
 如果你想更详细了解故事的原委请继续。
 2017时有个应用需要开机启动一个全屏的浏览器，内嵌一个html写的网站，要求播放mp4视频和播放swf格式的游戏。当时找的解决方案是用
