@@ -1,5 +1,5 @@
 ---
-title: "Windows 7 下CEF应用支持MP4\Flash播放 趟坑记"
+title: "Windows 7 下CEF应用支持 MP4 Flash播放 趟坑记"
 date: 2022-04-13
 draft: false
 keywords: ["CEF","cefsharp","win7","mp4","flash","H264"]
