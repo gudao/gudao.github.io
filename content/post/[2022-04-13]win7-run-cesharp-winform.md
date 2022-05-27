@@ -35,7 +35,7 @@ author: "古道"
 我先你点开这个地址[A list of Go GUI/graphics/image related projects](https://github.com/go-graphics/go-gui-projects)看看，github上列出来的一个 Go 语言在GUI方面的开源项目。
 从 `原生（native GUI and utility bindings）` 到 `基于HTML（HTML based GUI）`再到`2D \ 3D (2D vector graphics and computing APIs \ 3D graphics and computing API bindings)` 着实的让我花费了不少时间尝试他们的可行性。
 ***SCITER*** 花费我时间最多是[SCITER](https://sciter.com/) 在尝试了种种方案中让我觉得最靠谱，文档相对比较完善的就数它了，再加入人家在杀毒应用界的成功案例，让我兴奋了好几个晚上都夜不能寐。
-官方支持了我熟悉的C#和Go两种语言，心想怎么也得搞定吧。![语言支持]([2022-04-13]win7-run-cesharp-winform_files/5.jpg)
+官方支持了我熟悉的C#和Go两种语言，心想怎么也得搞定吧。![语言支持](/psot/win7-run-cesharp-winform_files/5.jpg)
 花了2天的时间先把Sciter.TIS和javascript的语法学完了，看这里[JavaScript, Dart/Chrome and TIScript/Sciter comparison 三种语言的区别对比](https://sciter.com/docs/js-dart-tis.html)。
 正要兴致勃勃地开始开发时，无情的被IDE折磨了几天，实在受不了最终放弃了。官方虽然提供了不少推荐的IDE[Development Tools](https://sciter.com/developers/development-tools/)，包括自家的`Sciter’s DOM Inspector`,
 但是在我修改代码后不能刷新页面看效果，而需要重启Inspector才能看到效果，经历了大几百次后，我崩溃了。自己的编程能力真的不能跟老外比，人家可以在编辑器（注意是编辑器不是IDE）下生生的敲出来，不用网络不用智能提示，敲完一大段后直接run一下，通过了。
