@@ -6,7 +6,16 @@
     <description>Recent content on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>云文件浏览器</title>
+      <link>https://gudao.github.io/post/2022-05-17cloud-file-explorer/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-05-17cloud-file-explorer/</guid>
+      <description>Cloud File Explorer 从 NetHadoop 升级而来，在保留原有阿里云OSS功能的基础上，增加 腾讯云COS、华为云OBS、七牛云Kodo、Minio自建对象存储。 云端文件操作</description>
+    </item>
+    
     <item>
       <title>Windows 7 下CEF应用支持 MP4 Flash播放 趟坑记</title>
       <link>https://gudao.github.io/post/2022-04-13win7-run-cesharp-winform/</link>
@@ -953,21 +962,21 @@
     </item>
     
     <item>
-      <title>中小型网站怎么快速实现在线支付</title>
-      <link>https://gudao.github.io/post/%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%AB%99%E6%80%8E%E4%B9%88%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E6%94%AF%E4%BB%98/</link>
-      <pubDate>Mon, 12 Mar 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://gudao.github.io/post/%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%AB%99%E6%80%8E%E4%B9%88%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E6%94%AF%E4%BB%98/</guid>
-      <description>不知道你是不是还在为自己的网站支付方式发愁？ 不懂编程技术，没有能力开发一个支持多银行多支付方式的支付接口？ 不愿意提交繁琐的证明材料，为了只是</description>
-    </item>
-    
-    <item>
       <title>怎样使用Windows认证连接SQL Server</title>
       <link>https://gudao.github.io/post/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8windows%E8%AE%A4%E8%AF%81%E8%BF%9E%E6%8E%A5sql-server/</link>
       <pubDate>Mon, 12 Mar 2012 00:00:00 +0000</pubDate>
       
       <guid>https://gudao.github.io/post/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8windows%E8%AE%A4%E8%AF%81%E8%BF%9E%E6%8E%A5sql-server/</guid>
       <description>连接方式有两种，如果你是在web.config文件中&amp;lt;connectionStrings&amp;gt;节点中就必须包括Trusted_Con</description>
+    </item>
+    
+    <item>
+      <title>中小型网站怎么快速实现在线支付</title>
+      <link>https://gudao.github.io/post/%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%AB%99%E6%80%8E%E4%B9%88%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E6%94%AF%E4%BB%98/</link>
+      <pubDate>Mon, 12 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%AB%99%E6%80%8E%E4%B9%88%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E6%94%AF%E4%BB%98/</guid>
+      <description>不知道你是不是还在为自己的网站支付方式发愁？ 不懂编程技术，没有能力开发一个支持多银行多支付方式的支付接口？ 不愿意提交繁琐的证明材料，为了只是</description>
     </item>
     
     <item>

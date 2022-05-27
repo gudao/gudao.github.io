@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSS on 古道的技术博客</title>
+    <link>https://gudao.github.io/tags/oss/</link>
+    <description>Recent content in OSS on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/oss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>云文件浏览器</title>
+      <link>https://gudao.github.io/post/2022-05-17cloud-file-explorer/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-05-17cloud-file-explorer/</guid>
+      <description>Cloud File Explorer 从 NetHadoop 升级而来，在保留原有阿里云OSS功能的基础上，增加 腾讯云COS、华为云OBS、七牛云Kodo、Minio自建对象存储。 云端文件操作</description>
+    </item>
+    
+  </channel>
+</rss>

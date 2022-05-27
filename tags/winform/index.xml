@@ -6,7 +6,16 @@
     <description>Recent content in Winform on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/winform/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/tags/winform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>云文件浏览器</title>
+      <link>https://gudao.github.io/post/2022-05-17cloud-file-explorer/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-05-17cloud-file-explorer/</guid>
+      <description>Cloud File Explorer 从 NetHadoop 升级而来，在保留原有阿里云OSS功能的基础上，增加 腾讯云COS、华为云OBS、七牛云Kodo、Minio自建对象存储。 云端文件操作</description>
+    </item>
+    
     <item>
       <title>Windows 7 下CEF应用支持 MP4 Flash播放 趟坑记</title>
       <link>https://gudao.github.io/post/2022-04-13win7-run-cesharp-winform/</link>
