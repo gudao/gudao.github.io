@@ -8,7 +8,7 @@ tags: ["Winform","OSS"]
 categories: ["Winform"]
 author: "古道" 
 ---
-![logo](2022-05-17cloud-file-explorer_files/1.png)
+![logo](/post/2022-05-17cloud-file-explorer_files/1.png)
  
  Cloud File Explorer 
  =================
@@ -28,7 +28,7 @@ author: "古道"
  
  预览 
  =========
- ![截图](2022-05-17cloud-file-explorer_files/2.png)
+ ![截图](/post/2022-05-17cloud-file-explorer_files/2.png)
  
  安装
  =========
