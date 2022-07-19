@@ -22,7 +22,7 @@
       <pubDate>Fri, 24 Aug 2012 00:00:00 +0000</pubDate>
       
       <guid>https://gudao.github.io/post/ffmpeg%E8%BD%AC%E7%A0%81%E9%97%AE%E9%A2%98%E4%B8%80%E5%8F%8D%E4%BA%A4%E9%94%99/</guid>
-      <description>ffmpeg 用x264视频编码，视频画面会出现锯齿（或者叫拉丝），下面两张图对比一下效果： （图：未设置反交错）（图：设置反交错） 导致此效果的原因是x2</description>
+      <description>ffmpeg 用x264视频编码，视频画面会出现锯齿（或者叫拉丝），下面两张图对比一下效果： （图：未设置反交错） （图：设置反交错） 导致此效果的原因是x2</description>
     </item>
     
     <item>

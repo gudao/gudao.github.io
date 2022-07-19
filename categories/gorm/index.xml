@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GORM on 古道的技术博客</title>
+    <link>https://gudao.github.io/categories/gorm/</link>
+    <description>Recent content in GORM on 古道的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/categories/gorm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GORM常用方法备注</title>
+      <link>https://gudao.github.io/post/2022-07-19gorm-learning/</link>
+      <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-07-19gorm-learning/</guid>
+      <description>官方网站 中文官方地址:GORM指南 官方的指南可以作为参考目录随时查阅的。 结构定义 下面所有举例将以用户类型对应的user表为例。 ``` type user struct { Id int</description>
+    </item>
+    
+  </channel>
+</rss>

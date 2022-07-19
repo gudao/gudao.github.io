@@ -6,7 +6,16 @@
     <description>Recent content on 古道的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gudao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GORM常用方法备注</title>
+      <link>https://gudao.github.io/post/2022-07-19gorm-learning/</link>
+      <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gudao.github.io/post/2022-07-19gorm-learning/</guid>
+      <description>官方网站 中文官方地址:GORM指南 官方的指南可以作为参考目录随时查阅的。 结构定义 下面所有举例将以用户类型对应的user表为例。 ``` type user struct { Id int</description>
+    </item>
+    
     <item>
       <title>云文件浏览器</title>
       <link>https://gudao.github.io/post/2022-05-17cloud-file-explorer/</link>
@@ -301,7 +310,7 @@
       <pubDate>Mon, 26 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://gudao.github.io/post/hdfs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%9B%B4%E6%96%B0%E5%95%A6/</guid>
-      <description>这几天没事把HDFS文件管理器的功能重新整理了一下，更新的内容主要有：部署更简单，界面更方便！哈哈，有点自夸，先来张截图炫一下！较第一版《.</description>
+      <description>这几天没事把HDFS文件管理器的功能重新整理了一下，更新的内容主要有：部署更简单，界面更方便！哈哈，有点自夸，先来张截图炫一下！ 较第一版《.</description>
     </item>
     
     <item>
@@ -346,7 +355,7 @@
       <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://gudao.github.io/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%85%A8%E7%90%83%E5%85%AC%E8%AE%A4%E5%A4%B4%E5%83%8Fgravatar/</guid>
-      <description>一、先说，Gravatar是什么？ 截一个FROYO&#39;s Blog的评论图来说明一下看到上面每个用户的头像你是不是觉得用户在评论时已经在该网站注</description>
+      <description>一、先说，Gravatar是什么？ 截一个FROYO&#39;s Blog的评论图来说明一下 看到上面每个用户的头像你是不是觉得用户在评论时已经在该网站注</description>
     </item>
     
     <item>
@@ -760,7 +769,7 @@
       <pubDate>Fri, 24 Aug 2012 00:00:00 +0000</pubDate>
       
       <guid>https://gudao.github.io/post/ffmpeg%E8%BD%AC%E7%A0%81%E9%97%AE%E9%A2%98%E4%B8%80%E5%8F%8D%E4%BA%A4%E9%94%99/</guid>
-      <description>ffmpeg 用x264视频编码，视频画面会出现锯齿（或者叫拉丝），下面两张图对比一下效果： （图：未设置反交错）（图：设置反交错） 导致此效果的原因是x2</description>
+      <description>ffmpeg 用x264视频编码，视频画面会出现锯齿（或者叫拉丝），下面两张图对比一下效果： （图：未设置反交错） （图：设置反交错） 导致此效果的原因是x2</description>
     </item>
     
     <item>
