@@ -49,7 +49,7 @@
 <meta itemprop="name" content="GORM常用方法备注">
 <meta itemprop="description" content="GORM常用方法备注"><meta itemprop="datePublished" content="2022-07-19T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-07-19T00:00:00+00:00" />
-<meta itemprop="wordCount" content="927">
+<meta itemprop="wordCount" content="950">
 <meta itemprop="keywords" content="GORM," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GORM常用方法备注"/>
 <meta name="twitter:description" content="GORM常用方法备注"/>
@@ -132,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/gorm/"> GORM </a>
             </div>
-          <span class="more-meta"> 约 927 字 </span>
+          <span class="more-meta"> 约 950 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -166,73 +166,120 @@
 <p>中文官方地址:<a href="https://gorm.io/zh_CN/docs/index.html">GORM指南</a>
 官方的指南可以作为参考目录随时查阅的。</p>
 <h2 id="结构定义">结构定义</h2>
-<pre><code>下面所有举例将以用户类型对应的user表为例。
-```
-type user struct {
-	Id int `json:&quot;Id&quot;    gorm:&quot;column:Id&quot;   `
-	Name string `json:&quot;Name&quot;    gorm:&quot;column:Name&quot;   `
-	Age int `json:&quot;Age&quot;    gorm:&quot;column:Age&quot;   `
-	Birthday string`json:&quot;Birthday&quot;    gorm:&quot;column:Birthday&quot;   `
-}
-
-func (t user) TableName() string {
-	return &quot;tb_user&quot;
-}
-```
-个人倾向于将所有字段的首字母大小，并且json和数据库字段都跟实体一致。
+<p>下面所有举例将以用户类型对应的user表为例。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">type user struct {
+</span></span><span class="line"><span class="cl">	Id int `json:&#34;Id&#34;    gorm:&#34;column:Id&#34;   `
+</span></span><span class="line"><span class="cl">	Name string `json:&#34;Name&#34;    gorm:&#34;column:Name&#34;   `
+</span></span><span class="line"><span class="cl">	Age int `json:&#34;Age&#34;    gorm:&#34;column:Age&#34;   `
+</span></span><span class="line"><span class="cl">	Birthday string`json:&#34;Birthday&#34;    gorm:&#34;column:Birthday&#34;   `
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">func (t user) TableName() string {
+</span></span><span class="line"><span class="cl">	return &#34;tb_user&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>个人倾向于将所有字段的首字母大小，并且json和数据库字段都跟实体一致。
 数据库表名可以使用TableName自定义。
-下文所使用的user为单个用户对象，users为用户列表。
-</code></pre>
+下文所使用的user为单个用户对象，users为用户列表。</p>
 <h3 id="指定使用的表">指定使用的表</h3>
-<pre><code>- `.Model`只要类型正确就会安装类型对应的表查询，如果不能根据后续的查询结果判断出是那个表时，就需要指定Model类型。如：
+<p><code>.Model</code>只要类型正确就会安装类型对应的表查询，如果不能根据后续的查询结果判断出是那个表时，就需要指定Model类型。如：
 .Create(&amp;user)、.Find(&amp;users)、.Take(&amp;user)等都可以根据查询结果判断出对应的表，
-像.Update(&quot;name&quot;,&quot;xxx&quot;)、Count(&amp;count)不能推断出表的就需要指定类型，比如：db.Model(&amp;user).Update(&quot;&quot;,&quot;&quot;)
-- Table 和 Select 也可以作为表的推断依据。
-</code></pre>
+像.Update(&ldquo;name&rdquo;,&ldquo;xxx&rdquo;)、Count(&amp;count)不能推断出表的就需要指定类型，比如：db.Model(&amp;user).Update(&quot;&quot;,&quot;&quot;)
+Table 和 Select 也可以作为表的推断依据。</p>
 <h3 id="条件查询">条件查询</h3>
-<pre><code>Where 有多种方法可以作为条件查询，个人常用SQL加参数的形式，优势在于可以根据条件拼接查询条件。
-如：db.Where(&quot;name = ? AND age &gt;= ?&quot;, &quot;jinzhu&quot;, &quot;22&quot;).Find(&amp;users)
-其中的参数可以通过外部传入，动态拼接,其中的args参数为多参数。
-
-```
-sql:=&quot;1=1&quot;
-var args []interface{}
-if len(name)&gt;0{
-	sql+=&quot; And Name=?&quot;
-	args=append(args,name)
-}
-db.Where(sql,args...).Find(&amp;users)
-```
-</code></pre>
-<h3 id="查询结果">查询结果</h3>
-<pre><code>查询除了按照表结构全查的情况其实用的最多的是指定字段查询，可以使用指定字段名查询，如：
-```
-db.Select(&quot;name&quot;, &quot;age&quot;).Find(&amp;users)
-```
-也可以指定结果类型查询，需要先定义要查询结果struct，然后用Scan(&amp;result)返回。
-如：
-```
-type Result struct {
-  ID   int
-  Name string
-  Age  int
-}
-
-var result Result
-db.Raw(&quot;SELECT id, name, age FROM users WHERE name = ?&quot;, 3).Scan(&amp;result)
-```
-</code></pre>
-<h2 id="自定义查询">自定义查询</h2>
-<pre><code>原生SQL可以更灵活的执行单表多表查询
+<p><code>Where</code> 有多种方法可以作为条件查询，个人常用SQL加参数的形式，优势在于可以根据条件拼接查询条件。
+如：db.Where(&ldquo;name = ? AND age &gt;= ?&rdquo;, &ldquo;jinzhu&rdquo;, &ldquo;22&rdquo;).Find(&amp;users)
+其中的参数可以通过外部传入，动态拼接,其中的args参数为多参数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sql:=&#34;1=1&#34;
+</span></span><span class="line"><span class="cl">var args []interface{}
+</span></span><span class="line"><span class="cl">if len(name)&gt;0{
+</span></span><span class="line"><span class="cl">	sql+=&#34; And Name=?&#34;
+</span></span><span class="line"><span class="cl">	args=append(args,name)
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">db.Where(sql,args...).Find(&amp;users)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="查询结果">查询结果</h3>
+<p>查询除了按照表结构全查的情况其实用的最多的是指定字段查询，可以使用指定字段名查询，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">db.Select(&#34;name&#34;, &#34;age&#34;).Find(&amp;users)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也可以指定结果类型查询，需要先定义要查询结果struct，然后用Scan(&amp;result)返回。
+如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">type Result struct {
+</span></span><span class="line"><span class="cl">  ID   int
+</span></span><span class="line"><span class="cl">  Name string
+</span></span><span class="line"><span class="cl">  Age  int
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">var result Result
+</span></span><span class="line"><span class="cl">db.Raw(&#34;SELECT id, name, age FROM users WHERE name = ?&#34;, 3).Scan(&amp;result)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="自定义查询">自定义查询</h2>
+<p>原生SQL可以更灵活的执行单表多表查询
 有结果的可以用 Raw(&quot;&quot;)加Scan(&amp;result)形式，
-无结果的可以用 Exec(&quot;&quot;)
-</code></pre>
+无结果的可以用 Exec(&quot;&quot;)</p>
 <h2 id="我的常用">我的常用</h2>
 <ul>
-<li>批量插入
-db.
-Create(&amp;users)</li>
-<li>冲突更新 Clauses
+<li>批量插入</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">db.
+</span></span><span class="line"><span class="cl">Create(&amp;users)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>冲突更新 Clauses</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -245,14 +292,9 @@ Create(&amp;users)</li>
 </span></span><span class="line"><span class="cl">Create(&amp;users)
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>单独更新
+</div><ul>
+<li>单独更新</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -265,14 +307,9 @@ Create(&amp;users)</li>
 </span></span><span class="line"><span class="cl">		})
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>限量查询
+</div><ul>
+<li>限量查询</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -291,18 +328,20 @@ Create(&amp;users)</li>
 </span></span><span class="line"><span class="cl">		Find(&amp;users)
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>分页
-Raw 下的Limit()会失效，需要自行拼接，可以使用Sprintf格式化，注意要放注入
-fmt.Sprintf(&quot; ORDER BY Id DESC LIMIT %d,%d &ldquo;, (pageIndex-1)*pageSize, pageSize)</li>
+</div><ul>
+<li>分页</li>
 </ul>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Raw 下的Limit()会失效，需要自行拼接，可以使用Sprintf格式化，注意要放注入
+</span></span><span class="line"><span class="cl">fmt.Sprintf(&#34; ORDER BY Id DESC LIMIT %d,%d &#34;, (pageIndex-1)*pageSize, pageSize)
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">
