@@ -122,6 +122,29 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/">面试中的海量数据处理问题</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-06-01 </span>
+      <div class="post-category">
+          <a href="/categories/nosql/"> NoSQL </a>
+          </div>
+        <span class="more-meta"> 约 9705 字 </span>
+        <span class="more-meta"> 预计阅读 20 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      第一部分、十道海量数据处理面试题 1、海量日志数据，提取出某日访问百度次数最多的那个IP。 首先是这一天，并且是访问百度的日志中的IP取出来，逐
+    </div>
+    <div class="read-more">
+      <a href="/post/%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/%E6%94%BE%E4%B8%80%E4%BA%9B%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E9%82%80%E8%AF%B7%E7%A0%81/">放一些百度网盘邀请码</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2012-05-08 </span>
@@ -323,29 +346,6 @@
     </div>
     <div class="read-more">
       <a href="/post/%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%AB%99%E6%80%8E%E4%B9%88%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E6%94%AF%E4%BB%98/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/">DES加密/解密类</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-03-09 </span>
-      <div class="post-category">
-          <a href="/categories/.net/"> .Net </a>
-          </div>
-        <span class="more-meta"> 约 135 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      /// &lt;summary&gt; /// 加密数据 /// &lt;/summary&gt; /// &lt;param name=&#34;Text&#34;&gt;&lt;/param&gt; /// &lt;param name=&#34;sKey&#34;&gt;&lt;/param&gt; /// &lt;returns&gt;&lt;/returns&gt; public static string Encrypt(string Text,string sKey) { DESCryptoServiceProvider des = new DESCryptoServiceProvider(); byte[] inputByteArray; inputByteArray=Encoding.Default.GetBytes(Text); des.Key = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, &#34;md5&#34;).Substring(0, 8)); des.IV = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, &#34;md5&#34;).Substring(0, 8)); System.IO.MemoryStream ms=new System.IO.MemoryStream(); CryptoStream cs=new CryptoStream(ms,des.CreateEncryptor(),CryptoStreamMode.Write); cs.Write(inputByteArray,0,inputByteArray.Length); cs.FlushFinalBlock(); StringBuilder ret=new StringBuilder(); foreach( byte b in ms.ToArray()) { ret.AppendFormat(&#34;{0:X2}&#34;,b); } return ret.ToString(); } /// &lt;summary&gt; /// 解密数
-    </div>
-    <div class="read-more">
-      <a href="/post/des%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%B1%BB/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
